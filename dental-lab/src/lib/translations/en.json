@@ -1,0 +1,121 @@
+{
+  "header": {
+    "logo": "APM DIGITAL LAB",
+    "nav": {
+      "workflow": "Workflow",
+      "products": "Products",
+      "technology": "Technology",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "The future of digital dentistry",
+    "subtitle": "Precision-engineered dental solutions from 3D data",
+    "tag": "3D scans only"
+  },
+  "workflow": {
+    "title": "Purely digital process",
+    "subtitle": "From scan to product. Controlled precision at every stage.",
+    "steps": {
+      "scan": {
+        "title": "3D Scan",
+        "desc": "Digital capture"
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Geometry optimization"
+      },
+      "print": {
+        "title": "3D Print",
+        "desc": "Medical-grade material"
+      },
+      "precision": {
+        "title": "Precision",
+        "desc": "Quality control"
+      }
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Digitally designed. Precisely manufactured.",
+    "aligners": {
+      "title": "Whitening Aligners",
+      "description": "Individually designed whitening aligners based on 3D scans. Precision fit to patient anatomy with controlled thickness for comfort and predictability.",
+      "features": [
+        "Designed from 3D data",
+        "Precision anatomical fit",
+        "Optimized thickness",
+        "3D printed medical-grade material"
+      ]
+    },
+    "guards": {
+      "title": "Occlusal Guards",
+      "description": "Night guards designed for bruxism protection. Variable thickness design – 2mm in occlusal zones, 1mm in non-load-bearing areas. Digitally controlled thickness zones.",
+      "features": [
+        "Bruxism protection",
+        "Variable thickness zones",
+        "Improved load distribution",
+        "Enhanced comfort"
+      ]
+    }
+  },
+  "injection": {
+    "tag": "Innovation",
+    "title": "Injection stamp system",
+    "subtitle": "Tooth reconstruction based on pre-preparation scan. Precise 1:1 anatomy replication. Alternative to ceramic inlays.",
+    "features": {
+      "precision": {
+        "title": "Precise anatomy",
+        "desc": "1:1 replication from pre-op data"
+      },
+      "cost": {
+        "title": "Cost-effective",
+        "desc": "Economical type I cavity reconstruction"
+      },
+      "workflow": {
+        "title": "Simple workflow",
+        "desc": "Flowable composite injection"
+      }
+    }
+  },
+  "technology": {
+    "title": "Technology",
+    "description": "We use advanced 3D printing and digital design technologies to create precise dental solutions from scan data.",
+    "points": {
+      "digital": {
+        "title": "Full digital workflow",
+        "desc": "Elimination of analog errors"
+      },
+      "precision": {
+        "title": "Controlled precision",
+        "desc": "Micron-level accuracy"
+      },
+      "material": {
+        "title": "Medical materials",
+        "desc": "Certified biocompatible materials"
+      }
+    }
+  },
+  "contact": {
+    "title": "Start collaboration",
+    "subtitle": "Contact us to learn more about our solutions.",
+    "email": "Send email",
+    "phone": "Call us",
+    "footer": "We'll respond within 24 hours"
+  },
+  "footer": {
+    "company": {
+      "title": "About",
+      "description": "Digital dental laboratory specializing in precision 3D printing."
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "APM Digital Dental Lab. All rights reserved."
+  }
+}

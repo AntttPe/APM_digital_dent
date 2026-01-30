@@ -1,0 +1,121 @@
+{
+  "header": {
+    "logo": "APM DIGITAL LAB",
+    "nav": {
+      "workflow": "Proces",
+      "products": "Produkty",
+      "technology": "Technologia",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Przyszłość stomatologii cyfrowej",
+    "subtitle": "Precyzyjnie zaprojektowane rozwiązania dentystyczne z danych 3D",
+    "tag": "Tylko skany 3D"
+  },
+  "workflow": {
+    "title": "Czysto cyfrowy proces",
+    "subtitle": "Od skanu do produktu. Kontrolowana precyzja na każdym etapie.",
+    "steps": {
+      "scan": {
+        "title": "Skan 3D",
+        "desc": "Cyfrowe odwzorowanie"
+      },
+      "design": {
+        "title": "Projektowanie",
+        "desc": "Optymalizacja geometrii"
+      },
+      "print": {
+        "title": "Druk 3D",
+        "desc": "Materiał medyczny"
+      },
+      "precision": {
+        "title": "Precyzja",
+        "desc": "Kontrola jakości"
+      }
+    }
+  },
+  "products": {
+    "title": "Produkty",
+    "subtitle": "Zaprojektowane cyfrowo. Wyprodukowane precyzyjnie.",
+    "aligners": {
+      "title": "Nakładki wybielające",
+      "description": "Indywidualnie zaprojektowane nakładki wybielające oparte na skanach 3D. Precyzyjne dopasowanie do anatomii pacjenta z kontrolowaną grubością dla komfortu i przewidywalności.",
+      "features": [
+        "Projektowanie z danych 3D",
+        "Precyzyjne dopasowanie do anatomii",
+        "Optymalizowana grubość",
+        "Druk 3D z materiału medycznego"
+      ]
+    },
+    "guards": {
+      "title": "Szyny relaksacyjne",
+      "description": "Szyny zgryzowe zaprojektowane dla ochrony przed bruksizmem. Zmienna grubość materiału – 2mm w strefach okluzyjnych, 1mm w obszarach nieobciążonych. Cyfrowo kontrolowane strefy grubości.",
+      "features": [
+        "Ochrona przed bruksizmem",
+        "Zmienne strefy grubości",
+        "Lepsze rozłożenie obciążenia",
+        "Zwiększony komfort użytkowania"
+      ]
+    }
+  },
+  "injection": {
+    "tag": "Innowacja",
+    "title": "System stempla iniekcyjnego",
+    "subtitle": "Rekonstrukcja zębów w oparciu o skan sprzed preparacji. Precyzyjne odwzorowanie anatomii 1:1. Alternatywa dla wkładów ceramicznych.",
+    "features": {
+      "precision": {
+        "title": "Precyzyjna anatomia",
+        "desc": "Odwzorowanie 1:1 z danych przedoperacyjnych"
+      },
+      "cost": {
+        "title": "Niski koszt",
+        "desc": "Ekonomiczna rekonstrukcja ubytków typu I"
+      },
+      "workflow": {
+        "title": "Prosty proces",
+        "desc": "Iniekcja kompozytu płynnego"
+      }
+    }
+  },
+  "technology": {
+    "title": "Technologia",
+    "description": "Wykorzystujemy zaawansowane technologie druku 3D i projektowania cyfrowego do tworzenia precyzyjnych rozwiązań dentystycznych z danych skanów.",
+    "points": {
+      "digital": {
+        "title": "Pełen cyfrowy workflow",
+        "desc": "Eliminacja błędów analogowych"
+      },
+      "precision": {
+        "title": "Kontrolowana precyzja",
+        "desc": "Dokładność na poziomie mikronów"
+      },
+      "material": {
+        "title": "Materiały medyczne",
+        "desc": "Certyfikowane tworzywa biokompatybilne"
+      }
+    }
+  },
+  "contact": {
+    "title": "Rozpocznij współpracę",
+    "subtitle": "Skontaktuj się z nami, aby dowiedzieć się więcej o naszych rozwiązaniach.",
+    "email": "Wyślij email",
+    "phone": "Zadzwoń",
+    "footer": "Odpowiemy w ciągu 24 godzin"
+  },
+  "footer": {
+    "company": {
+      "title": "O nas",
+      "description": "Cyfrowe laboratorium dentystyczne specjalizujące się w precyzyjnym druku 3D."
+    },
+    "contact": {
+      "title": "Kontakt"
+    },
+    "legal": {
+      "title": "Informacje",
+      "privacy": "Polityka prywatności",
+      "terms": "Warunki usługi"
+    },
+    "copyright": "APM Digital Dental Lab. Wszelkie prawa zastrzeżone."
+  }
+}
