@@ -10,8 +10,8 @@
   },
   "hero": {
     "title": "Przyszłość stomatologii cyfrowej",
-    "subtitle": "Precyzyjnie zaprojektowane rozwiązania dentystyczne z danych 3D",
-    "tag": "Tylko skany 3D"
+    "subtitle": "Cyfrowa precyzja. Perfekcyjne dopasowanie.",
+    "tag": "Projektowane cyfrowo"
   },
   "workflow": {
     "title": "Czysto cyfrowy proces",
@@ -23,7 +23,7 @@
       },
       "design": {
         "title": "Projektowanie",
-        "desc": "Optymalizacja geometrii"
+        "desc": "Cyfrowe dopasowanie do anatomii pacjenta"
       },
       "print": {
         "title": "Druk 3D",

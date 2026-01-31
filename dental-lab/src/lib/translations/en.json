@@ -10,8 +10,8 @@
   },
   "hero": {
     "title": "The future of digital dentistry",
-    "subtitle": "Precision-engineered dental solutions from 3D data",
-    "tag": "3D scans only"
+    "subtitle": "Digital precision. Perfect fit.",
+    "tag": "Digitally designed"
   },
   "workflow": {
     "title": "Purely digital process",
@@ -23,7 +23,7 @@
       },
       "design": {
         "title": "Design",
-        "desc": "Geometry optimization"
+        "desc": "Digitally tailored to patient anatomy"
       },
       "print": {
         "title": "3D Print",

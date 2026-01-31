@@ -56,46 +56,44 @@ export default function Products() {
               offset: ['start end', 'end start'],
             });
 
+            // ZMIANA: Usunięto rotację.
+            // Zostawiamy tylko subtelny ruch w pionie (parallax) dla poczucia głębi
             const y = useTransform(
               productProgress,
               [0, 0.5, 1],
-              [100, 0, -100]
+              [50, 0, -50] // Zmniejszony zakres ruchu dla większego spokoju
             );
 
-            const imageRotate = useTransform(
-              productProgress,
-              [0, 0.5, 1],
-              [-10, 0, 10]
-            );
-
+            // ZMIANA: Bardzo delikatne skalowanie (z 0.95 do 1.0), ledwo zauważalne
             const imageScale = useTransform(
               productProgress,
               [0, 0.5, 1],
-              [0.8, 1, 0.8]
+              [0.95, 1, 0.95]
             );
 
             return (
               <motion.div
                 key={product.key}
                 ref={productRef}
-                style={{ y }}
+                style={{ y }} // Aplikujemy tylko przesunięcie w pionie
                 className={`grid md:grid-cols-2 gap-16 items-center ${
                   isEven ? '' : 'md:grid-flow-dense'
                 }`}
               >
                 <motion.div
                   style={{
-                    rotate: imageRotate,
                     scale: imageScale,
+                    // rotate: imageRotate <- USUNIĘTE
                   }}
                   className={isEven ? 'md:col-start-1' : 'md:col-start-2'}
                 >
                   {/* Future Blender-rendered product sequence */}
-                  <div className={`relative aspect-square rounded-3xl bg-gradient-to-br ${product.gradient} border border-zinc-800/50 overflow-hidden group`}>
+                  <div className={`relative aspect-square rounded-3xl bg-gradient-to-br ${product.gradient} border border-zinc-800/50 overflow-hidden group shadow-2xl shadow-black/50`}>
                     <div className={`absolute inset-0 bg-gradient-to-br ${product.accentColor} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
 
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-32 h-32 border border-zinc-700 rounded-full animate-pulse" />
+                      {/* Placeholder na render - teraz stabilny */}
+                      <div className="w-32 h-32 border border-zinc-700/50 rounded-full" />
                     </div>
                   </div>
                 </motion.div>

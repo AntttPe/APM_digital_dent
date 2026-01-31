@@ -3,7 +3,7 @@ import { Variants } from 'framer-motion';
 export const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] },
+  transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] as const },
 };
 
 export const staggerContainer: Variants = {
@@ -37,7 +37,7 @@ export const slideIn = (direction: 'left' | 'right' | 'up' | 'down' = 'up') => {
   return {
     initial: { ...directions[direction], opacity: 0 },
     animate: { x: 0, y: 0, opacity: 1 },
-    transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] },
+    transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] as const },
   };
 };
 
@@ -48,8 +48,8 @@ export const parallax = (offset: number = 100) => ({
 });
 
 export const reveal: Variants = {
-  hidden: {
-    opacity: 0,
+  hidden: { 
+    opacity: 0, 
     y: 50,
     clipPath: 'inset(0 0 100% 0)',
   },
@@ -59,7 +59,7 @@ export const reveal: Variants = {
     clipPath: 'inset(0 0 0% 0)',
     transition: {
       duration: 1.2,
-      ease: [0.6, 0.05, 0.01, 0.9],
+      ease: [0.6, 0.05, 0.01, 0.9] as const,
     },
   },
 };
