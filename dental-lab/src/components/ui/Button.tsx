@@ -1,7 +1,8 @@
-import { ButtonHTMLAttributes, forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+// NAPRAWA: Zmieniamy dziedziczenie typów, aby uniknąć konfliktu onAnimationStart
+interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary';
 }
 
