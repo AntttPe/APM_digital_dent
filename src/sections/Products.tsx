@@ -18,7 +18,7 @@ export default function Products() {
             key: 'retainers',
             gradient: 'from-blue-500/10 to-cyan-500/10',
             accentColor: 'from-blue-500 to-cyan-500',
-            hasSequence: false, // Zmień na true gdy będziesz mieć sekwencję
+            hasSequence: true, // Zmień na true gdy będziesz mieć sekwencję
             sequencePath: '/images/products/retainers/sequence',
             frameCount: 120,
         },
