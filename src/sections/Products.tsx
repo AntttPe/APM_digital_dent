@@ -15,19 +15,27 @@ export default function Products() {
 
     const products = [
         {
-            key: 'aligners',
+            key: 'retainers',
             gradient: 'from-blue-500/10 to-cyan-500/10',
             accentColor: 'from-blue-500 to-cyan-500',
-            hasSequence: true,
-            sequencePath: '/images/products/aligners/sequence',
+            hasSequence: false, // Zmień na true gdy będziesz mieć sekwencję
+            sequencePath: '/images/products/retainers/sequence',
             frameCount: 120,
         },
         {
             key: 'guards',
-            gradient: 'from-violet-500/10 to-purple-500/10',
-            accentColor: 'from-violet-500 to-purple-500',
+            gradient: 'from-pink-500/10 to-rose-500/10',
+            accentColor: 'from-pink-500 to-rose-500',
             hasSequence: true,
             sequencePath: '/images/products/guards/sequence',
+            frameCount: 120,
+        },
+        {
+            key: 'aligners',
+            gradient: 'from-zinc-400/10 to-slate-300/10',
+            accentColor: 'from-zinc-100 to-white',
+            hasSequence: true,
+            sequencePath: '/images/products/aligners/sequence',
             frameCount: 120,
         },
     ];

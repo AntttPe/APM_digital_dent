@@ -38,45 +38,66 @@
   "products": {
     "title": "Products",
     "subtitle": "Digitally designed. Precisely manufactured.",
-    "aligners": {
-      "title": "Whitening Aligners",
-      "description": "Individually designed whitening aligners based on 3D scans. Precision fit to patient anatomy with controlled thickness for comfort and predictability.",
+    "retainers": {
+      "title": "Retainer Splints",
+      "description": "Digitally designed retainer splints providing full control over insertion path and seating stability. Based on 3D scans, they enable precise management of geometry, thickness, and retention zones – unavailable in traditional thermoforming methods.",
       "features": [
         "Designed from 3D data",
-        "Precision anatomical fit",
-        "Optimized thickness",
-        "3D printed medical-grade material"
+        "Controlled insertion and removal path",
+        "Precise retention zone geometry",
+        "Optimized thickness in functional zones",
+        "Significantly higher durability than thermoformed splints",
+        "3D printed from certified medical material"
       ]
     },
     "guards": {
       "title": "Occlusal Guards",
-      "description": "Night guards designed for bruxism protection. Variable thickness design – 2mm in occlusal zones, 1mm in non-load-bearing areas. Digitally controlled thickness zones.",
+      "description": "Night guards designed for bruxism protection. Variable thickness design – 2mm in occlusal zones, 1mm in non-load-bearing areas. Significantly higher material and structural durability compared to traditional thermoforming methods.",
       "features": [
         "Bruxism protection",
         "Variable thickness zones",
         "Improved load distribution",
-        "Enhanced comfort"
+        "Enhanced comfort",
+        "Significantly higher durability than traditional methods",
+        "Designed from 3D data"
+      ]
+    },
+    "aligners": {
+      "title": "Whitening Aligners",
+      "description": "Individually designed whitening aligners based on 3D scans. Precision fit to patient anatomy with controlled thickness for comfort and predictable whitening results.",
+      "features": [
+        "Designed from 3D data",
+        "Precision anatomical fit",
+        "Optimized wall thickness",
+        "Controlled gel reservoirs",
+        "3D printed medical-grade material",
+        "Predictable whitening effects"
       ]
     }
   },
   "injection": {
     "tag": "Innovation",
     "title": "Injection stamp system",
-    "subtitle": "Tooth reconstruction based on pre-preparation scan. Precise 1:1 anatomy replication. Alternative to ceramic inlays.",
+    "description": "Digital system for type I cavity reconstruction based on pre-preparation scan. 3D printed form enables flowable composite injection and 1:1 anatomy reconstruction as an alternative to ceramic inlays.",
     "features": {
       "precision": {
-        "title": "Precise anatomy",
-        "desc": "1:1 replication from pre-op data"
+        "title": "1:1 Replication",
+        "desc": "Precise anatomy reconstruction from pre-operative data"
+      },
+      "time": {
+        "title": "Minimal steps",
+        "desc": "Simplified clinical protocol without laboratory stage"
       },
       "cost": {
-        "title": "Cost-effective",
-        "desc": "Economical type I cavity reconstruction"
+        "title": "Cost optimization",
+        "desc": "Economic alternative to ceramic inlays"
       },
       "workflow": {
-        "title": "Simple workflow",
-        "desc": "Flowable composite injection"
+        "title": "Digital control",
+        "desc": "Predictable outcome through CAD/CAM design"
       }
-    }
+    },
+    "note": "Product in technological development phase"
   },
   "technology": {
     "title": "Technology",
@@ -117,5 +138,59 @@
       "terms": "Terms of Service"
     },
     "copyright": "APM Digital Dental Lab. All rights reserved."
+  },
+  "software": {
+    "tag": "What we're building",
+    "title": "Next-generation CAD/CAM",
+    "subtitle": "for digital dentistry",
+    "vision": "We're building a new generation of CAD/CAM software, designed from the ground up for modern digital dentistry. Not as another interface layer — but as a new engine.",
+    "why": {
+      "title": "Why a new system?",
+      "description": "Today's CAD/CAM solutions were created over a decade ago. They're stable, proven — but technologically based on architecture not designed for AI or GPU.",
+      "old": [
+        "manual work on heavy meshes",
+        "dozens of clicks",
+        "compromises between time and quality"
+      ],
+      "new": "A system that understands tooth anatomy"
+    },
+    "capabilities": {
+      "anatomy": {
+        "title": "Digital anatomy",
+        "desc": "Analysis of shape, structure, and color directly from 3D scan data"
+      },
+      "recognition": {
+        "title": "Intelligent recognition",
+        "desc": "Automatic detection, numbering, and classification of teeth"
+      },
+      "reconstruction": {
+        "title": "AI-driven reconstruction",
+        "desc": "Geometry reconstruction preserving anatomy, occlusion, and proportions"
+      },
+      "gpu": {
+        "title": "GPU-accelerated",
+        "desc": "Real-time design leveraging modern graphics card power"
+      }
+    },
+    "focus": {
+      "title": "Focus on precision",
+      "items": {
+        "aligners": "Whitening aligners",
+        "retainers": "Retainer splints",
+        "guards": "Occlusal guards"
+      },
+      "subtitle": "No compromises. No unnecessary features."
+    },
+    "philosophy": {
+      "title": "Development philosophy",
+      "description": "We don't build 'everything at once'. We build exactly what has the greatest clinical and technological significance.",
+      "steps": [
+        "Quality",
+        "Speed",
+        "Scale"
+      ]
+    },
+    "status": "Project in intensive R&D phase",
+    "closing": "We're not improving existing tools. We're designing what should exist if CAD/CAM were built from scratch today."
   }
 }

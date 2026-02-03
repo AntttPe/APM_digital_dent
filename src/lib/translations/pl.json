@@ -38,45 +38,66 @@
   "products": {
     "title": "Produkty",
     "subtitle": "Zaprojektowane cyfrowo. Wyprodukowane precyzyjnie.",
-    "aligners": {
-      "title": "Nakładki wybielające",
-      "description": "Indywidualnie zaprojektowane nakładki wybielające oparte na skanach 3D. Precyzyjne dopasowanie do anatomii pacjenta z kontrolowaną grubością dla komfortu i przewidywalności.",
+    "retainers": {
+      "title": "Szyny retencyjne",
+      "description": "Cyfrowo projektowane szyny retencyjne zapewniające pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. Oparte na skanach 3D, umożliwiają precyzyjne zarządzanie geometrią, grubością i strefami retencji – niedostępne w tradycyjnych metodach termoformowania.",
       "features": [
         "Projektowanie z danych 3D",
-        "Precyzyjne dopasowanie do anatomii",
-        "Optymalizowana grubość",
-        "Druk 3D z materiału medycznego"
+        "Kontrolowany tor wprowadzania i zdejmowania",
+        "Precyzyjna geometria stref retencji",
+        "Zoptymalizowana grubość w strefach funkcjonalnych",
+        "Wielokrotnie wyższa trwałość niż szyny termoformowalne",
+        "Druk 3D z certyfikowanego materiału medycznego"
       ]
     },
     "guards": {
       "title": "Szyny relaksacyjne",
-      "description": "Szyny zgryzowe zaprojektowane dla ochrony przed bruksizmem. Zmienna grubość materiału – 2mm w strefach okluzyjnych, 1mm w obszarach nieobciążonych. Cyfrowo kontrolowane strefy grubości.",
+      "description": "Szyny zgryzowe zaprojektowane dla ochrony przed bruksizmem. Zmienna grubość materiału – 2mm w strefach okluzyjnych, 1mm w obszarach nieobciążonych. Znacznie wyższa wytrzymałość materiału i struktury w porównaniu z tradycyjnymi metodami termoformowania.",
       "features": [
         "Ochrona przed bruksizmem",
         "Zmienne strefy grubości",
         "Lepsze rozłożenie obciążenia",
-        "Zwiększony komfort użytkowania"
+        "Zwiększony komfort użytkowania",
+        "Wielokrotnie wyższa wytrzymałość niż metody tradycyjne",
+        "Projektowanie z danych 3D"
+      ]
+    },
+    "aligners": {
+      "title": "Nakładki wybielające",
+      "description": "Indywidualnie zaprojektowane nakładki wybielające oparte na skanach 3D. Precyzyjne dopasowanie do anatomii pacjenta z kontrolowaną grubością dla komfortu i przewidywalności rezultatów wybielania.",
+      "features": [
+        "Projektowanie z danych 3D",
+        "Precyzyjne dopasowanie do anatomii",
+        "Optymalizowana grubość ścianek",
+        "Kontrolowane rezerwuary żelowe",
+        "Druk 3D z materiału medycznego",
+        "Przewidywalne efekty wybielania"
       ]
     }
   },
   "injection": {
     "tag": "Innowacja",
     "title": "System stempla iniekcyjnego",
-    "subtitle": "Rekonstrukcja zębów w oparciu o skan sprzed preparacji. Precyzyjne odwzorowanie anatomii 1:1. Alternatywa dla wkładów ceramicznych.",
+    "description": "Cyfrowy system do odbudowy ubytków typu I, oparty na skanie sprzed preparacji. Drukowana forma 3D umożliwia iniekcję kompozytu flow i odbudowę anatomii 1:1 jako alternatywę dla wkładów ceramicznych.",
     "features": {
       "precision": {
-        "title": "Precyzyjna anatomia",
-        "desc": "Odwzorowanie 1:1 z danych przedoperacyjnych"
+        "title": "Odwzorowanie 1:1",
+        "desc": "Precyzyjna rekonstrukcja anatomii z danych przedoperacyjnych"
+      },
+      "time": {
+        "title": "Minimalna liczba kroków",
+        "desc": "Uproszczony protokół kliniczny bez etapu laboratoryjnego"
       },
       "cost": {
-        "title": "Niski koszt",
-        "desc": "Ekonomiczna rekonstrukcja ubytków typu I"
+        "title": "Optymalizacja kosztów",
+        "desc": "Ekonomiczna alternatywa dla wkładów ceramicznych"
       },
       "workflow": {
-        "title": "Prosty proces",
-        "desc": "Iniekcja kompozytu płynnego"
+        "title": "Cyfrowa kontrola",
+        "desc": "Przewidywalny wynik dzięki projektowaniu CAD/CAM"
       }
-    }
+    },
+    "note": "Produkt w fazie rozwoju technologicznego"
   },
   "technology": {
     "title": "Technologia",
@@ -117,5 +138,59 @@
       "terms": "Warunki usługi"
     },
     "copyright": "APM Digital Dental Lab. Wszelkie prawa zastrzeżone."
+  },
+  "software": {
+    "tag": "Nad czym pracujemy",
+    "title": "Next-generation CAD/CAM",
+    "subtitle": "dla stomatologii cyfrowej",
+    "vision": "Pracujemy nad nową generacją oprogramowania CAD/CAM, zaprojektowanego od podstaw z myślą o nowoczesnej stomatologii cyfrowej. Nie jako kolejna warstwa interfejsu — lecz jako nowy silnik.",
+    "why": {
+      "title": "Dlaczego nowy system?",
+      "description": "Dzisiejsze rozwiązania CAD/CAM powstały ponad dekadę temu. Są stabilne, sprawdzone — ale technologicznie oparte na architekturze, która nie była projektowana pod AI ani GPU.",
+      "old": [
+        "ręczna praca na ciężkich meshach",
+        "dziesiątki kliknięć",
+        "kompromisy między czasem a jakością"
+      ],
+      "new": "System, który rozumie anatomię zęba"
+    },
+    "capabilities": {
+      "anatomy": {
+        "title": "Cyfrowa anatomia",
+        "desc": "Analiza kształtu, struktury i koloru bezpośrednio z danych skanów 3D"
+      },
+      "recognition": {
+        "title": "Inteligentne rozpoznawanie",
+        "desc": "Automatyczne wykrywanie, numeracja i klasyfikacja zębów"
+      },
+      "reconstruction": {
+        "title": "AI-driven reconstruction",
+        "desc": "Odbudowa geometrii z zachowaniem anatomii, okluzji i proporcji"
+      },
+      "gpu": {
+        "title": "GPU-accelerated",
+        "desc": "Projektowanie w czasie rzeczywistym z wykorzystaniem mocy GPU"
+      }
+    },
+    "focus": {
+      "title": "Skupienie na precyzji",
+      "items": {
+        "aligners": "Nakładki wybielające",
+        "retainers": "Szyny retencyjne",
+        "guards": "Szyny relaksacyjne"
+      },
+      "subtitle": "Bez kompromisów. Bez zbędnych funkcji."
+    },
+    "philosophy": {
+      "title": "Filozofia rozwoju",
+      "description": "Nie budujemy 'wszystkiego naraz'. Budujemy dokładnie to, co ma największe znaczenie kliniczne i technologiczne.",
+      "steps": [
+        "Jakość",
+        "Szybkość",
+        "Skala"
+      ]
+    },
+    "status": "Projekt w fazie intensywnych prac badawczo-rozwojowych",
+    "closing": "Nie poprawiamy istniejących narzędzi. Projektujemy to, co powinno powstać, gdyby CAD/CAM tworzono dziś od zera."
   }
 }
