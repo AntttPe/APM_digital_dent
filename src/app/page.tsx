@@ -8,8 +8,8 @@ import Contact from '@/sections/Contact';
 
 export default function Home() {
     // ⚠️ PRODUCTION FLAGS
-    const SHOW_INJECTION_SYSTEM = true; // false na produkcji
-    const SHOW_SOFTWARE = true; // false na produkcji
+    const SHOW_INJECTION_SYSTEM = false; // false na produkcji
+    const SHOW_SOFTWARE = false; // false na produkcji
 
     return (
         <>
