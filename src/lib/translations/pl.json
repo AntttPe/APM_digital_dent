@@ -192,5 +192,15 @@
     },
     "status": "Projekt w fazie intensywnych prac badawczo-rozwojowych",
     "closing": "Nie poprawiamy istniejących narzędzi. Projektujemy to, co powinno powstać, gdyby CAD/CAM tworzono dziś od zera."
+  },
+  "professionalGate": {
+    "title": "Treści dla profesjonalistów",
+    "description": "Ta strona zawiera specjalistyczne informacje przeznaczone dla osób związanych z branżą stomatologiczną. Kontynuując, potwierdzasz, że jesteś specjalistą w dziedzinie stomatologii lub techniki dentystycznej.",
+    "audience": [
+      "Stomatolodzy",
+      "Technicy dentystyczni"
+    ],
+    "confirm": "Potwierdzam i kontynuuj",
+    "note": "Strona przeznaczona wyłącznie dla specjalistów branży stomatologicznej"
   }
 }

@@ -192,5 +192,15 @@
     },
     "status": "Project in intensive R&D phase",
     "closing": "We're not improving existing tools. We're designing what should exist if CAD/CAM were built from scratch today."
+  },
+  "professionalGate": {
+    "title": "Professional content",
+    "description": "This website contains specialized information intended for dental industry professionals. By continuing, you confirm that you are a specialist in dentistry or dental technology.",
+    "audience": [
+      "Dentists",
+      "Dental technicians"
+    ],
+    "confirm": "Confirm and continue",
+    "note": "Website intended exclusively for dental industry professionals"
   }
 }
