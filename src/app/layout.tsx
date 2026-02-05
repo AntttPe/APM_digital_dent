@@ -23,11 +23,8 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+// src/app/layout.tsx
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="pl" className={inter.variable}>
         <body className="font-sans">

@@ -38,6 +38,7 @@
   "products": {
     "title": "Produkty",
     "subtitle": "Zaprojektowane cyfrowo. Wyprodukowane precyzyjnie.",
+    "cta": "Szczegóły produktu",
     "retainers": {
       "title": "Szyny retencyjne",
       "description": "Cyfrowo projektowane szyny retencyjne zapewniające pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. Oparte na skanach 3D, umożliwiają precyzyjne zarządzanie geometrią, grubością i strefami retencji – niedostępne w tradycyjnych metodach termoformowania.",
@@ -72,6 +73,18 @@
         "Kontrolowane rezerwuary żelowe",
         "Druk 3D z materiału medycznego",
         "Przewidywalne efekty wybielania"
+      ]
+    },
+    "fixedRetainer": {
+      "title": "Retencja stała drukowana",
+      "description": "Cyfrowo projektowana retencja stała wykonana w technologii druku 3D z biokompatybilnej żywicy medycznej. W przeciwieństwie do tradycyjnych drucików wyginanych ręcznie na modelu, nasza metoda zapewnia ultraprecyzyjne dopasowanie, przewidywalną wytrzymałość oraz pełną powtarzalność.",
+      "features": [
+        "Projektowanie CAD/CAM z danych skanów 3D",
+        "Ultradokładne dopasowanie do anatomii pacjenta",
+        "Żywica biokompatybilna o wysokiej wytrzymałości",
+        "Powtarzalność i przewidywalność kształtu",
+        "Eliminacja błędów manualnego wyginania drutu",
+        "Kontrolowana grubość i geometria retencji"
       ]
     }
   },
@@ -202,5 +215,116 @@
     ],
     "confirm": "Potwierdzam i kontynuuj",
     "note": "Strona przeznaczona wyłącznie dla specjalistów branży stomatologicznej"
+  },
+  "productPage": {
+    "back": "Powrót",
+    "about": "O produkcie",
+    "keyFeatures": "Kluczowe cechy",
+    "pricing": {
+      "title": "Wycena",
+      "perUnit": "za jednostkę",
+      "includes": [
+        "Projektowanie CAD/CAM",
+        "Druk 3D z materiału medycznego",
+        "Kontrola jakości",
+        "Wysyłka kurierem"
+      ],
+      "cta": "Zapytaj o wycenę",
+      "note": "Ceny mogą się różnić w zależności od specyfikacji i ilości zamówienia"
+    },
+    "cta": {
+      "title": "Zainteresowany współpracą?",
+      "subtitle": "Skontaktuj się z nami, aby omówić szczegóły i rozpocząć cyfrową transformację swojej praktyki",
+      "button": "Skontaktuj się"
+    },
+    "retainers": {
+      "title": "Szyny retencyjne",
+      "tagline": "Precyzyjna retencja z kontrolą cyfrową",
+      "description": [
+        "Cyfrowo projektowane szyny retencyjne zapewniają pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. W przeciwieństwie do tradycyjnych metod termoformowania, nasze rozwiązanie umożliwia precyzyjne zarządzanie geometrią, grubością oraz strefami retencji.",
+        "Dzięki drukowaniu 3D z certyfikowanych materiałów medycznych osiągamy wielokrotnie wyższą wytrzymałość mechaniczną, co przekłada się na długoterminową niezawodność w codziennym użytkowaniu."
+      ],
+      "features": [
+        "Precyzyjna geometria stref retencji zaprojektowana z danych 3D",
+        "Kontrolowany tor wprowadzania i zdejmowania dla komfortu pacjenta",
+        "Zoptymalizowana grubość w strefach funkcjonalnych",
+        "Znacząco wyższa wytrzymałość niż szyny termoformowalne",
+        "Materiał medyczny certyfikowany do długoterminowego kontaktu",
+        "Przewidywalna retencja dzięki cyfrowej kontroli procesu"
+      ],
+      "specs": [
+        { "label": "Materiał", "value": "Żywica medyczna Class IIa" },
+        { "label": "Grubość", "value": "0.75 - 1.5 mm" },
+        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+      ],
+      "price": "od 180 zł"
+    },
+    "guards": {
+      "title": "Szyny relaksacyjne",
+      "tagline": "Ochrona przed bruksizmem z precyzją cyfrową",
+      "description": [
+        "Szyny zgryzowe zaprojektowane dla maksymalnej ochrony przed bruksizmem. Wykorzystujemy zaawansowane projektowanie CAD/CAM do stworzenia zmiennej grubości materiału – 2mm w strefach okluzyjnych dla absorpcji sił zgryzowych, 1mm w obszarach nieobciążonych dla komfortu.",
+        "Cyfrowo kontrolowane strefy grubości zapewniają optymalne rozłożenie obciążenia i długotrwałą ochronę tkanek. Znacznie wyższa wytrzymałość materiału w porównaniu z tradycyjnymi metodami termoformowania gwarantuje długą żywotność produktu."
+      ],
+      "features": [
+        "Zmienna grubość dostosowana do rozkładu sił zgryzowych",
+        "Precyzyjne dopasowanie do anatomii pacjenta",
+        "Optymalne rozłożenie obciążenia w strefach okluzyjnych",
+        "Wielokrotnie wyższa wytrzymałość niż szyny termoformowalne",
+        "Zwiększony komfort użytkowania dzięki ergonomicznej geometrii",
+        "Materiał odporny na długotrwałe obciążenia mechaniczne"
+      ],
+      "specs": [
+        { "label": "Materiał", "value": "Żywica medyczna wysoka wytrzymałość" },
+        { "label": "Grubość", "value": "1-2 mm (zmienne strefy)" },
+        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+      ],
+      "price": "od 220 zł"
+    },
+    "aligners": {
+      "title": "Szyny do wybielania nakładowego",
+      "tagline": "Precyzja i komfort w terapii wybielającej",
+      "description": [
+        "Indywidualnie zaprojektowane szyny do wybielania nakładowego, oparte na precyzyjnych skanach 3D. Każda szyna jest projektowana z uwzględnieniem anatomii pacjenta, zapewniając idealne dopasowanie i kontrolowaną grubość dla komfortu podczas terapii.",
+        "Zoptymalizowane rezerwuary żelowe gwarantują równomierne rozprowadzenie preparatu wybielającego, a kontrolowana geometria zapewnia przewidywalne efekty terapii przy minimalnym dyskomforcie dla pacjenta."
+      ],
+      "features": [
+        "Projektowanie z danych skanów 3D dla idealnego dopasowania",
+        "Kontrolowane rezerwuary żelowe dla równomiernego wybielania",
+        "Optymalizowana grubość ścianek dla komfortu noszenia",
+        "Precyzyjne dopasowanie do anatomii pacjenta",
+        "Materiał medyczny bezpieczny dla tkanek jamy ustnej",
+        "Przewidywalne efekty wybielania dzięki cyfrowej kontroli"
+      ],
+      "specs": [
+        { "label": "Materiał", "value": "Żywica medyczna biokompatybilna" },
+        { "label": "Grubość", "value": "0.5-0.75 mm" },
+        { "label": "Czas produkcji", "value": "2-4 dni robocze" }
+      ],
+      "price": "od 150 zł"
+    },
+    "fixedRetainer": {
+      "title": "Retencja stała drukowana",
+      "tagline": "Precyzja cyfrowa zamiast ręcznego wyginania",
+      "description": [
+        "Cyfrowo projektowana retencja stała wykonana w technologii druku 3D z biokompatybilnej żywicy medycznej. Każda retencja jest projektowana indywidualnie na podstawie skanów 3D, co zapewnia idealne dopasowanie do anatomii łuku zębowego pacjenta.",
+        "W przeciwieństwie do tradycyjnych drucików stalowych wyginanych ręcznie na modelu, nasza metoda eliminuje ryzyko błędów manualnych, zapewnia pełną powtarzalność geometrii oraz kontrolowaną wytrzymałość materiału. Żywica biokompatybilna charakteryzuje się wysoką odpornością mechaniczną i długotrwałą stabilnością retencji."
+      ],
+      "features": [
+        "Projektowanie CAD/CAM z precyzyjnych danych skanów 3D",
+        "Ultradokładne dopasowanie do anatomii łuku zębowego",
+        "Żywica biokompatybilna certyfikowana medycznie",
+        "Przewidywalna wytrzymałość mechaniczna materiału",
+        "Eliminacja zmienności ręcznego wyginania drutu",
+        "Kontrolowana geometria i grubość retencji",
+        "Pełna powtarzalność kształtu między produkcjami"
+      ],
+      "specs": [
+        { "label": "Materiał", "value": "Żywica biokompatybilna Class IIa" },
+        { "label": "Grubość", "value": "0.6-0.8 mm" },
+        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+      ],
+      "price": "od 200 zł"
+    }
   }
 }

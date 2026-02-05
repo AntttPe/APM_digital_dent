@@ -1,9 +1,10 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import { useTranslation } from '@/lib/i18n';
 import VideoSequence from '@/components/ui/VideoSequence';
+import Link from 'next/link';
 
 export default function Products() {
     const { t } = useTranslation();
@@ -16,14 +17,16 @@ export default function Products() {
     const products = [
         {
             key: 'retainers',
+            slug: 'szyny-retencyjne',
             gradient: 'from-blue-500/10 to-cyan-500/10',
             accentColor: 'from-blue-500 to-cyan-500',
-            hasSequence: true, // Zmień na true gdy będziesz mieć sekwencję
+            hasSequence: true,
             sequencePath: '/images/products/retainers/sequence',
             frameCount: 120,
         },
         {
             key: 'guards',
+            slug: 'szyny-relaksacyjne',
             gradient: 'from-pink-500/10 to-rose-500/10',
             accentColor: 'from-pink-500 to-rose-500',
             hasSequence: true,
@@ -32,10 +35,20 @@ export default function Products() {
         },
         {
             key: 'aligners',
+            slug: 'szyny-do-wybielania',
             gradient: 'from-zinc-400/10 to-slate-300/10',
             accentColor: 'from-zinc-100 to-white',
             hasSequence: true,
             sequencePath: '/images/products/aligners/sequence',
+            frameCount: 120,
+        },
+        {
+            key: 'fixedRetainer',
+            slug: 'retencja-stala-drukowana',
+            gradient: 'from-emerald-500/10 to-teal-500/10',
+            accentColor: 'from-emerald-500 to-teal-500',
+            hasSequence: false, // Zmień na true gdy dodasz sekwencję
+            sequencePath: '/images/products/fixed-retainer/sequence',
             frameCount: 120,
         },
     ];
@@ -66,6 +79,7 @@ export default function Products() {
                     {products.map((product, index) => {
                         const isEven = index % 2 === 0;
                         const productRef = useRef<HTMLDivElement>(null);
+                        const features = t(`products.${product.key}.features`);
 
                         return (
                             <motion.div
@@ -119,8 +133,8 @@ export default function Products() {
                                         {t(`products.${product.key}.description`)}
                                     </p>
 
-                                    <ul className="space-y-4">
-                                        {(t(`products.${product.key}.features`) as string[]).map((feature, i) => (
+                                    <ul className="space-y-4 mb-8">
+                                        {Array.isArray(features) && features.map((feature: string, i: number) => (
                                             <motion.li
                                                 key={i}
                                                 initial={{ opacity: 0, x: -20 }}
@@ -134,6 +148,27 @@ export default function Products() {
                                             </motion.li>
                                         ))}
                                     </ul>
+
+                                    {/* CTA Button */}
+                                    <Link href={`/produkty/${product.slug}`}>
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-zinc-700 transition-all bg-zinc-900/30 hover:bg-zinc-900/50"
+                                        >
+                                            <span className="text-sm text-zinc-300 group-hover:text-white transition-colors">
+                                                {t('products.cta')}
+                                            </span>
+                                            <svg
+                                                className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 group-hover:translate-x-1 transition-all"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </motion.button>
+                                    </Link>
                                 </motion.div>
                             </motion.div>
                         );
