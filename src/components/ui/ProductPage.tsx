@@ -164,6 +164,92 @@ export default function ProductPage({
                         ))}
                     </motion.div>
 
+                    {/*narazie tylko testowo dodaje do retencji:    */}
+                    {/* Comparison bars - TYLKO dla fixedRetainer */}
+                    {productKey === 'fixedRetainer' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mb-32"
+                        >
+                            <h2 className="text-2xl font-light text-center mb-12 text-zinc-300">
+                                {t('productPage.comparison.title')}
+                            </h2>
+
+                            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+                                {(t(`productPage.comparison.items`) as Array<{
+                                    label: string;
+                                    wire: number;
+                                    printed: number;
+                                    description: string;
+                                }>).map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.15 }}
+                                    >
+                                        {/* Label */}
+                                        <div className="mb-6">
+                                            <h3 className="text-lg font-light text-zinc-300 mb-2">
+                                                {item.label}
+                                            </h3>
+                                            <p className="text-sm text-zinc-500 leading-relaxed">
+                                                {item.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Bars */}
+                                        <div className="space-y-5">
+                                            {/* 3D printed - FIRST, full bar */}
+                                            <div>
+              <span className="text-xs text-zinc-400 uppercase tracking-wider block mb-2">
+                {t('productPage.comparison.printed')}
+              </span>
+                                                <div className="w-full h-2 bg-zinc-900 rounded-full overflow-hidden">
+                                                    <motion.div
+                                                        initial={{ width: 0 }}
+                                                        whileInView={{ width: `${item.printed}%` }}
+                                                        viewport={{ once: true }}
+                                                        transition={{
+                                                            duration: 1.4,
+                                                            delay: index * 0.15 + 0.3,
+                                                            ease: [0.6, 0.05, 0.01, 0.9]
+                                                        }}
+                                                        className={`h-full bg-gradient-to-r ${accentColor} rounded-full`}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            {/* Wire retainer - SECOND, shorter bar */}
+                                            <div>
+              <span className="text-xs text-zinc-600 uppercase tracking-wider block mb-2">
+                {t('productPage.comparison.wire')}
+              </span>
+                                                <div className="w-full h-2 bg-zinc-900 rounded-full overflow-hidden">
+                                                    <motion.div
+                                                        initial={{ width: 0 }}
+                                                        whileInView={{ width: `${item.wire}%` }}
+                                                        viewport={{ once: true }}
+                                                        transition={{
+                                                            duration: 1.2,
+                                                            delay: index * 0.15 + 0.4,
+                                                            ease: [0.6, 0.05, 0.01, 0.9]
+                                                        }}
+                                                        className="h-full bg-zinc-700 rounded-full"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+
+
                     {/* Pricing */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

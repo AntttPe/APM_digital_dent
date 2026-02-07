@@ -33,35 +33,37 @@ export default function Header() {
             {t('header.logo')}
           </Link>
 
-          <div className="flex items-center gap-8">
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <Link
-                  href={getNavLink('workflow')}
-                  className="text-zinc-400 hover:text-white transition-colors"
-              >
-                {t('header.nav.workflow')}
-              </Link>
-              <Link
-                  href={getNavLink('products')}
-                  className="text-zinc-400 hover:text-white transition-colors"
-              >
-                {t('header.nav.products')}
-              </Link>
-              <Link
-                  href={getNavLink('technology')}
-                  className="text-zinc-400 hover:text-white transition-colors"
-              >
-                {t('header.nav.technology')}
-              </Link>
-              <Link
-                  href={getNavLink('contact')}
-                  className="text-zinc-400 hover:text-white transition-colors"
-              >
-                {t('header.nav.contact')}
-              </Link>
-            </div>
-
-            <LanguageSwitch />
+          <div className="hidden md:flex items-center gap-6 text-sm">
+            <Link
+                href={getNavLink('workflow')}
+                className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {t('header.nav.workflow')}
+            </Link>
+            <Link
+                href={getNavLink('products')}
+                className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {t('header.nav.products')}
+            </Link>
+            <Link
+                href="/proces"
+                className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {t('header.nav.process')}
+            </Link>
+            <Link
+                href={getNavLink('technology')}
+                className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {t('header.nav.technology')}
+            </Link>
+            <Link
+                href={getNavLink('contact')}
+                className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {t('header.nav.contact')}
+            </Link>
           </div>
         </nav>
       </motion.header>

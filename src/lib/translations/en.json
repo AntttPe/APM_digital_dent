@@ -5,17 +5,19 @@
       "workflow": "Workflow",
       "products": "Products",
       "technology": "Technology",
-      "contact": "Contact"
+      "contact": "Contact",
+      "process": "Partnership"
     }
   },
   "hero": {
-    "title": "The Future of Digital Dentistry",
+    "title": "The future of digital dentistry",
     "subtitle": "Digital precision. Perfect fit.",
-    "tag": "Digitally Designed"
+    "tag": "Digitally engineered",
+    "processLink": "View the workflow"
   },
   "workflow": {
-    "title": "A Purely Digital Workflow",
-    "subtitle": "From scan to product. Controlled precision at every stage.",
+    "title": "Purely digital workflow",
+    "subtitle": "From scan to product. Controlled precision at every step.",
     "steps": {
       "scan": {
         "title": "3D Scan",
@@ -23,7 +25,7 @@
       },
       "design": {
         "title": "Design",
-        "desc": "Digital adaptation to patient anatomy"
+        "desc": "Digital adaptation to anatomy"
       },
       "print": {
         "title": "3D Print",
@@ -37,77 +39,77 @@
   },
   "products": {
     "title": "Products",
-    "subtitle": "Digitally designed. Manufactured with precision.",
-    "cta": "Product Details",
+    "subtitle": "Digitally designed. Precisely manufactured.",
+    "cta": "Product details",
     "retainers": {
       "title": "Retention Splints",
-      "description": "Digitally designed retainers ensuring full control over the insertion path and seating stability. Based on 3D scans, allowing for precise management of geometry, thickness, and retention zones – unattainable with traditional thermoforming methods.",
+      "description": "Digitally engineered retention splints providing full control over the insertion path and seating stability. Based on 3D scans, they allow for precise management of geometry, thickness, and retention zones—capabilities unattainable with traditional thermoforming methods.",
       "features": [
         "Designed from 3D data",
         "Controlled insertion and removal path",
-        "Precise geometry of retention zones",
+        "Precise retention zone geometry",
         "Optimized thickness in functional zones",
-        "Significantly higher durability than thermoformed splints",
-        "3D printed using certified medical material"
+        "Superior durability compared to thermoforming",
+        "3D printed with certified medical material"
       ]
     },
     "guards": {
       "title": "Occlusal Splints",
-      "description": "Occlusal splints designed for protection against bruxism. Variable material thickness – 2mm in occlusal zones, 1mm in unloaded areas. Significantly higher material and structural strength compared to traditional thermoforming methods.",
+      "description": "Splints designed for protection against bruxism. Variable material thickness—2mm in occlusal zones, 1mm in non-load bearing areas. Significantly higher structural and material durability compared to traditional thermoforming methods.",
       "features": [
         "Protection against bruxism",
         "Variable thickness zones",
-        "Better load distribution",
-        "Increased user comfort",
-        "Multi-fold higher durability than traditional methods",
+        "Optimized load distribution",
+        "Enhanced comfort",
+        "Superior strength over traditional methods",
         "Designed from 3D data"
       ]
     },
     "aligners": {
       "title": "Whitening Trays",
-      "description": "Individually designed whitening trays based on 3D scans. Precise adaptation to patient anatomy with controlled thickness for comfort and predictability of whitening results.",
+      "description": "Custom-designed whitening trays based on 3D scans. Precise anatomical fit with controlled thickness for maximum comfort and predictable whitening results.",
       "features": [
         "Designed from 3D data",
-        "Precise fit to anatomy",
+        "Precise anatomical fit",
         "Optimized wall thickness",
         "Controlled gel reservoirs",
-        "3D printed using medical-grade material",
+        "3D printed with medical-grade material",
         "Predictable whitening effects"
       ]
     },
     "fixedRetainer": {
-      "title": "Printed Fixed Retainer",
-      "description": "Digitally designed fixed retention made using 3D printing technology with biocompatible medical resin. Unlike traditional wires bent by hand on a model, our method ensures ultra-precise fit, predictable strength, and full repeatability.",
+      "title": "Printed Fixed Retainers",
+      "description": "Digitally designed fixed retention crafted via 3D printing using biocompatible medical resin. Unlike traditional wires bent by hand on a model, our method ensures an ultra-precise fit, predictable strength, and complete repeatability.",
       "features": [
         "CAD/CAM design from 3D scan data",
-        "Ultra-accurate fit to patient anatomy",
+        "Ultra-precise anatomical fit",
         "High-strength biocompatible resin",
         "Shape repeatability and predictability",
-        "Elimination of manual wire bending errors",
+        "Elimination of manual wire-bending errors",
         "Controlled retention thickness and geometry"
       ]
     }
   },
   "injection": {
     "tag": "Innovation",
-    "title": "Injection Stamp System",
-    "description": "A digital system for Class I cavity restoration, based on a pre-preparation scan. The 3D printed mold allows for flowable composite injection and 1:1 anatomy restoration as an alternative to ceramic inlays.",
+    "title": "Injection Template System",
+    "description": "A digital system for Class I restorations, based on pre-preparation scans. A 3D printed mold enables flow composite injection and 1:1 anatomy reconstruction as an alternative to ceramic inlays.",
     "features": {
       "precision": {
         "title": "1:1 Replication",
-        "desc": "Precise reconstruction of anatomy from pre-op data"
+        "desc": "Precise anatomy reconstruction from pre-op data"
       },
       "time": {
-        "title": "Minimal Steps",
-        "desc": "Simplified clinical protocol with no lab phase"
+        "title": "Minimal steps",
+        "desc": "Simplified clinical protocol with no lab stage"
       },
       "cost": {
-        "title": "Cost Optimization",
+        "title": "Cost optimization",
         "desc": "Economical alternative to ceramic inlays"
       },
       "workflow": {
-        "title": "Digital Control",
-        "desc": "Predictable result thanks to CAD/CAM design"
+        "title": "Digital control",
+        "desc": "Predictable results via CAD/CAM design"
       }
     },
     "note": "Product in technological development phase"
@@ -117,29 +119,29 @@
     "description": "We utilize advanced 3D printing and digital design technologies to create precise dental solutions from scan data.",
     "points": {
       "digital": {
-        "title": "Full Digital Workflow",
+        "title": "Full digital workflow",
         "desc": "Elimination of analog errors"
       },
       "precision": {
-        "title": "Controlled Precision",
+        "title": "Controlled precision",
         "desc": "Accuracy at the micron level"
       },
       "material": {
-        "title": "Medical Materials",
+        "title": "Medical materials",
         "desc": "Certified biocompatible resins"
       }
     }
   },
   "contact": {
-    "title": "Start Cooperation",
+    "title": "Start a partnership",
     "subtitle": "Contact us to learn more about our solutions.",
-    "email": "Send Email",
-    "phone": "Call Us",
-    "footer": "We will reply within 24 hours"
+    "email": "Send email",
+    "phone": "Call us",
+    "footer": "We respond within 24 hours"
   },
   "footer": {
     "company": {
-      "title": "About Us",
+      "title": "About us",
       "description": "A digital dental laboratory specializing in precise 3D printing."
     },
     "contact": {
@@ -153,40 +155,40 @@
     "copyright": "APM Digital Dental Lab. All rights reserved."
   },
   "software": {
-    "tag": "What we are working on",
+    "tag": "Current R&D",
     "title": "Next-generation CAD/CAM",
     "subtitle": "for digital dentistry",
-    "vision": "We are working on the next generation of CAD/CAM software, designed from the ground up for modern digital dentistry. Not as another interface layer — but as a new engine.",
+    "vision": "We are working on the next generation of CAD/CAM software, designed from the ground up for modern digital dentistry. Not as another interface layer—but as a new engine.",
     "why": {
       "title": "Why a new system?",
-      "description": "Today's CAD/CAM solutions were built over a decade ago. They are stable and proven — but technologically based on an architecture not designed for AI or GPUs.",
+      "description": "Today's CAD/CAM solutions originated over a decade ago. They are stable and proven—but technologically based on architecture not designed for AI or GPUs.",
       "old": [
-        "Manual work on heavy meshes",
-        "Dozens of clicks",
-        "Compromises between time and quality"
+        "manual work on heavy meshes",
+        "dozens of clicks",
+        "compromises between time and quality"
       ],
       "new": "A system that understands tooth anatomy"
     },
     "capabilities": {
       "anatomy": {
-        "title": "Digital Anatomy",
+        "title": "Digital anatomy",
         "desc": "Analysis of shape, structure, and color directly from 3D scan data"
       },
       "recognition": {
-        "title": "Intelligent Recognition",
+        "title": "Smart recognition",
         "desc": "Automatic detection, numbering, and classification of teeth"
       },
       "reconstruction": {
         "title": "AI-driven reconstruction",
-        "desc": "Geometry reconstruction preserving anatomy, occlusion, and proportions"
+        "desc": "Geometry restoration preserving anatomy, occlusion, and proportions"
       },
       "gpu": {
         "title": "GPU-accelerated",
-        "desc": "Real-time design utilizing GPU power"
+        "desc": "Real-time design leveraging GPU power"
       }
     },
     "focus": {
-      "title": "Focus on Precision",
+      "title": "Focus on precision",
       "items": {
         "aligners": "Whitening Trays",
         "retainers": "Retention Splints",
@@ -196,7 +198,7 @@
     },
     "philosophy": {
       "title": "Development Philosophy",
-      "description": "We don't build 'everything at once'. We build exactly what has the greatest clinical and technological significance.",
+      "description": "We don't build 'everything at once'. We build exactly what has the greatest clinical and technological impact.",
       "steps": [
         "Quality",
         "Speed",
@@ -204,51 +206,70 @@
       ]
     },
     "status": "Project in intensive R&D phase",
-    "closing": "We are not improving existing tools. We are designing what should exist if CAD/CAM were created today from scratch."
+    "closing": "We aren't fixing existing tools. We are designing what should exist if CAD/CAM were created today from scratch."
   },
   "professionalGate": {
-    "title": "Content for Professionals",
-    "description": "This site contains specialized information intended for dental professionals. By continuing, you confirm that you are a dentist or dental technician.",
+    "title": "Professional Content",
+    "description": "This site contains specialized information intended for the dental industry. By continuing, you confirm that you are a dental professional or dental technician.",
     "audience": [
       "Dentists",
       "Dental Technicians"
     ],
-    "confirm": "Confirm and Continue",
-    "note": "Site intended exclusively for dental industry specialists"
+    "confirm": "Confirm and continue",
+    "note": "Content exclusively for dental professionals"
   },
   "productPage": {
     "back": "Back",
-    "about": "About Product",
-    "keyFeatures": "Key Features",
+    "about": "About the product",
+    "keyFeatures": "Key features",
+    "comparison": {
+      "title": "Technical Comparison",
+      "printed": "3D Printed",
+      "wire": "Traditional Method",
+      "items": [
+        {
+          "label": "Geometry predictability",
+          "description": "Digitally engineered. 1:1 reproducibility.",
+          "wire": 45,
+          "printed": 100
+        },
+        {
+          "label": "Shape and thickness control",
+          "description": "CAD designed, zero manual variability.",
+          "wire": 40,
+          "printed": 100
+        }
+      ]
+    },
     "pricing": {
       "title": "Pricing",
       "perUnit": "per unit",
       "includes": [
         "CAD/CAM Design",
-        "3D Printing (Medical Material)",
+        "3D Print (Medical Grade)",
         "Quality Control",
         "Courier Shipping"
       ],
-      "cta": "Request a Quote",
-      "note": "Prices may vary depending on specifications and order volume"
+      "cta": "Request a quote",
+      "note": "Prices may vary based on specifications and volume"
     },
     "cta": {
-      "title": "Interested in cooperation?",
-      "subtitle": "Contact us to discuss details and start the digital transformation of your practice",
-      "button": "Contact Us"
+      "title": "Interested in a partnership?",
+      "subtitle": "Contact us to discuss details and begin the digital transformation of your practice.",
+      "button": "Get in touch"
     },
     "retainers": {
       "title": "Retention Splints",
       "tagline": "Precise retention with digital control",
       "description": [
-        "Digitally designed retention splints provide full control over the insertion path and seating stability. Unlike traditional thermoforming methods, our solution enables precise management of geometry, thickness, and retention zones.",
-        "Thanks to 3D printing with certified medical materials, we achieve significantly higher mechanical strength, translating to long-term reliability in daily use."
+        "Digitally engineered retention splints provide complete control over the insertion path and seating stability. Unlike traditional thermoforming methods, our solution enables precise management of geometry, thickness, and retention zones.",
+        "By 3D printing with certified medical materials, we achieve significantly higher mechanical strength, translating to long-term reliability in daily use."
       ],
       "features": [
         "Precise retention zone geometry designed from 3D data",
         "Controlled insertion and removal path for patient comfort",
         "Optimized thickness in functional zones",
-        "Significantly higher strength than thermoformed splints",
+        "Significantly higher durability than thermoformed splints",
         "Medical material certified for long-term contact",
         "Predictable retention thanks to digital process control"
       ],
@@ -263,16 +284,16 @@
       "title": "Occlusal Splints",
       "tagline": "Bruxism protection with digital precision",
       "description": [
-        "Occlusal splints designed for maximum protection against bruxism. We use advanced CAD/CAM design to create variable material thickness – 2mm in occlusal zones for bite force absorption, and 1mm in unloaded areas for comfort.",
-        "Digitally controlled thickness zones ensure optimal load distribution and long-term tissue protection. Significantly higher material strength compared to traditional thermoforming methods guarantees a long product lifespan."
+        "Splints designed for maximum protection against bruxism. We utilize advanced CAD/CAM design to create variable material thickness—2mm in occlusal zones for force absorption, and 1mm in non-load bearing areas for comfort.",
+        "Digitally controlled thickness zones ensure optimal load distribution and long-term tissue protection. Significantly higher material strength compared to traditional thermoforming guarantees product longevity."
       ],
       "features": [
-        "Variable thickness adapted to bite force distribution",
-        "Precise fit to patient anatomy",
+        "Variable thickness adapted to occlusal force distribution",
+        "Precise anatomical fit",
         "Optimal load distribution in occlusal zones",
-        "Multi-fold higher durability than thermoformed splints",
-        "Increased user comfort thanks to ergonomic geometry",
-        "Material resistant to long-term mechanical loads"
+        "Multi-fold higher strength than thermoformed splints",
+        "Enhanced comfort via ergonomic geometry",
+        "Material resistant to long-term mechanical stress"
       ],
       "specs": [
         { "label": "Material", "value": "High-strength Medical Resin" },
@@ -282,19 +303,19 @@
       "price": "from 220 PLN"
     },
     "aligners": {
-      "title": "Tray Whitening Splints",
+      "title": "Whitening Trays",
       "tagline": "Precision and comfort in whitening therapy",
       "description": [
-        "Individually designed tray whitening splints, based on precise 3D scans. Each splint is designed considering patient anatomy, ensuring a perfect fit and controlled thickness for comfort during therapy.",
+        "Individually designed whitening trays based on precise 3D scans. Each tray is engineered with patient anatomy in mind, ensuring a perfect fit and controlled thickness for comfort during therapy.",
         "Optimized gel reservoirs guarantee even distribution of the whitening agent, while controlled geometry ensures predictable therapy results with minimal patient discomfort."
       ],
       "features": [
         "Designed from 3D scan data for a perfect fit",
         "Controlled gel reservoirs for even whitening",
-        "Optimized wall thickness for wearing comfort",
+        "Optimized wall thickness for wear comfort",
         "Precise adaptation to patient anatomy",
         "Medical material safe for oral tissues",
-        "Predictable whitening effects thanks to digital control"
+        "Predictable whitening effects via digital control"
       ],
       "specs": [
         { "label": "Material", "value": "Biocompatible Medical Resin" },
@@ -304,18 +325,18 @@
       "price": "from 150 PLN"
     },
     "fixedRetainer": {
-      "title": "Printed Fixed Retainer",
+      "title": "Printed Fixed Retainers",
       "tagline": "Digital precision instead of manual bending",
       "description": [
-        "Digitally designed fixed retention made using 3D printing technology with biocompatible medical resin. Each retainer is individually designed based on 3D scans, ensuring a perfect fit to the anatomy of the patient's dental arch.",
-        "Unlike traditional steel wires bent by hand on a model, our method eliminates the risk of manual errors, ensures full geometry repeatability, and controlled material strength. Biocompatible resin is characterized by high mechanical resistance and long-term retention stability."
+        "Digitally designed fixed retention crafted via 3D printing using biocompatible medical resin. Each retainer is individually designed based on 3D scans, ensuring a perfect fit to the patient's dental arch anatomy.",
+        "Unlike traditional steel wires bent by hand on a model, our method eliminates the risk of manual error, ensures full geometry repeatability, and controlled material strength. The biocompatible resin features high mechanical resistance and long-term retention stability."
       ],
       "features": [
         "CAD/CAM design from precise 3D scan data",
-        "Ultra-accurate fit to the dental arch anatomy",
+        "Ultra-accurate fit to dental arch anatomy",
         "Medically certified biocompatible resin",
-        "Predictable mechanical strength of the material",
-        "Elimination of manual wire bending variability",
+        "Predictable mechanical material strength",
+        "Elimination of manual wire-bending variability",
         "Controlled retention geometry and thickness",
         "Full shape repeatability between productions"
       ],
@@ -325,6 +346,78 @@
         { "label": "Production Time", "value": "3-5 business days" }
       ],
       "price": "from 200 PLN"
+    }
+  },
+  "process": {
+    "back": "Back",
+    "hero": {
+      "title": "Partnership Workflow",
+      "subtitle": "From clinical data to application. 6 stages of digital precision."
+    },
+    "steps": {
+      "clinicalData": {
+        "title": "Clinical Data",
+        "description": "The practice sends a 3D scan electronically along with design requirements. We consult on preferences and technical specifications together.",
+        "time": "5-10 minutes"
+      },
+      "digitalPlanning": {
+        "title": "Digital Planning",
+        "description": "Custom CAD/CAM design adapted to patient anatomy. Full control over geometry, thickness, and fit.",
+        "time": "1-2 days"
+      },
+      "labProduction": {
+        "title": "Production",
+        "description": "Precise 3D printing with certified medical materials. Technology ensuring repeatability and accuracy at the micron level.",
+        "time": "1 day"
+      },
+      "qualityControl": {
+        "title": "Quality Control",
+        "description": "Advanced QA process. Each product undergoes multi-stage dimensional and visual verification before shipping.",
+        "time": "2-4 hours"
+      },
+      "shipping": {
+        "title": "Shipping",
+        "description": "Secure packaging and express courier delivery. Real-time shipment tracking.",
+        "time": "1-3 days"
+      },
+      "clinicalApplication": {
+        "title": "Clinical Application",
+        "description": "Finished product ready for immediate use in the practice. Precise fit ensures patient comfort and therapy effectiveness.",
+        "time": "Immediate"
+      }
+    },
+    "summary": {
+      "highlight": "Fast turnaround",
+      "title": "Design + Production in max. 1 business day",
+      "subtitle": "Digital workflow eliminates delays. From design approval to finished product at express speed.",
+      "stats": [
+        {
+          "value": "24h",
+          "label": "Design + Production",
+          "color": "from-emerald-500 to-green-500"
+        },
+        {
+          "value": "100%",
+          "label": "Digital",
+          "color": "from-blue-500 to-cyan-500"
+        },
+        {
+          "value": "±10µm",
+          "label": "Precision",
+          "color": "from-purple-500 to-pink-500"
+        },
+        {
+          "value": "1-3",
+          "label": "Delivery Days",
+          "color": "from-orange-500 to-yellow-500"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Interested in a partnership?",
+      "subtitle": "Start a collaboration based on precision and modern technology.",
+      "button": "Get in touch",
+      "products": "View products"
     }
   }
 }
