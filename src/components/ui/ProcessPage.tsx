@@ -376,6 +376,19 @@ export default function ProcessPage() {
                         ))}
                     </div>
 
+                    {/* Disclaimer */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="text-center mb-12"
+                    >
+                        <p className="text-xs text-zinc-600 max-w-3xl mx-auto leading-relaxed">
+                            {t('process.summary.disclaimer')}
+                        </p>
+                    </motion.div>
+
                     {/* CTA */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

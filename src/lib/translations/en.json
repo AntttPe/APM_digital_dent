@@ -351,29 +351,29 @@
   "process": {
     "back": "Back",
     "hero": {
-      "title": "Partnership Workflow",
+      "title": "Collaboration Process",
       "subtitle": "From clinical data to application. 6 stages of digital precision."
     },
     "steps": {
       "clinicalData": {
         "title": "Clinical Data",
-        "description": "The practice sends a 3D scan electronically along with design requirements. We consult on preferences and technical specifications together.",
+        "description": "Practice sends 3D scan electronically with design requirements. We consult preferences and technical specifications together.",
         "time": "5-10 minutes"
       },
       "digitalPlanning": {
         "title": "Digital Planning",
-        "description": "Custom CAD/CAM design adapted to patient anatomy. Full control over geometry, thickness, and fit.",
-        "time": "1-2 days"
+        "description": "Individual CAD/CAM design adapted to patient anatomy. Full control over geometry, thickness and fit.",
+        "time": "~1 hour"
       },
       "labProduction": {
         "title": "Production",
-        "description": "Precise 3D printing with certified medical materials. Technology ensuring repeatability and accuracy at the micron level.",
-        "time": "1 day"
+        "description": "Precise 3D printing with certified medical materials. Technology ensuring repeatability and micron-level accuracy.",
+        "time": "~6 hours"
       },
       "qualityControl": {
         "title": "Quality Control",
-        "description": "Advanced QA process. Each product undergoes multi-stage dimensional and visual verification before shipping.",
-        "time": "2-4 hours"
+        "description": "Advanced QA process. Every product undergoes multi-stage dimensional and visual verification before shipping.",
+        "time": "~2 hours"
       },
       "shipping": {
         "title": "Shipping",
@@ -382,14 +382,15 @@
       },
       "clinicalApplication": {
         "title": "Clinical Application",
-        "description": "Finished product ready for immediate use in the practice. Precise fit ensures patient comfort and therapy effectiveness.",
-        "time": "Immediate"
+        "description": "Ready product for immediate use in practice. Precise fit ensures patient comfort and therapy effectiveness.",
+        "time": "Immediately"
       }
     },
     "summary": {
-      "highlight": "Fast turnaround",
+      "highlight": "Fast Turnaround",
       "title": "Design + Production in max. 1 business day",
-      "subtitle": "Digital workflow eliminates delays. From design approval to finished product at express speed.",
+      "subtitle": "Digital workflow eliminates delays. From design approval to finished product in express time.",
+      "disclaimer": "Stated times apply to standard orders. We are prepared for large-scale production – for larger orders, lead time may be minimally extended, however we maintain full control over delivery schedules.",
       "stats": [
         {
           "value": "24h",
@@ -408,16 +409,16 @@
         },
         {
           "value": "1-3",
-          "label": "Delivery Days",
+          "label": "Days Delivery",
           "color": "from-orange-500 to-yellow-500"
         }
       ]
     },
     "cta": {
-      "title": "Interested in a partnership?",
-      "subtitle": "Start a collaboration based on precision and modern technology.",
-      "button": "Get in touch",
-      "products": "View products"
+      "title": "Interested in Collaboration?",
+      "subtitle": "Start working with precision and modern technology.",
+      "button": "Contact Us",
+      "products": "See Products"
     }
   }
 }
