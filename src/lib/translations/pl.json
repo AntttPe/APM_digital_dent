@@ -351,72 +351,43 @@
   "process": {
     "back": "Powrót",
     "hero": {
-      "title": "Proces współpracy",
-      "subtitle": "Od danych klinicznych do aplikacji. 6 etapów cyfrowej precyzji."
+      "label": "Jak działamy",
+      "title": "Prosty proces. Precyzyjny wynik.",
+      "subtitle": "Trzy etapy dzielą skan od gotowego produktu w gabinecie."
     },
     "steps": {
-      "clinicalData": {
-        "title": "Dane kliniczne",
-        "description": "Gabinet przesyła skan 3D drogą elektroniczną wraz z wymaganiami projektowymi. Wspólnie konsultujemy preferencje i specyfikację techniczną.",
-        "time": "5-10 minut"
+      "label": "Przebieg współpracy",
+      "scan": {
+        "title": "Dane kliniczne i preferencje",
+        "description": "Gabinet przesyła skan 3D drogą elektroniczną. Jednocześnie stomatolog kontaktuje się z nami mailowo lub telefonicznie, by omówić szczegółowe wymagania i preferencje dotyczące projektu.",
+        "time": "Kilka minut po stronie gabinetu"
       },
-      "digitalPlanning": {
-        "title": "Planowanie cyfrowe",
-        "description": "Indywidualne projektowanie CAD/CAM dostosowane do anatomii pacjenta. Pełna kontrola nad geometrią, grubością i dopasowaniem.",
-        "time": "~1 godzina"
+      "produce": {
+        "title": "Projektowanie, produkcja i kontrola",
+        "description": "Projektujemy produkt indywidualnie w oparciu o dane ze skanu, drukujemy go z certyfikowanych materiałów medycznych, a następnie weryfikujemy zgodność z wymaganiami przed wysyłką.",
+        "time": "Projektowanie ~1 h · Druk ~6 h · QA ~2 h"
       },
-      "labProduction": {
-        "title": "Produkcja",
-        "description": "Precyzyjny druk 3D z certyfikowanych materiałów medycznych. Technologia zapewniająca powtarzalność i dokładność na poziomie mikronów.",
-        "time": "~6 godzin"
-      },
-      "qualityControl": {
-        "title": "Kontrola jakości",
-        "description": "Zaawansowany proces kontroli QA. Każdy produkt przechodzi wieloetapową weryfikację wymiarową i wizualną przed wysyłką.",
-        "time": "~2 godziny"
-      },
-      "shipping": {
-        "title": "Wysyłka",
-        "description": "Bezpieczne pakowanie i ekspresowa dostawa kurierem. Śledzenie przesyłki w czasie rzeczywistym.",
-        "time": "1-3 dni"
-      },
-      "clinicalApplication": {
-        "title": "Aplikacja kliniczna",
-        "description": "Gotowy produkt do natychmiastowego zastosowania w gabinecie. Precyzyjne dopasowanie zapewnia komfort pacjenta i skuteczność terapii.",
-        "time": "Natychmiastowo"
+      "ship": {
+        "title": "Wysyłka i aplikacja",
+        "description": "Gotowy produkt trafia do gabinetu kurierem w ciągu 1–3 dni roboczych. Dzięki cyfrowemu dopasowaniu jest gotowy do aplikacji od razu po odbiorze — bez dodatkowych korekt.",
+        "time": "Dostawa 1–3 dni robocze"
       }
     },
     "summary": {
-      "highlight": "Szybka realizacja",
-      "title": "Projektowanie + produkcja w max. 1 dzień roboczy",
-      "subtitle": "Cyfrowy workflow eliminuje opóźnienia. Od zatwierdzenia projektu do gotowego produktu w ekspresowym tempie.",
-      "disclaimer": "Podane czasy dotyczą standardowych zamówień. Jesteśmy przygotowani na produkcję na dużą skalę – w przypadku większych zleceń czas realizacji może ulec minimalnemu wydłużeniu, jednak zachowujemy pełną kontrolę nad terminowością.",
+      "label": "Szybka realizacja",
+      "title": "Projektowanie i produkcja w jednym dniu roboczym.",
+      "subtitle": "Cyfrowy workflow eliminuje zbędne etapy. Od zatwierdzenia danych do gotowego produktu — wszystko dzieje się u nas tego samego dnia.",
+      "disclaimer": "Podane czasy odnoszą się do standardowych zamówień. Jesteśmy przygotowani na produkcję wielkoseryjną — w przypadku większych zleceń czas realizacji może ulec nieznacznej zmianie, choć robimy wszystko, by tak się nie zdarzało.",
       "stats": [
-        {
-          "value": "24h",
-          "label": "Projekt + Produkcja",
-          "color": "from-emerald-500 to-green-500"
-        },
-        {
-          "value": "100%",
-          "label": "Cyfrowo",
-          "color": "from-blue-500 to-cyan-500"
-        },
-        {
-          "value": "±10µm",
-          "label": "Precyzja",
-          "color": "from-purple-500 to-pink-500"
-        },
-        {
-          "value": "1-3",
-          "label": "Dni dostawy",
-          "color": "from-orange-500 to-yellow-500"
-        }
+        { "value": "24h", "label": "Projekt + produkcja" },
+        { "value": "±10µm", "label": "Precyzja druku" },
+        { "value": "1–3", "label": "Dni dostawy" },
+        { "value": "100%", "label": "Cyfrowo" }
       ]
     },
     "cta": {
       "title": "Zainteresowanie współpracą?",
-      "subtitle": "Rozpocznij współpracę opartą na precyzji i nowoczesnych technologiach.",
+      "subtitle": "Skontaktuj się z nami — omówimy szczegóły i przygotujemy pierwsze zamówienie.",
       "button": "Skontaktuj się",
       "products": "Zobacz produkty"
     }

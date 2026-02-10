@@ -351,74 +351,45 @@
   "process": {
     "back": "Back",
     "hero": {
-      "title": "Collaboration Process",
-      "subtitle": "From clinical data to application. 6 stages of digital precision."
+      "label": "How we work",
+      "title": "Simple process. Precise result.",
+      "subtitle": "Three steps separate a scan from a finished product in the practice."
     },
     "steps": {
-      "clinicalData": {
-        "title": "Clinical Data",
-        "description": "Practice sends 3D scan electronically with design requirements. We consult preferences and technical specifications together.",
-        "time": "5-10 minutes"
+      "label": "Collaboration flow",
+      "scan": {
+        "title": "Clinical data & preferences",
+        "description": "The practice sends a 3D scan electronically. The dentist contacts us by email or phone to discuss detailed requirements and design preferences.",
+        "time": "A few minutes on the practice's end"
       },
-      "digitalPlanning": {
-        "title": "Digital Planning",
-        "description": "Individual CAD/CAM design adapted to patient anatomy. Full control over geometry, thickness and fit.",
-        "time": "~1 hour"
+      "produce": {
+        "title": "Design, production & quality check",
+        "description": "We design the product individually based on scan data, 3D-print it with certified medical materials, and verify it against specifications before shipping.",
+        "time": "Design ~1 h · Print ~6 h · QA ~2 h"
       },
-      "labProduction": {
-        "title": "Production",
-        "description": "Precise 3D printing with certified medical materials. Technology ensuring repeatability and micron-level accuracy.",
-        "time": "~6 hours"
-      },
-      "qualityControl": {
-        "title": "Quality Control",
-        "description": "Advanced QA process. Every product undergoes multi-stage dimensional and visual verification before shipping.",
-        "time": "~2 hours"
-      },
-      "shipping": {
-        "title": "Shipping",
-        "description": "Secure packaging and express courier delivery. Real-time shipment tracking.",
-        "time": "1-3 days"
-      },
-      "clinicalApplication": {
-        "title": "Clinical Application",
-        "description": "Ready product for immediate use in practice. Precise fit ensures patient comfort and therapy effectiveness.",
-        "time": "Immediately"
+      "ship": {
+        "title": "Shipping & clinical application",
+        "description": "The finished product is delivered by courier within 1–3 business days. Thanks to digital precision, it is ready for immediate application upon arrival — no additional adjustments needed.",
+        "time": "Delivery 1–3 business days"
       }
     },
     "summary": {
-      "highlight": "Fast Turnaround",
-      "title": "Design + Production in max. 1 business day",
-      "subtitle": "Digital workflow eliminates delays. From design approval to finished product in express time.",
-      "disclaimer": "Stated times apply to standard orders. We are prepared for large-scale production – for larger orders, lead time may be minimally extended, however we maintain full control over delivery schedules.",
+      "label": "Fast turnaround",
+      "title": "Design and production in one business day.",
+      "subtitle": "Digital workflow removes unnecessary steps. From scan approval to finished product — everything happens the same day.",
+      "disclaimer": "Times refer to standard orders. We are prepared for high-volume production — for larger batches lead time may vary slightly, though we do everything to prevent that.",
       "stats": [
-        {
-          "value": "24h",
-          "label": "Design + Production",
-          "color": "from-emerald-500 to-green-500"
-        },
-        {
-          "value": "100%",
-          "label": "Digital",
-          "color": "from-blue-500 to-cyan-500"
-        },
-        {
-          "value": "±10µm",
-          "label": "Precision",
-          "color": "from-purple-500 to-pink-500"
-        },
-        {
-          "value": "1-3",
-          "label": "Days Delivery",
-          "color": "from-orange-500 to-yellow-500"
-        }
+        { "value": "24h", "label": "Design + production" },
+        { "value": "±10µm", "label": "Print precision" },
+        { "value": "1–3", "label": "Days delivery" },
+        { "value": "100%", "label": "Digital" }
       ]
     },
     "cta": {
-      "title": "Interested in Collaboration?",
-      "subtitle": "Start working with precision and modern technology.",
-      "button": "Contact Us",
-      "products": "See Products"
+      "title": "Interested in working together?",
+      "subtitle": "Get in touch — we'll discuss the details and prepare your first order.",
+      "button": "Contact us",
+      "products": "See products"
     }
   }
 }

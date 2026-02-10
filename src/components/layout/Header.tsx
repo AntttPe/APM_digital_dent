@@ -10,6 +10,7 @@ export default function Header() {
   const { t } = useTranslation();
   const pathname = usePathname();
   const isProductPage = pathname?.startsWith('/produkty/');
+  const isHomePage = pathname === '/';
 
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
@@ -20,7 +21,7 @@ export default function Header() {
 
   // Funkcja do budowania linków - jeśli jesteśmy na podstronie, wracamy do głównej
   const getNavLink = (section: string) => {
-    return isProductPage ? `/#${section}` : `#${section}`;
+    return isHomePage ? `#${section}` : `/#${section}`;
   };
 
   return (
