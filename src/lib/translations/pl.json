@@ -391,5 +391,127 @@
       "button": "Skontaktuj się",
       "products": "Zobacz produkty"
     }
+  },
+  "whyDigital": {
+    "label": "Przewaga technologiczna",
+    "title": "Cyfrowa precyzja vs termoformowanie",
+    "subtitle": "Projektowanie cyfrowe eliminuje niekontrolowaną zmienność procesu termoformowania. Każda nakładka powstaje bezpośrednio z danych skanu 3D, z pełną kontrolą geometrii, grubości i toru wprowadzania.\nDla Państwa pacjentów oznacza to przewidywalne dopasowanie i powtarzalną jakość – zgodną z projektem CAD, a nie z ograniczeniami materiału.",
+    "bars": [
+      {
+        "label": "Dokładność dopasowania",
+        "digitalLabel": "Druk 3D",
+        "traditionalLabel": "Metoda tradycyjna",
+        "digital": 10,
+        "traditional": 300,
+        "unit": "µm",
+        "lowerIsBetter": true
+      },
+      {
+        "label": "Jednolitość grubości ścianki",
+        "digitalLabel": "Druk 3D",
+        "traditionalLabel": "Metoda tradycyjna",
+        "digital": 100,
+        "traditional": 65,
+        "unit": "%",
+        "lowerIsBetter": false
+      },
+      {
+        "label": "Powtarzalność między egzemplarzami",
+        "digitalLabel": "Druk 3D",
+        "traditionalLabel": "Metoda tradycyjna",
+        "digital": 100,
+        "traditional": 55,
+        "unit": "%",
+        "lowerIsBetter": false
+      }
+    ],
+    "table": {
+      "colFeature": "Cecha",
+      "colDigital": "Druk 3D (APM Digital Lab – KeySplint Hard/Soft)",
+      "colTraditional": "Termoformowalne (Essix / Duran / PET-G)",
+      "rows": [
+        {
+          "feature": "Dokładność dopasowania",
+          "digital": "±10 µm – pełna kontrola CAD z danych skanu 3D",
+          "traditional": "150–450 µm – rozciąganie folii podczas termoformowania",
+          "highlight": true
+        },
+        {
+          "feature": "Kontrola grubości",
+          "digital": "Strefowa, precyzyjnie projektowana (np. 2 mm w okluzji / 1 mm bocznie)",
+          "traditional": "Jednolita lub losowa – miejscowe zmniejszenie grubości nawet o 30–35 %",
+          "highlight": false
+        },
+        {
+          "feature": "Wytrzymałość mechaniczna",
+          "digital": "KeySplint Hard: wytrzymałość zginania 60–65 MPa (ISO 20795-2), odporność na ścieranie porównywalna z laboratoryjnym PMMA (Lucitone 199)",
+          "traditional": "Dobra początkowo, ale większa podatność na pełzanie (creep) i lokalne osłabienie pod obciążeniem bruksistycznym",
+          "highlight": false
+        },
+        {
+          "feature": "Powtarzalność",
+          "digital": "100 % – każdy egzemplarz identyczny z pliku cyfrowego",
+          "traditional": "Zależna od folii, parametrów ogrzewania i doświadczenia technika",
+          "highlight": true
+        }
+      ]
+    },
+    "footnote": "Dane oparte na specyfikacji producenta KeySplint (ISO 20795-2) oraz publikacjach naukowych (2018–2024). Rzeczywiste wartości mogą się minimalnie różnić w zależności od grubości i protokołu klinicznego.",
+    "evidenceButton": "Badania i źródła naukowe"
+  },
+  "whyChooseUs": {
+    "label": "Dlaczego APM Digital Lab",
+    "title": "Sprawdzone. Precyzyjne. Powtarzalne.",
+    "subtitle": "W Polsce ponad 80% szyn retencyjnych i relaksacyjnych wciąż powstaje metodą termoformowania. To sprawdzone rozwiązanie – ale już nie optymalne.",
+    "subtitleNote": "Oferujemy alternatywę, która realnie zmienia codzienne wyniki leczenia i redukuje liczbę korekt na wizycie.",
+    "reasons": [
+      {
+        "number": "01",
+        "title": "Precyzja, której nie da się uzyskać ręcznie",
+        "description": "Każda szyna projektowana jest dokładnie pod anatomię pacjenta z tolerancją ±10 µm. Żadnego thinningu, żadnych losowych odchyleń grubości, żadnego 'prawie pasuje'."
+      },
+      {
+        "number": "02",
+        "title": "Znacznie dłuższa żywotność w jamie ustnej",
+        "description": "KeySplint Hard lepiej znosi obciążenia bruksistyczne niż klasyczne PET-G. Pacjenci z silnym bruksizmem noszą nasze szyny 2–3× dłużej niż termoformowane."
+      },
+      {
+        "number": "03",
+        "title": "Pełna powtarzalność przy każdym zamówieniu",
+        "description": "Gdy pacjent zgubi szynę lub potrzebuje duplikatu – wysyłamy egzemplarz identyczny z oryginałem. Plik cyfrowy nie zna pojęcia 'trochę inaczej niż poprzednio'."
+      },
+      {
+        "number": "04",
+        "title": "Mniej korekt, mniej reklamacji",
+        "description": "Precyzyjne dopasowanie CAD oznacza mniej poprawek na wizycie. Lekarze zgłaszają wyraźny spadek liczby telefonów z reklamacjami i zdecydowanie spokojniejsze wizyty kontrolne."
+      }
+    ],
+    "casesLabel": "Przykłady kliniczne",
+    "cases": [
+      {
+        "tag": "Ciężki bruksizm",
+        "title": "Szyna relaksacyjna u pacjenta z nocnym bruksizmem",
+        "description": "Pacjent użytkował przez lata szyny termoformowane – regularnie je pękały lub odkształcały się w strefach okluzyjnych. Zamówiono szynę relaksacyjną drukowaną 3D z precyzyjnie zaprojektowaną grubością 2 mm w okluzji.",
+        "result": "Szyna osadza się przy każdym założeniu identycznie. Zero pęknięć, żadnych korekt na wizycie – pacjent wreszcie używa szyny regularnie."
+      },
+      {
+        "tag": "Retencja po leczeniu ortodontycznym",
+        "title": "Szyna retencyjna po zakończeniu leczenia aparatem stałym",
+        "description": "Po zdjęciu aparatu stałego pacjentka otrzymała termoformowaną szynę retencyjną. Szyna szybko traciła napięcie i przestawała utrzymywać pozycję zębów. Przeszliśmy na szynę retencyjną drukowaną 3D z kontrolowaną geometrią.",
+        "result": "Szyna utrzymuje precyzyjne dopasowanie bez odkształceń. Lekarz nie odnotował żadnej konieczności korekty na wizytach kontrolnych."
+      },
+      {
+        "tag": "Dyskomfort przy noszeniu",
+        "title": "Pacjent zgłaszający dyskomfort z szyną termoformowaną",
+        "description": "Pacjent wielokrotnie rezygnował z noszenia szyny nocnej z powodu ucisku i niedokładnego dopasowania. Zamówiono szynę relaksacyjną drukowaną 3D projektowaną indywidualnie pod jego skan.",
+        "result": "Pacjent nosi szynę regularnie po raz pierwszy od lat. Brak uwag dotyczących dyskomfortu już od pierwszego założenia."
+      }
+    ],
+    "cta": {
+      "title": "Przekonaj się na pierwszym zleceniu",
+      "description": "Wyślij nam skan – wykonamy pierwszą szynę bezpłatnie, abyś mógł porównać jakość dopasowania i wykończenia z dotychczasowym dostawcą.",
+      "button": "Wyślij pierwszy skan",
+      "secondary": "Zobacz nasz proces"
+    }
   }
 }

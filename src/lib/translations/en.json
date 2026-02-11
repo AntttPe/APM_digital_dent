@@ -391,5 +391,127 @@
       "button": "Contact us",
       "products": "See products"
     }
+  },
+  "whyDigital": {
+    "label": "Technical advantage",
+    "title": "Digital precision vs thermoforming",
+    "subtitle": "Digital production eliminates manual and material variability – every product is identical to the CAD design.",
+    "bars": [
+      {
+        "label": "Fit accuracy",
+        "digitalLabel": "3D Printing",
+        "traditionalLabel": "Traditional method",
+        "digital": 10,
+        "traditional": 300,
+        "unit": "µm",
+        "lowerIsBetter": true
+      },
+      {
+        "label": "Wall thickness consistency",
+        "digitalLabel": "3D Printing",
+        "traditionalLabel": "Traditional method",
+        "digital": 100,
+        "traditional": 65,
+        "unit": "%",
+        "lowerIsBetter": false
+      },
+      {
+        "label": "Repeatability between units",
+        "digitalLabel": "3D Printing",
+        "traditionalLabel": "Traditional method",
+        "digital": 100,
+        "traditional": 55,
+        "unit": "%",
+        "lowerIsBetter": false
+      }
+    ],
+    "table": {
+      "colFeature": "Feature",
+      "colDigital": "3D Printing (APM Digital Lab – KeySplint Hard/Soft)",
+      "colTraditional": "Thermoformed (Essix / Duran / PET-G)",
+      "rows": [
+        {
+          "feature": "Fit accuracy",
+          "digital": "±10 µm — full CAD control from 3D scan data",
+          "traditional": "150–450 µm — film stretching during thermoforming",
+          "highlight": true
+        },
+        {
+          "feature": "Thickness control",
+          "digital": "Zone-based, precisely designed (e.g. 2 mm occlusal / 1 mm lateral)",
+          "traditional": "Uniform or random — thinning up to 30–35%",
+          "highlight": false
+        },
+        {
+          "feature": "Mechanical strength",
+          "digital": "KeySplint Hard: 60–65 MPa flexural strength, wear resistance equal to lab-processed PMMA",
+          "traditional": "Good initially — higher susceptibility to creep and local weakening under bruxism load",
+          "highlight": false
+        },
+        {
+          "feature": "Repeatability",
+          "digital": "100% — every unit identical to the digital file",
+          "traditional": "Dependent on film, heating parameters and technician experience",
+          "highlight": true
+        }
+      ]
+    },
+    "footnote": "Comparison based on material studies (ISO 20795-2, wear studies KeySplint vs Lucitone 199) and publications on accuracy of 3D-printed vs vacuum-formed retainers/splints (2018–2024). Actual values may vary slightly depending on thickness and clinical protocol.",
+    "evidenceButton": "Research & scientific sources"
+  },
+  "whyChooseUs": {
+    "label": "Why APM Digital Lab",
+    "title": "Proven. Precise. Repeatable.",
+    "subtitle": "In Poland, over 80% of retainers and occlusal splints are still made by thermoforming. A proven method – but no longer the optimal one.",
+    "subtitleNote": "We offer an alternative that genuinely changes daily treatment outcomes and reduces the number of chairside adjustments.",
+    "reasons": [
+      {
+        "number": "01",
+        "title": "Precision that cannot be achieved manually",
+        "description": "Every splint is designed precisely to the patient's anatomy with ±10 µm tolerance. No thinning, no random thickness variation, no 'almost fits'."
+      },
+      {
+        "number": "02",
+        "title": "Significantly longer intraoral lifespan",
+        "description": "KeySplint Hard withstands bruxism loads better than standard PET-G. Patients with heavy bruxism typically wear our splints 2–3× longer than thermoformed ones."
+      },
+      {
+        "number": "03",
+        "title": "Full repeatability on every order",
+        "description": "When a patient loses a splint or needs a duplicate – we ship an identical unit. A digital file has no concept of 'slightly different from last time'."
+      },
+      {
+        "number": "04",
+        "title": "Fewer adjustments, fewer complaints",
+        "description": "Precise CAD fit means fewer chairside corrections. Dentists report a clear drop in complaint calls and noticeably smoother follow-up appointments."
+      }
+    ],
+    "casesLabel": "Clinical examples",
+    "cases": [
+      {
+        "tag": "Heavy bruxism",
+        "title": "Relaxation splint for a patient with nocturnal bruxism",
+        "description": "The patient had been through several thermoformed splints that fractured or deformed in occlusal zones. A 3D-printed relaxation splint was ordered with precisely designed 2 mm occlusal zone thickness.",
+        "result": "The splint seats identically on every insertion. No fractures, no chairside adjustments – the patient finally wears it consistently."
+      },
+      {
+        "tag": "Post-orthodontic retention",
+        "title": "Retainer splint after fixed appliance treatment",
+        "description": "After debonding, the patient received a thermoformed retainer that quickly lost tension and stopped maintaining tooth position. Switched to a 3D-printed retainer with controlled geometry.",
+        "result": "The splint maintains precise fit without deformation. No adjustments required at any follow-up appointment."
+      },
+      {
+        "tag": "Discomfort with thermoformed splint",
+        "title": "Patient repeatedly abandoning their night splint",
+        "description": "The patient had given up wearing a night splint multiple times due to pressure and poor fit. A 3D-printed relaxation splint was designed individually from their scan.",
+        "result": "The patient has worn the splint consistently for the first time in years. No discomfort reported from the very first fitting."
+      }
+    ],
+    "cta": {
+      "title": "See the difference on your first order",
+      "description": "Send us a scan – we'll produce the first splint free of charge so you can compare fit and finish against your current provider.",
+      "button": "Send your first scan",
+      "secondary": "See our process"
+    }
   }
 }
