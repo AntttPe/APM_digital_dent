@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="512" height="512" rx="112" fill="#09090b" />
+
+    <text
+            x="256"
+            y="275"
+            font-family="Inter, SF Pro Display, Helvetica, Arial, sans-serif"
+            font-size="140"
+            font-weight="600"
+            letter-spacing="0.05em"
+            fill="#FFFFFF"
+            text-anchor="middle"
+    >
+        APM
+    </text>
+
+    <path
+            d="M 180 330 C 180 390, 332 390, 332 330"
+            stroke="#2FE4C5"
+            stroke-width="24"
+            stroke-linecap="round"
+            fill="none"
+    />
+</svg>

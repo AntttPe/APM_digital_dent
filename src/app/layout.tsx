@@ -16,6 +16,9 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: 'Digital Dental Laboratory | Precision 3D Printing',
     description: 'Future of digital dentistry. Precision-engineered dental solutions from 3D scans.',
+    icons: {
+        icon: '/images/logos/favicon.svg',
+    },
     openGraph: {
         title: 'Digital Dental Laboratory',
         description: 'Precision 3D printing for digital dentistry',

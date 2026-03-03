@@ -11,8 +11,18 @@
         APM
     </text>
 
+    <line
+            x1="145"
+            y1="18"
+            x2="145"
+            y2="62"
+            stroke="#2FE4C5"
+            stroke-width="2"
+            opacity="0.8"
+    />
+
     <text
-            x="190"
+            x="175"
             y="55"
             font-family="Inter, SF Pro Display, Helvetica, Arial, sans-serif"
             font-size="48"
@@ -20,17 +30,6 @@
             letter-spacing="0.08em"
             fill="#FFFFFF"
     >
-        DIGITAL LAB
+        DENTAL LAB
     </text>
-
-    <!-- subtle divider -->
-    <line
-            x1="165"
-            y1="18"
-            x2="165"
-            y2="62"
-            stroke="#2FE4C5"
-            stroke-width="2"
-            opacity="0.8"
-    />
 </svg>

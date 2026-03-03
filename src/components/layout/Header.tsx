@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from '@/lib/i18n';
 import LanguageSwitch from '@/components/ui/LanguageSwitch';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
@@ -30,8 +31,14 @@ export default function Header() {
           className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-zinc-900/0"
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm font-light tracking-wider hover:text-zinc-400 transition-colors">
-            {t('header.logo')}
+          <Link href="/" className="hover:opacity-75 transition-opacity">
+            <Image
+              src="/images/logos/website.svg"
+              alt="APM Dental Lab"
+              width={160}
+              height={25}
+              priority
+            />
           </Link>
 
           <div className="flex items-center gap-8">
