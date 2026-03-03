@@ -54,7 +54,7 @@ export default function Hero() {
                     transition={{ delay: 0.6 }}
                     className="mt-12"
                 >
-                    <Link href="/proces">
+                    <Link href="#workflow">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

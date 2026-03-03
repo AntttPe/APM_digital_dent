@@ -18,22 +18,25 @@
   "workflow": {
     "title": "Purely digital workflow",
     "subtitle": "From scan to product. Controlled precision at every step.",
+    "label": "How it works",
+    "cta": "See process details",
+    "ctaNote": "Every step explained — timelines, file formats, delivery.",
     "steps": {
       "scan": {
         "title": "3D Scan",
-        "desc": "Digital replication"
+        "desc": "Send us the scan file from your intraoral scanner or lab. We accept all standard formats."
       },
       "design": {
         "title": "Design",
-        "desc": "Digital adaptation to anatomy"
+        "desc": "We design the splint with full control over thickness, insertion path, and retention zones — impossible with thermoforming."
       },
       "print": {
         "title": "3D Print",
-        "desc": "Medical-grade material"
+        "desc": "Printed in certified Class IIa medical-grade material. Ready within 24 hours of design approval."
       },
       "precision": {
-        "title": "Precision",
-        "desc": "Quality control"
+        "title": "QC & Delivery",
+        "desc": "Every splint verified for geometry before shipping. Fit guaranteed — we remake it if needed."
       }
     }
   },

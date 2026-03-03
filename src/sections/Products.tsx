@@ -63,7 +63,7 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
         <section
             ref={containerRef}
             id="products"
-            className="relative py-32 px-6"
+            className="relative py-32 px-6 border-t border-zinc-900"
         >
             <div className="max-w-7xl mx-auto">
                 <motion.div

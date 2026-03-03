@@ -18,22 +18,25 @@
   "workflow": {
     "title": "Czysto cyfrowy proces",
     "subtitle": "Od skanu do produktu. Kontrolowana precyzja na każdym etapie.",
+    "label": "Jak to działa",
+    "cta": "Poznaj szczegóły procesu",
+    "ctaNote": "Każdy etap szczegółowo opisany — terminy, formaty plików, realizacja.",
     "steps": {
       "scan": {
         "title": "Skan 3D",
-        "desc": "Cyfrowe odwzorowanie"
+        "desc": "Wysyłasz plik ze skanera wewnątrzustnego lub z laboratorium. Przyjmujemy wszystkie standardowe formaty."
       },
       "design": {
         "title": "Projektowanie",
-        "desc": "Cyfrowe dopasowanie do anatomii pacjenta"
+        "desc": "Projektujemy szynę z pełną kontrolą grubości, toru wprowadzania i stref retencji — niemożliwą w termoformowaniu."
       },
       "print": {
         "title": "Druk 3D",
-        "desc": "Materiał medyczny"
+        "desc": "Druk z certyfikowanego materiału medycznego Class IIa. Realizacja w 24 godziny od zatwierdzenia projektu."
       },
       "precision": {
-        "title": "Precyzja",
-        "desc": "Kontrola jakości"
+        "title": "Kontrola i wysyłka",
+        "desc": "Każda szyna sprawdzana pod kątem geometrii przed wysyłką. Gwarancja dopasowania lub wykonujemy ponownie."
       }
     }
   },

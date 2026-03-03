@@ -1,91 +1,116 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
-import { staggerContainer } from '@/lib/animations';
+
+// Detail per step — technical specs relevant to dentists/technicians,
+// same in both languages (formats and units are universal)
+const stepDetails = [
+    { num: '01', tag: 'STL · OBJ · PLY' },
+    { num: '02', tag: '±10 µm' },
+    { num: '03', tag: 'Class IIa' },
+    { num: '04', tag: '1–3 dni' },
+];
+
+const stepKeys = ['scan', 'design', 'print', 'precision'] as const;
 
 export default function DigitalWorkflow() {
     const { t } = useTranslation();
-    const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ['start end', 'end start'],
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
-
-    const steps = [
-        { key: 'scan', icon: '3D', delay: 0 },
-        { key: 'design', icon: 'AI', delay: 0.1 },
-        { key: 'print', icon: '→', delay: 0.2 },
-        { key: 'precision', icon: '✓', delay: 0.3 },
-    ];
 
     return (
-        <section
-            ref={containerRef}
-            id="workflow"
-            className="relative py-32 px-6 overflow-hidden"
-        >
-            <motion.div style={{ opacity, scale }} className="max-w-7xl mx-auto">
+        <section id="workflow" className="relative py-28 md:py-36 px-6 overflow-hidden border-t border-zinc-900">
+            <div className="max-w-6xl mx-auto">
+
+                {/* Section header */}
                 <motion.div
-                    style={{ y }}
-                    className="text-center mb-24"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, ease: [0.6, 0.05, 0.01, 0.9] }}
+                    className="mb-14 md:mb-20"
                 >
-                    <h2 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
+                    <p className="text-xs text-zinc-500 uppercase tracking-widest mb-5">
+                        {t('workflow.label')}
+                    </p>
+                    <h2 className="text-4xl md:text-6xl font-light tracking-tight mb-4">
                         {t('workflow.title')}
                     </h2>
-                    <p className="text-xl text-zinc-500 max-w-2xl mx-auto">
+                    <p className="text-zinc-500 text-base md:text-lg max-w-xl leading-relaxed">
                         {t('workflow.subtitle')}
                     </p>
                 </motion.div>
 
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-8"
-                >
-                    {steps.map((step, index) => (
+                {/* Cards grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                    {stepKeys.map((key, i) => (
                         <motion.div
-                            key={step.key}
-                            variants={{
-                                hidden: { opacity: 0, y: 60 },
-                                visible: {
-                                    opacity: 1,
-                                    y: 0,
-                                    transition: {
-                                        delay: index * 0.1,
-                                        duration: 0.6,
-                                        ease: [0.6, 0.05, 0.01, 0.9]
-                                    }
-                                }
+                            key={key}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-40px' }}
+                            transition={{
+                                duration: 0.55,
+                                delay: i * 0.1,
+                                ease: [0.6, 0.05, 0.01, 0.9],
                             }}
-                            className="relative"
+                            className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 md:p-7 hover:border-zinc-700 hover:bg-zinc-900/50 transition-all duration-300 group flex flex-col"
                         >
-                            <div className="aspect-square bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 flex flex-col items-center justify-center hover:border-zinc-700 transition-colors group">
-                                <div className="text-4xl font-light text-zinc-600 mb-4 group-hover:text-zinc-400 transition-colors">
-                                    {step.icon}
-                                </div>
-                                <h3 className="text-sm uppercase tracking-wider text-zinc-400 group-hover:text-zinc-300 transition-colors">
-                                    {t(`workflow.steps.${step.key}.title`)}
-                                </h3>
-                                <p className="text-xs text-zinc-600 mt-2 text-center">
-                                    {t(`workflow.steps.${step.key}.desc`)}
-                                </p>
-                            </div>
+                            {/* Large background step number */}
+                            <span
+                                aria-hidden="true"
+                                className="absolute bottom-3 right-4 text-[6rem] font-bold leading-none text-zinc-900 select-none pointer-events-none group-hover:text-zinc-800/80 transition-colors duration-300"
+                            >
+                                {stepDetails[i].num}
+                            </span>
 
-                            {index < steps.length - 1 && (
-                                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-zinc-800" />
-                            )}
+                            {/* Content */}
+                            <div className="relative z-10 flex flex-col flex-1">
+                                <h3 className="text-base font-medium text-zinc-100 mb-3">
+                                    {t(`workflow.steps.${key}.title`)}
+                                </h3>
+                                <p className="text-sm text-zinc-500 leading-relaxed flex-1 group-hover:text-zinc-400 transition-colors duration-300">
+                                    {t(`workflow.steps.${key}.desc`)}
+                                </p>
+
+                                {/* Detail tag */}
+                                <div className="mt-6 flex items-center gap-2.5">
+                                    <div className="w-3 h-px bg-teal-500/50 group-hover:w-5 group-hover:bg-teal-500/70 transition-all duration-300" />
+                                    <span className="text-xs text-teal-500/60 tracking-wide group-hover:text-teal-500/80 transition-colors duration-300">
+                                        {stepDetails[i].tag}
+                                    </span>
+                                </div>
+                            </div>
                         </motion.div>
                     ))}
+                </div>
+
+                {/* CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.35, ease: [0.6, 0.05, 0.01, 0.9] }}
+                    className="mt-10 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5"
+                >
+                    <p className="text-zinc-600 text-sm max-w-sm leading-relaxed">
+                        {t('workflow.ctaNote')}
+                    </p>
+                    <Link href="/proces" className="flex-shrink-0">
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group flex items-center gap-3 px-6 py-3 border border-zinc-700 rounded-full hover:border-teal-500/40 hover:bg-teal-500/5 transition-all text-sm whitespace-nowrap"
+                        >
+                            {t('workflow.cta')}
+                            <span className="text-teal-500 group-hover:translate-x-1 transition-transform inline-block">
+                                →
+                            </span>
+                        </motion.button>
+                    </Link>
                 </motion.div>
-            </motion.div>
+
+            </div>
         </section>
     );
 }
