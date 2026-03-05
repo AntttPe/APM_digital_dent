@@ -62,8 +62,9 @@ export default function WhyChooseUs() {
                             key={i}
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: '-40px' }}
+                            viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
+                            style={{ willChange: 'opacity, transform' }}
                             className="group relative flex gap-6 p-8 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 hover:bg-zinc-900/30 transition-all duration-500 overflow-hidden"
                         >
                             {/* Hover glow */}
@@ -114,8 +115,9 @@ export default function WhyChooseUs() {
                             key={i}
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: '-40px' }}
+                            viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.6, delay: i * 0.12, ease: EASE }}
+                            style={{ willChange: 'opacity, transform' }}
                             className="flex flex-col p-8 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 transition-all duration-500"
                         >
                             {/* Tag */}

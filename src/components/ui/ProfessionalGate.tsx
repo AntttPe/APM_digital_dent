@@ -10,12 +10,19 @@ export default function ProfessionalGate() {
     const [isClosing, setIsClosing] = useState(false);
 
     useEffect(() => {
-        // Sprawdź czy użytkownik już potwierdził
         const hasConfirmed = localStorage.getItem('professional_confirmed');
-        if (!hasConfirmed) {
-            // Opóźnienie 500ms dla lepszego UX
-            setTimeout(() => setIsOpen(true), 500);
-        }
+        if (hasConfirmed) return;
+
+        // Pokaż dopiero po przewinięciu poza Hero (60% wysokości ekranu)
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight * 0.6) {
+                window.removeEventListener('scroll', handleScroll);
+                setIsOpen(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleConfirm = () => {

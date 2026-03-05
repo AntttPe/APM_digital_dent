@@ -160,8 +160,9 @@ export default function ProcessPage() {
                                     variants={cardVariants}
                                     initial="hidden"
                                     whileInView="visible"
-                                    viewport={{ once: true, amount: 0.5, margin: '-100px' }}
-                                    className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-500 rounded-2xl bg-zinc-950/50 backdrop-blur-sm overflow-hidden"
+                                    viewport={{ once: true, amount: 0.15 }}
+                                    style={{ willChange: 'opacity, transform' }}
+                                    className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-500 rounded-2xl bg-zinc-950/50 overflow-hidden"
                                 >
                                     {/* Hover blue tint */}
                                     <div
@@ -253,7 +254,7 @@ export default function ProcessPage() {
                                             variants={connectorVariants}
                                             initial="hidden"
                                             whileInView="visible"
-                                            viewport={{ once: true, amount: 0.8 }}
+                                            viewport={{ once: true, amount: 0.3 }}
                                             className="relative w-full flex items-center origin-left"
                                         >
                                             <div className="w-full h-px" style={{ backgroundColor: 'rgba(59,130,246,0.3)' }} />
@@ -270,7 +271,7 @@ export default function ProcessPage() {
                                         <motion.div
                                             initial={{ opacity: 0, scaleY: 0 }}
                                             whileInView={{ opacity: 1, scaleY: 1 }}
-                                            viewport={{ once: true, amount: 0.8 }}
+                                            viewport={{ once: true, amount: 0.3 }}
                                             transition={{ duration: 0.6, delay: 0.2 }}
                                             className="flex flex-col items-center gap-1 origin-top"
                                         >
