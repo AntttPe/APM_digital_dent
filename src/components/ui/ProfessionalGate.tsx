@@ -70,7 +70,7 @@ export default function ProfessionalGate() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl" />
 
                         {/* Content */}
-                        <div className="relative bg-zinc-950 border border-zinc-800/50 rounded-3xl p-8 md:p-12">
+                        <div className="relative bg-zinc-950 border border-zinc-800/50 rounded-3xl p-8 md:p-12 text-white">
                             {/* Icon */}
                             <motion.div
                                 initial={{ scale: 0 }}

@@ -39,7 +39,7 @@ export default function ProcessPage() {
     const stats = t('process.summary.stats') as Array<{ value: string; label: string }>;
 
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-white">
 
             {/* Back button — mount animation, not scroll, fine with WAAPI */}
             <div className="fixed top-20 left-6 z-50">
@@ -49,12 +49,12 @@ export default function ProcessPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
                         whileHover={{ x: -4 }}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-xl hover:border-zinc-700 transition-all group"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all group"
                     >
-                        <svg className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
-                        <span className="text-sm text-zinc-400 group-hover:text-white transition-colors">
+                        <span className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                             {t('process.back')}
                         </span>
                     </motion.button>
@@ -62,7 +62,6 @@ export default function ProcessPage() {
             </div>
 
             {/* ─── HERO ─────────────────────────────────────── */}
-            {/* Mount animations — not scroll-triggered, no Safari flash */}
             <section className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden">
 
                 <div
@@ -82,7 +81,7 @@ export default function ProcessPage() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.7 }}
-                    className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-6"
+                    className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-500 mb-6"
                 >
                     {t('process.hero.label')}
                 </motion.p>
@@ -100,7 +99,7 @@ export default function ProcessPage() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45, duration: 0.7 }}
-                    className="text-lg md:text-xl text-zinc-400 font-light max-w-xl leading-relaxed"
+                    className="text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light max-w-xl leading-relaxed"
                 >
                     {t('process.hero.subtitle')}
                 </motion.p>
@@ -111,8 +110,8 @@ export default function ProcessPage() {
                     transition={{ delay: 1.1 }}
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
                 >
-                    <span className="text-xs text-zinc-600 uppercase tracking-widest">scroll</span>
-                    <div className="w-6 h-9 rounded-full border border-zinc-800 flex justify-center pt-2">
+                    <span className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest">scroll</span>
+                    <div className="w-6 h-9 rounded-full border border-zinc-300 dark:border-zinc-800 flex justify-center pt-2">
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -128,7 +127,7 @@ export default function ProcessPage() {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Section label */}
-                    <FadeIn y={0} threshold={0.3} className="text-xs uppercase tracking-[0.3em] text-zinc-600 text-center mb-20">
+                    <FadeIn y={0} threshold={0.3} className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600 text-center mb-20">
                         {t('process.steps.label')}
                     </FadeIn>
 
@@ -144,7 +143,7 @@ export default function ProcessPage() {
                                     y={16}
                                     className="flex-1 flex"
                                 >
-                                    <div className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-800/80 hover:border-zinc-700 transition-colors duration-500 rounded-2xl bg-zinc-950/50">
+                                    <div className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-400 dark:hover:border-zinc-700 transition-colors duration-500 rounded-2xl bg-white dark:bg-zinc-950/50">
 
                                         {/* Hover glow — overflow-hidden on inner wrapper, not on FadeIn */}
                                         <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
@@ -161,13 +160,13 @@ export default function ProcessPage() {
                                             </span>
                                             <div className="w-10 h-10 flex items-center justify-center">
                                                 {i === 0 && (
-                                                    <svg className="w-full h-full text-zinc-700 group-hover:text-zinc-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className="w-full h-full text-zinc-400 dark:text-zinc-700 group-hover:text-zinc-600 dark:group-hover:text-zinc-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                     </svg>
                                                 )}
                                                 {i === 1 && (
                                                     <div
-                                                        className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
+                                                        className="w-full h-full bg-zinc-400 dark:bg-zinc-700 group-hover:bg-zinc-600 dark:group-hover:bg-zinc-500 transition-colors duration-300"
                                                         style={{
                                                             maskImage: "url('/images/icons/3d_printer.png')",
                                                             maskSize: 'contain',
@@ -182,7 +181,7 @@ export default function ProcessPage() {
                                                 )}
                                                 {i === 2 && (
                                                     <div
-                                                        className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
+                                                        className="w-full h-full bg-zinc-400 dark:bg-zinc-700 group-hover:bg-zinc-600 dark:group-hover:bg-zinc-500 transition-colors duration-300"
                                                         style={{
                                                             maskImage: "url('/images/icons/delivery.png')",
                                                             maskSize: 'contain',
@@ -206,9 +205,9 @@ export default function ProcessPage() {
                                             {t(`process.steps.${step.key}.description`)}
                                         </p>
 
-                                        <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center gap-2">
+                                        <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-900 flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
-                                            <span className="text-xs text-zinc-600 tracking-wider uppercase">
+                                            <span className="text-xs text-zinc-400 dark:text-zinc-600 tracking-wider uppercase">
                                                 {t(`process.steps.${step.key}.time`)}
                                             </span>
                                         </div>
@@ -258,7 +257,7 @@ export default function ProcessPage() {
             </section>
 
             {/* ─── SUMMARY METRICS ──────────────────────────── */}
-            <section className="relative px-6 py-24 border-t border-zinc-900">
+            <section className="relative px-6 py-24 border-t border-zinc-200 dark:border-zinc-900">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -279,7 +278,7 @@ export default function ProcessPage() {
                                 {t('process.summary.subtitle')}
                             </p>
 
-                            <p className="text-xs text-zinc-700 leading-relaxed max-w-sm">
+                            <p className="text-xs text-zinc-400 dark:text-zinc-700 leading-relaxed max-w-sm">
                                 {t('process.summary.disclaimer')}
                             </p>
                         </FadeIn>
@@ -289,14 +288,14 @@ export default function ProcessPage() {
                             <div className="grid grid-cols-2 gap-4">
                                 {Array.isArray(stats) && stats.map((stat, i) => (
                                     <FadeIn key={i} delay={0.2 + i * 0.1} y={16}>
-                                        <div className="p-6 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 transition-colors group">
+                                        <div className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800/60 bg-white dark:bg-zinc-950/40 hover:border-zinc-400 dark:hover:border-zinc-700 transition-colors group">
                                             <div
-                                                className="text-3xl md:text-4xl font-light mb-2 tracking-tight"
-                                                style={{ color: i === 0 ? ACCENT : 'white' }}
+                                                className={`text-3xl md:text-4xl font-light mb-2 tracking-tight ${i !== 0 ? 'text-zinc-900 dark:text-white' : ''}`}
+                                                style={{ color: i === 0 ? ACCENT : undefined }}
                                             >
                                                 {stat.value}
                                             </div>
-                                            <div className="text-xs text-zinc-600 uppercase tracking-wider">
+                                            <div className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-wider">
                                                 {stat.label}
                                             </div>
                                         </div>
@@ -309,7 +308,7 @@ export default function ProcessPage() {
             </section>
 
             {/* ─── CTA ──────────────────────────────────────── */}
-            <section className="relative px-6 py-24 border-t border-zinc-900 bg-gradient-to-b from-black to-zinc-950">
+            <section className="relative px-6 py-24 border-t border-zinc-200 dark:border-zinc-900 bg-gradient-to-b from-white to-slate-50 dark:from-black dark:to-zinc-950">
                 <div className="max-w-3xl mx-auto text-center">
                     <FadeIn y={20}>
                         <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-4">
@@ -322,16 +321,13 @@ export default function ProcessPage() {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
                                 href="/#contact"
-                                className="px-8 py-3.5 rounded-full font-light text-sm text-black transition-colors"
-                                style={{ backgroundColor: 'white' }}
-                                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#e4e4e7')}
-                                onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'white')}
+                                className="px-8 py-3.5 rounded-full font-light text-sm bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
                             >
                                 {t('process.cta.button')}
                             </Link>
                             <Link
                                 href="/#products"
-                                className="px-8 py-3.5 rounded-full border border-zinc-700 font-light text-sm hover:bg-zinc-900 hover:border-zinc-600 transition-colors"
+                                className="px-8 py-3.5 rounded-full border border-zinc-300 dark:border-zinc-700 font-light text-sm hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
                             >
                                 {t('process.cta.products')}
                             </Link>

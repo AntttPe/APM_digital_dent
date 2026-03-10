@@ -1,9 +1,10 @@
 'use client';
 
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useTranslation } from '@/lib/i18n';
 import VideoSequence from '@/components/ui/VideoSequence';
+import FadeIn from '@/components/ui/FadeIn';
 import Link from 'next/link';
 
 interface ProductsProps {
@@ -23,7 +24,7 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
             hasSequence: true,
             sequencePath: '/images/products/retainers/sequence',
             frameCount: 120,
-            production: true, // zawsze widoczny
+            production: true,
         },
         {
             key: 'guards',
@@ -53,7 +54,7 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
             hasSequence: false,
             sequencePath: '/images/products/fixed-retainer/sequence',
             frameCount: 120,
-            production: false, // ukryty na produkcji
+            production: false,
         },
     ];
 
@@ -63,23 +64,17 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
         <section
             ref={containerRef}
             id="products"
-            className="relative py-32 px-6 border-t border-zinc-900"
+            className="relative py-32 px-6 border-t border-zinc-200 dark:border-zinc-900 bg-white dark:bg-black"
         >
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center mb-24"
-                >
-                    <h2 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
+                <FadeIn y={24} className="text-center mb-24">
+                    <h2 className="text-5xl md:text-7xl font-light tracking-tight mb-6 text-zinc-900 dark:text-white">
                         {t('products.title')}
                     </h2>
                     <p className="text-xl text-zinc-500 max-w-2xl mx-auto">
                         {t('products.subtitle')}
                     </p>
-                </motion.div>
+                </FadeIn>
 
                 <div className="space-y-48">
                     {products.map((product, index) => {
@@ -88,95 +83,88 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
                         const features = t(`products.${product.key}.features`);
 
                         return (
-                            <motion.div
+                            <FadeIn
                                 key={product.key}
-                                ref={productRef}
-                                initial={{ opacity: 0, y: 60 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: '-100px' }}
-                                transition={{ duration: 0.8 }}
-                                className={`grid md:grid-cols-2 gap-16 items-center ${
-                                    isEven ? '' : 'md:grid-flow-dense'
-                                }`}
+                                y={40}
+                                delay={0.1}
                             >
-                                <div className={isEven ? 'md:col-start-1' : 'md:col-start-2'}>
-                                    <div className={`relative aspect-square rounded-3xl bg-gradient-to-br ${product.gradient} border border-zinc-800/50 overflow-hidden`}>
-                                        {product.hasSequence ? (
-                                            <VideoSequence
-                                                frameCount={product.frameCount!}
-                                                basePath={product.sequencePath!}
-                                                scrollTarget={productRef}
-                                                fileExtension="webp"
-                                                className="rounded-3xl"
-                                            />
-                                        ) : (
-                                            <>
-                                                <div className={`absolute inset-0 bg-gradient-to-br ${product.accentColor} opacity-0 hover:opacity-5 transition-opacity duration-500`} />
-                                                <div className="absolute inset-0 flex items-center justify-center">
-                                                    <div className="w-32 h-32 border border-zinc-700 rounded-full animate-pulse" />
-                                                </div>
-                                            </>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, x: isEven ? 40 : -40 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                    className={isEven ? 'md:col-start-2' : 'md:col-start-1'}
+                                <div
+                                    ref={productRef}
+                                    className={`grid md:grid-cols-2 gap-16 items-center ${
+                                        isEven ? '' : 'md:grid-flow-dense'
+                                    }`}
                                 >
-                                    <div className="inline-block mb-4">
-                                        <div className={`h-1 w-12 bg-gradient-to-r ${product.accentColor}`} />
+                                    {/* Product image — always dark container */}
+                                    <div className={isEven ? 'md:col-start-1' : 'md:col-start-2'}>
+                                        <div className={`relative aspect-square rounded-3xl bg-zinc-950 bg-gradient-to-br ${product.gradient} border border-zinc-800/50 overflow-hidden`}>
+                                            {product.hasSequence ? (
+                                                <VideoSequence
+                                                    frameCount={product.frameCount!}
+                                                    basePath={product.sequencePath!}
+                                                    scrollTarget={productRef}
+                                                    fileExtension="webp"
+                                                    className="rounded-3xl"
+                                                />
+                                            ) : (
+                                                <>
+                                                    <div className={`absolute inset-0 bg-gradient-to-br ${product.accentColor} opacity-0 hover:opacity-5 transition-opacity duration-500`} />
+                                                    <div className="absolute inset-0 flex items-center justify-center">
+                                                        <div className="w-32 h-32 border border-zinc-700 rounded-full animate-pulse" />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
 
-                                    <h3 className="text-4xl md:text-5xl font-light mb-6">
-                                        {t(`products.${product.key}.title`)}
-                                    </h3>
+                                    <FadeIn
+                                        x={isEven ? 30 : -30}
+                                        y={0}
+                                        delay={0.2}
+                                        className={isEven ? 'md:col-start-2' : 'md:col-start-1'}
+                                    >
+                                        <div className="inline-block mb-4">
+                                            <div className={`h-1 w-12 bg-gradient-to-r ${product.accentColor}`} />
+                                        </div>
 
-                                    <p className="text-zinc-400 mb-8 leading-relaxed text-lg">
-                                        {t(`products.${product.key}.description`)}
-                                    </p>
+                                        <h3 className="text-4xl md:text-5xl font-light mb-6 text-zinc-900 dark:text-white">
+                                            {t(`products.${product.key}.title`)}
+                                        </h3>
 
-                                    <ul className="space-y-4 mb-8">
-                                        {Array.isArray(features) && features.map((feature: string, i: number) => (
-                                            <motion.li
-                                                key={i}
-                                                initial={{ opacity: 0, x: -20 }}
-                                                whileInView={{ opacity: 1, x: 0 }}
-                                                viewport={{ once: true }}
-                                                transition={{ delay: i * 0.1 }}
-                                                className="flex items-start gap-3"
+                                        <p className="text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed text-lg">
+                                            {t(`products.${product.key}.description`)}
+                                        </p>
+
+                                        <ul className="space-y-4 mb-8">
+                                            {Array.isArray(features) && features.map((feature: string, i: number) => (
+                                                <li key={i} className="flex items-start gap-3">
+                                                    <div className={`w-1.5 h-1.5 rounded-full mt-2.5 flex-shrink-0 bg-gradient-to-r ${product.accentColor}`} />
+                                                    <span className="text-sm text-zinc-500 dark:text-zinc-500">{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <Link href={`/produkty/${product.slug}`}>
+                                            <motion.button
+                                                whileHover={{ scale: 1.02 }}
+                                                whileTap={{ scale: 0.98 }}
+                                                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-300 dark:border-zinc-800 hover:border-zinc-500 dark:hover:border-zinc-700 transition-all bg-zinc-50 dark:bg-zinc-900/30 hover:bg-zinc-100 dark:hover:bg-zinc-900/50"
                                             >
-                                                <div className={`w-1.5 h-1.5 rounded-full mt-2.5 flex-shrink-0 bg-gradient-to-r ${product.accentColor}`} />
-                                                <span className="text-sm text-zinc-500">{feature}</span>
-                                            </motion.li>
-                                        ))}
-                                    </ul>
-
-                                    {/* CTA Button */}
-                                    <Link href={`/produkty/${product.slug}`}>
-                                        <motion.button
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-zinc-700 transition-all bg-zinc-900/30 hover:bg-zinc-900/50"
-                                        >
-                                            <span className="text-sm text-zinc-300 group-hover:text-white transition-colors">
-                                                {t('products.cta')}
-                                            </span>
-                                            <svg
-                                                className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 group-hover:translate-x-1 transition-all"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </motion.button>
-                                    </Link>
-                                </motion.div>
-                            </motion.div>
+                                                <span className="text-sm text-zinc-600 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                                                    {t('products.cta')}
+                                                </span>
+                                                <svg
+                                                    className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 group-hover:translate-x-1 transition-all"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </motion.button>
+                                        </Link>
+                                    </FadeIn>
+                                </div>
+                            </FadeIn>
                         );
                     })}
                 </div>

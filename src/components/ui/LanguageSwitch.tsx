@@ -11,8 +11,8 @@ export default function LanguageSwitch() {
         onClick={() => setLanguage('pl')}
         className={`px-3 py-1 rounded-full transition-colors ${
           language === 'pl'
-            ? 'bg-white text-black'
-            : 'text-zinc-500 hover:text-white'
+            ? 'bg-zinc-900 dark:bg-white text-white dark:text-black'
+            : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'
         }`}
       >
         PL
@@ -21,8 +21,8 @@ export default function LanguageSwitch() {
         onClick={() => setLanguage('en')}
         className={`px-3 py-1 rounded-full transition-colors ${
           language === 'en'
-            ? 'bg-white text-black'
-            : 'text-zinc-500 hover:text-white'
+            ? 'bg-zinc-900 dark:bg-white text-white dark:text-black'
+            : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'
         }`}
       >
         EN

@@ -3,17 +3,13 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { useTranslation } from '@/lib/i18n';
+import FadeIn from '@/components/ui/FadeIn';
 import Image from 'next/image';
 
 export default function Technology() {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ['start end', 'end start'],
-    });
 
     const { scrollYProgress: imageProgress } = useScroll({
         target: imageRef,
@@ -24,51 +20,38 @@ export default function Technology() {
     const imageRotate = useTransform(imageProgress, [0, 0.5, 1], [-3, 0, 3]);
 
     return (
-        <section ref={containerRef} id="technology" className="relative py-32 px-6 overflow-hidden">
+        <section ref={containerRef} id="technology" className="relative py-32 px-6 overflow-hidden border-t border-zinc-200 dark:border-zinc-900 bg-white dark:bg-black">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     {/* Text content */}
                     <div>
-                        <motion.h2
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="text-5xl md:text-6xl font-light tracking-tight mb-8"
-                        >
-                            {t('technology.title')}
-                        </motion.h2>
+                        <FadeIn y={20}>
+                            <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8 text-zinc-900 dark:text-white">
+                                {t('technology.title')}
+                            </h2>
+                        </FadeIn>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.1 }}
-                            className="text-lg text-zinc-400 leading-relaxed mb-12"
-                        >
-                            {t('technology.description')}
-                        </motion.p>
+                        <FadeIn y={16} delay={0.1}>
+                            <p className="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed mb-12">
+                                {t('technology.description')}
+                            </p>
+                        </FadeIn>
 
                         <div className="space-y-6">
                             {['digital', 'precision', 'material'].map((item, index) => (
-                                <motion.div
-                                    key={item}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                                    className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/50 hover:border-zinc-700/50 transition-colors group"
-                                >
-                                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform" />
-                                    <div>
-                                        <h3 className="font-light mb-1 text-zinc-200">
-                                            {t(`technology.points.${item}.title`)}
-                                        </h3>
-                                        <p className="text-sm text-zinc-500">
-                                            {t(`technology.points.${item}.desc`)}
-                                        </p>
+                                <FadeIn key={item} delay={0.1 + index * 0.1} y={12}>
+                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-700/50 transition-colors group">
+                                        <div className="w-2 h-2 bg-zinc-900 dark:bg-white rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform" />
+                                        <div>
+                                            <h3 className="font-light mb-1 text-zinc-800 dark:text-zinc-200">
+                                                {t(`technology.points.${item}.title`)}
+                                            </h3>
+                                            <p className="text-sm text-zinc-500">
+                                                {t(`technology.points.${item}.desc`)}
+                                            </p>
+                                        </div>
                                     </div>
-                                </motion.div>
+                                </FadeIn>
                             ))}
                         </div>
                     </div>

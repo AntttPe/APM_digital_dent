@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValue } from 'framer-motion';
 import { useTranslation } from '@/lib/i18n';
+import { useTheme } from '@/lib/theme';
 import LanguageSwitch from '@/components/ui/LanguageSwitch';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -12,27 +14,36 @@ const EASE = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
 
 export default function Header() {
     const { t } = useTranslation();
+    const { theme } = useTheme();
     const pathname = usePathname();
     const isHomePage = pathname === '/';
     const [isOpen, setIsOpen] = useState(false);
 
     const { scrollY } = useScroll();
-    const backgroundColor = useTransform(
-        scrollY,
-        [0, 100],
-        ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.8)']
-    );
+    const bgColor = useMotionValue('rgba(0,0,0,0)');
+
+    // Update background based on scroll + theme
+    useEffect(() => {
+        const updateBg = (value: number) => {
+            const progress = Math.min(value / 100, 1);
+            if (theme === 'dark') {
+                bgColor.set(`rgba(0,0,0,${progress * 0.85})`);
+            } else {
+                bgColor.set(`rgba(255,255,255,${progress * 0.92})`);
+            }
+        };
+        updateBg(scrollY.get());
+        return scrollY.on('change', updateBg);
+    }, [scrollY, bgColor, theme]);
 
     const getNavLink = (section: string) =>
         isHomePage ? `#${section}` : `/#${section}`;
 
-    // Blokuj scroll gdy menu otwarte
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : '';
         return () => { document.body.style.overflow = ''; };
     }, [isOpen]);
 
-    // Zamknij menu na ESC
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setIsOpen(false); };
         window.addEventListener('keydown', onKey);
@@ -50,8 +61,8 @@ export default function Header() {
     return (
         <>
             <motion.header
-                style={{ backgroundColor }}
-                className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-zinc-900/0"
+                style={{ backgroundColor: bgColor }}
+                className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-transparent"
             >
                 <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     {/* Logo */}
@@ -62,23 +73,25 @@ export default function Header() {
                             width={160}
                             height={25}
                             priority
+                            className="invert dark:invert-0"
                         />
                     </Link>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-4">
                         {/* Desktop nav */}
                         <div className="hidden md:flex items-center gap-6 text-sm">
                             {navLinks.map(({ label, href }) => (
                                 <Link
                                     key={href}
                                     href={href}
-                                    className="text-zinc-400 hover:text-white transition-colors"
+                                    className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
                                 >
                                     {label}
                                 </Link>
                             ))}
                         </div>
 
+                        <ThemeToggle />
                         <LanguageSwitch />
 
                         {/* Hamburger — mobile only */}
@@ -90,17 +103,17 @@ export default function Header() {
                             <motion.span
                                 animate={isOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
                                 transition={{ duration: 0.3, ease: EASE }}
-                                className="block w-5 h-px bg-white origin-center"
+                                className="block w-5 h-px bg-zinc-900 dark:bg-white origin-center"
                             />
                             <motion.span
                                 animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
                                 transition={{ duration: 0.2 }}
-                                className="block w-5 h-px bg-white origin-center"
+                                className="block w-5 h-px bg-zinc-900 dark:bg-white origin-center"
                             />
                             <motion.span
                                 animate={isOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
                                 transition={{ duration: 0.3, ease: EASE }}
-                                className="block w-5 h-px bg-white origin-center"
+                                className="block w-5 h-px bg-zinc-900 dark:bg-white origin-center"
                             />
                         </button>
                     </div>
@@ -115,7 +128,7 @@ export default function Header() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.25, ease: 'easeInOut' }}
-                        className="fixed inset-0 z-[55] bg-black/97 flex flex-col items-center justify-center md:hidden"
+                        className="fixed inset-0 z-[55] bg-white/98 dark:bg-black/97 flex flex-col items-center justify-center md:hidden"
                     >
                         <nav className="flex flex-col items-center gap-2 w-full px-8">
                             {navLinks.map(({ label, href }, i) => (
@@ -130,16 +143,15 @@ export default function Header() {
                                     <Link
                                         href={href}
                                         onClick={() => setIsOpen(false)}
-                                        className="flex items-center justify-between w-full py-4 border-b border-zinc-900 text-2xl font-light text-zinc-200 hover:text-white transition-colors group"
+                                        className="flex items-center justify-between w-full py-4 border-b border-zinc-200 dark:border-zinc-900 text-2xl font-light text-zinc-800 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors group"
                                     >
                                         <span>{label}</span>
-                                        <span className="text-zinc-700 group-hover:text-zinc-400 transition-colors text-lg">→</span>
+                                        <span className="text-zinc-400 dark:text-zinc-700 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors text-lg">→</span>
                                     </Link>
                                 </motion.div>
                             ))}
                         </nav>
 
-                        {/* Bottom bar z language switch */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -147,6 +159,7 @@ export default function Header() {
                             transition={{ delay: 0.35 }}
                             className="absolute bottom-10 flex items-center gap-4"
                         >
+                            <ThemeToggle />
                             <LanguageSwitch />
                         </motion.div>
                     </motion.div>

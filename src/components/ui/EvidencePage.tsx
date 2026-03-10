@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
+import FadeIn from '@/components/ui/FadeIn';
 
 const ACCENT = '#3B82F6';
 
@@ -57,17 +58,17 @@ const sources = [
 ];
 
 const typeColors: Record<string, string> = {
-    'Specyfikacja producenta': 'text-zinc-500 border-zinc-800',
-    'Badanie materiałowe': 'text-blue-400/70 border-blue-500/20',
-    'Badanie kliniczne': 'text-blue-400/70 border-blue-500/20',
-    'Meta-analiza': 'text-purple-400/70 border-purple-500/20',
+    'Specyfikacja producenta': 'text-zinc-500 border-zinc-300 dark:border-zinc-800',
+    'Badanie materiałowe': 'text-blue-600 dark:text-blue-400/70 border-blue-300 dark:border-blue-500/20',
+    'Badanie kliniczne': 'text-blue-600 dark:text-blue-400/70 border-blue-300 dark:border-blue-500/20',
+    'Meta-analiza': 'text-purple-600 dark:text-purple-400/70 border-purple-300 dark:border-purple-500/20',
 };
 
 export default function EvidencePage() {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-white">
 
             {/* Back button */}
             <div className="fixed top-20 left-6 z-50">
@@ -77,12 +78,12 @@ export default function EvidencePage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
                         whileHover={{ x: -4 }}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-xl hover:border-zinc-700 transition-all group"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all group"
                     >
-                        <svg className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
-                        <span className="text-sm text-zinc-400 group-hover:text-white transition-colors">Powrót</span>
+                        <span className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">Powrót</span>
                     </motion.button>
                 </Link>
             </div>
@@ -124,7 +125,7 @@ export default function EvidencePage() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45, duration: 0.7 }}
-                    className="text-base md:text-lg text-zinc-400 font-light max-w-xl leading-relaxed"
+                    className="text-base md:text-lg text-zinc-500 dark:text-zinc-400 font-light max-w-xl leading-relaxed"
                 >
                     Dane techniczne i publikacje naukowe potwierdzające parametry materiałów oraz przewagę cyfrowej produkcji w stomatologii.
                 </motion.p>
@@ -134,76 +135,62 @@ export default function EvidencePage() {
             <section className="px-6 pb-32">
                 <div className="max-w-4xl mx-auto">
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="text-xs uppercase tracking-[0.3em] text-zinc-600 text-center mb-16"
-                    >
+                    <FadeIn y={0} className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600 text-center mb-16">
                         {sources.length} źródeł
-                    </motion.p>
+                    </FadeIn>
 
                     <div className="flex flex-col gap-4">
                         {sources.map((source, i) => (
-                            <motion.a
-                                key={i}
-                                href={source.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: '-40px' }}
-                                transition={{ delay: i * 0.08, duration: 0.6, ease: EASE }}
-                                whileHover={{ x: 4 }}
-                                className="group flex items-start gap-6 p-6 md:p-8 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 hover:bg-zinc-900/30 transition-all duration-300"
-                            >
-                                {/* Number */}
-                                <span
-                                    className="text-xs font-light tracking-[0.2em] mt-1 flex-shrink-0"
-                                    style={{ color: ACCENT }}
+                            <FadeIn key={i} delay={i * 0.08} y={16}>
+                                <motion.a
+                                    href={source.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ x: 4 }}
+                                    className="group flex items-start gap-6 p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-950/40 hover:border-zinc-400 dark:hover:border-zinc-700 hover:bg-white dark:hover:bg-zinc-900/30 transition-all duration-300"
                                 >
-                                    {source.number}
-                                </span>
+                                    {/* Number */}
+                                    <span
+                                        className="text-xs font-light tracking-[0.2em] mt-1 flex-shrink-0"
+                                        style={{ color: ACCENT }}
+                                    >
+                                        {source.number}
+                                    </span>
 
-                                {/* Content */}
-                                <div className="flex-1 min-w-0">
-                                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                                        <span className={`text-xs px-2 py-0.5 rounded-full border ${typeColors[source.type] ?? 'text-zinc-500 border-zinc-800'}`}>
-                                            {source.type}
-                                        </span>
-                                        <span className="text-xs text-zinc-700">{source.publisher} · {source.year}</span>
+                                    {/* Content */}
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                                            <span className={`text-xs px-2 py-0.5 rounded-full border ${typeColors[source.type] ?? 'text-zinc-500 border-zinc-300 dark:border-zinc-800'}`}>
+                                                {source.type}
+                                            </span>
+                                            <span className="text-xs text-zinc-400 dark:text-zinc-700">{source.publisher} · {source.year}</span>
+                                        </div>
+
+                                        <h3 className="text-base md:text-lg font-light text-zinc-900 dark:text-white mb-2 leading-snug group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors">
+                                            {source.title}
+                                        </h3>
+
+                                        <p className="text-sm text-zinc-500 leading-relaxed">
+                                            {source.detail}
+                                        </p>
                                     </div>
 
-                                    <h3 className="text-base md:text-lg font-light text-white mb-2 leading-snug group-hover:text-zinc-200 transition-colors">
-                                        {source.title}
-                                    </h3>
-
-                                    <p className="text-sm text-zinc-500 leading-relaxed">
-                                        {source.detail}
-                                    </p>
-                                </div>
-
-                                {/* Arrow */}
-                                <svg
-                                    className="w-4 h-4 text-zinc-700 group-hover:text-zinc-400 transition-colors flex-shrink-0 mt-1"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </motion.a>
+                                    {/* Arrow */}
+                                    <svg
+                                        className="w-4 h-4 text-zinc-400 dark:text-zinc-700 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors flex-shrink-0 mt-1"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </motion.a>
+                            </FadeIn>
                         ))}
                     </div>
 
                     {/* Disclaimer */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="text-xs text-zinc-700 text-center mt-12 max-w-2xl mx-auto leading-relaxed"
-                    >
+                    <FadeIn y={0} delay={0.2} className="text-xs text-zinc-400 dark:text-zinc-700 text-center mt-12 max-w-2xl mx-auto leading-relaxed">
                         Dane oparte na specyfikacji producenta KeySplint (ISO 20795-2) oraz publikacjach naukowych (2018–2024). Rzeczywiste wartości mogą się minimalnie różnić w zależności od grubości i protokołu klinicznego.
-                    </motion.p>
+                    </FadeIn>
                 </div>
             </section>
         </div>
