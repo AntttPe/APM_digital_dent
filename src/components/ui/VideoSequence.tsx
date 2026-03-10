@@ -10,6 +10,7 @@ interface VideoSequenceProps {
     className?: string;
     fileExtension?: string;
     filePrefix?: string;
+    transparent?: boolean;
 }
 
 export default function VideoSequence({
@@ -19,6 +20,7 @@ export default function VideoSequence({
                                           className = '',
                                           fileExtension = 'webp',
                                           filePrefix = '',
+                                          transparent = false,
                                       }: VideoSequenceProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -101,7 +103,7 @@ export default function VideoSequence({
         if (!canvas || !images.length) return;
 
         const context = canvas.getContext('2d', {
-            alpha: false,
+            alpha: transparent,
             desynchronized: true,
         });
         if (!context) return;

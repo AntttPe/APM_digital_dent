@@ -13,7 +13,8 @@
     "title": "Your scan. Our splint.",
     "subtitle": "Retention, occlusal, and whitening splints — printed from certified biocompatible Class IIa material.",
     "tag": "3D-printed splints",
-    "processLink": "View the workflow"
+    "processLink": "View the workflow",
+    "productsLink": "Our products"
   },
   "workflow": {
     "title": "Purely digital workflow",
@@ -136,11 +137,12 @@
     }
   },
   "contact": {
-    "title": "Start a partnership",
-    "subtitle": "Contact us to learn more about our solutions.",
-    "email": "Send email",
-    "phone": "Call us",
-    "footer": "We respond within 24 hours"
+    "tag": "Contact",
+    "title": "Write to us.",
+    "subtitle": "Describe the splint type and attach your scan file — we'll handle the rest.",
+    "hint": "Click the address to open your email client",
+    "responseTime": "Response within 24h",
+    "formats": "All scan formats accepted"
   },
   "footer": {
     "company": {

@@ -13,7 +13,8 @@
     "title": "Twój skan. Nasza szyna.",
     "subtitle": "Szyny retencyjne, relaksacyjne i wybielające — drukowane z certyfikowanego biokompatybilnego materiału Class IIa.",
     "tag": "Szyny drukowane cyfrowo",
-    "processLink": "Zobacz proces współpracy"
+    "processLink": "Zobacz proces współpracy",
+    "productsLink": "Nasze produkty"
   },
   "workflow": {
     "title": "Czysto cyfrowy proces",
@@ -136,11 +137,12 @@
     }
   },
   "contact": {
-    "title": "Rozpocznij współpracę",
-    "subtitle": "Skontaktuj się z nami, aby dowiedzieć się więcej o naszych rozwiązaniach.",
-    "email": "Wyślij email",
-    "phone": "Zadzwoń",
-    "footer": "Odpowiemy w ciągu 24 godzin"
+    "tag": "Kontakt",
+    "title": "Napisz do nas.",
+    "subtitle": "Opisz rodzaj szyny, dołącz plik ze skanera — zajmiemy się resztą.",
+    "hint": "Kliknij adres, by otworzyć klienta pocztowego",
+    "responseTime": "Odpowiedź w ciągu 24h",
+    "formats": "Przyjmujemy wszystkie formaty skanów"
   },
   "footer": {
     "company": {
