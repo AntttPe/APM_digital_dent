@@ -467,6 +467,12 @@
     "title": "Proven. Precise. Repeatable.",
     "subtitle": "In Poland, over 80% of retainers and occlusal splints are still made by thermoforming. A proven method – but no longer the optimal one.",
     "subtitleNote": "We offer an alternative that genuinely changes daily treatment outcomes and reduces the number of chairside adjustments.",
+    "stats": [
+      { "value": "±10µm", "label": "Geometry tolerance" },
+      { "value": "2–3×", "label": "Longer lifespan" },
+      { "value": "24h", "label": "Turnaround time" },
+      { "value": ">95%", "label": "Splints without adjustment" }
+    ],
     "reasons": [
       {
         "number": "01",
@@ -486,7 +492,7 @@
       {
         "number": "04",
         "title": "Fewer adjustments, fewer complaints",
-        "description": "Precise CAD fit means fewer chairside corrections. Dentists report a clear drop in complaint calls and noticeably smoother follow-up appointments."
+        "description": "Precise CAD fit means fewer chairside corrections. Over 95% of splints accepted without any adjustment — dentists report a clear drop in patient complaint calls."
       }
     ],
     "casesLabel": "Clinical examples",
@@ -495,19 +501,19 @@
         "tag": "Heavy bruxism",
         "title": "Relaxation splint for a patient with nocturnal bruxism",
         "description": "The patient had been through several thermoformed splints that fractured or deformed in occlusal zones. A 3D-printed relaxation splint was ordered with precisely designed 2 mm occlusal zone thickness.",
-        "result": "The splint seats identically on every insertion. No fractures, no chairside adjustments – the patient finally wears it consistently."
+        "result": "No fractures after 12 months of use. Zero complaint visits — the patient finally wears the splint consistently."
       },
       {
         "tag": "Post-orthodontic retention",
         "title": "Retainer splint after fixed appliance treatment",
         "description": "After debonding, the patient received a thermoformed retainer that quickly lost tension and stopped maintaining tooth position. Switched to a 3D-printed retainer with controlled geometry.",
-        "result": "The splint maintains precise fit without deformation. No adjustments required at any follow-up appointment."
+        "result": "No adjustments required across four follow-up appointments over 9 months. Splint geometry identical to the day it was delivered."
       },
       {
         "tag": "Discomfort with thermoformed splint",
         "title": "Patient repeatedly abandoning their night splint",
         "description": "The patient had given up wearing a night splint multiple times due to pressure and poor fit. A 3D-printed relaxation splint was designed individually from their scan.",
-        "result": "The patient has worn the splint consistently for the first time in years. No discomfort reported from the very first fitting."
+        "result": "The patient has worn the splint consistently for 10 months — for the first time in their treatment history. No discomfort reported from the very first fitting."
       }
     ],
     "cta": {

@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from '@/lib/i18n';
 import Link from 'next/link';
+import FadeIn from '@/components/ui/FadeIn';
 
-const ACCENT = '#3B82F6'; // blue-500
+const ACCENT = '#3B82F6';
 
 const steps = [
     { number: '01', key: 'scan' },
@@ -14,29 +15,22 @@ const steps = [
 
 const EASE = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
 
+// Connectors stay as Framer Motion — scaleX only, no opacity, no Safari flash
 const connectorVariants = {
     hidden: { scaleX: 0 },
     visible: (i: number) => ({
         scaleX: 1,
-        transition: {
-            duration: 0.8,
-            delay: 0.4 + i * 0.5,
-            ease: EASE  // ← zamiast inline array
-        },
+        transition: { duration: 0.8, delay: 0.4 + i * 0.5, ease: EASE },
     }),
 };
 
-const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i: number) => ({
+const mobileConnectorVariants = {
+    hidden: { opacity: 0, scaleY: 0 },
+    visible: {
         opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.7,
-            delay: 0.1 + i * 0.15,
-            ease: EASE  // ← zamiast inline array
-        },
-    }),
+        scaleY: 1,
+        transition: { duration: 0.6, delay: 0.2, ease: EASE },
+    },
 };
 
 export default function ProcessPage() {
@@ -47,7 +41,7 @@ export default function ProcessPage() {
     return (
         <div className="min-h-screen bg-black text-white">
 
-            {/* Back button */}
+            {/* Back button — mount animation, not scroll, fine with WAAPI */}
             <div className="fixed top-20 left-6 z-50">
                 <Link href="/">
                     <motion.button
@@ -68,17 +62,14 @@ export default function ProcessPage() {
             </div>
 
             {/* ─── HERO ─────────────────────────────────────── */}
+            {/* Mount animations — not scroll-triggered, no Safari flash */}
             <section className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden">
 
-                {/* Subtle radial glow */}
                 <div
                     className="pointer-events-none absolute inset-0"
-                    style={{
-                        background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(59,130,246,0.07) 0%, transparent 70%)',
-                    }}
+                    style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(59,130,246,0.07) 0%, transparent 70%)' }}
                 />
 
-                {/* Thin horizontal rule */}
                 <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
@@ -114,7 +105,6 @@ export default function ProcessPage() {
                     {t('process.hero.subtitle')}
                 </motion.p>
 
-                {/* Scroll cue */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -138,15 +128,9 @@ export default function ProcessPage() {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Section label */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, amount: 0.8 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-xs uppercase tracking-[0.3em] text-zinc-600 text-center mb-20"
-                    >
+                    <FadeIn y={0} threshold={0.3} className="text-xs uppercase tracking-[0.3em] text-zinc-600 text-center mb-20">
                         {t('process.steps.label')}
-                    </motion.p>
+                    </FadeIn>
 
                     {/* Cards + connectors */}
                     <div className="relative flex flex-col md:flex-row gap-0 items-stretch">
@@ -154,99 +138,84 @@ export default function ProcessPage() {
                         {steps.map((step, i) => (
                             <div key={step.key} className="flex md:flex-row flex-col items-stretch flex-1">
 
-                                {/* ── Card ── */}
-                                <motion.div
-                                    custom={i}
-                                    variants={cardVariants}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true, amount: 0.15 }}
-                                    style={{ willChange: 'opacity, transform' }}
-                                    className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-500 rounded-2xl bg-zinc-950/50 overflow-hidden"
+                                {/* ── Card — FadeIn instead of whileInView ── */}
+                                <FadeIn
+                                    delay={0.1 + i * 0.15}
+                                    y={16}
+                                    className="flex-1 flex"
                                 >
-                                    {/* Hover blue tint */}
-                                    <div
-                                        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
-                                        style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(59,130,246,0.06) 0%, transparent 70%)' }}
-                                    />
+                                    <div className="group flex-1 relative flex flex-col p-8 md:p-10 border border-zinc-800/80 hover:border-zinc-700 transition-colors duration-500 rounded-2xl bg-zinc-950/50">
 
-                                    {/* Top row */}
-                                    <div className="flex items-start justify-between mb-8">
-                            <span
-                                className="text-xs font-light tracking-[0.25em] uppercase"
-                                style={{ color: ACCENT }}
-                            >
-                                {step.number}
-                            </span>
-                                        {/* Icon glyph */}
-                                        <div className="w-10 h-10 flex items-center justify-center">
+                                        {/* Hover glow — overflow-hidden on inner wrapper, not on FadeIn */}
+                                        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                                            <div
+                                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                                style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(59,130,246,0.06) 0%, transparent 70%)' }}
+                                            />
+                                        </div>
 
-                                            {/* IKONA 1 (SVG - Skanowanie) - bez zmian */}
-                                            {i === 0 && (
-                                                <svg
-                                                    className="w-full h-full text-zinc-700 group-hover:text-zinc-500 transition-colors duration-300"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                >
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                </svg>
-                                            )}
+                                        {/* Top row */}
+                                        <div className="flex items-start justify-between mb-8">
+                                            <span className="text-xs font-light tracking-[0.25em] uppercase" style={{ color: ACCENT }}>
+                                                {step.number}
+                                            </span>
+                                            <div className="w-10 h-10 flex items-center justify-center">
+                                                {i === 0 && (
+                                                    <svg className="w-full h-full text-zinc-700 group-hover:text-zinc-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                    </svg>
+                                                )}
+                                                {i === 1 && (
+                                                    <div
+                                                        className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
+                                                        style={{
+                                                            maskImage: "url('/images/icons/3d_printer.png')",
+                                                            maskSize: 'contain',
+                                                            maskRepeat: 'no-repeat',
+                                                            maskPosition: 'center',
+                                                            WebkitMaskImage: "url('/images/icons/3d_printer.png')",
+                                                            WebkitMaskSize: 'contain',
+                                                            WebkitMaskRepeat: 'no-repeat',
+                                                            WebkitMaskPosition: 'center',
+                                                        }}
+                                                    />
+                                                )}
+                                                {i === 2 && (
+                                                    <div
+                                                        className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
+                                                        style={{
+                                                            maskImage: "url('/images/icons/delivery.png')",
+                                                            maskSize: 'contain',
+                                                            maskRepeat: 'no-repeat',
+                                                            maskPosition: 'center',
+                                                            WebkitMaskImage: "url('/images/icons/delivery.png')",
+                                                            WebkitMaskSize: 'contain',
+                                                            WebkitMaskRepeat: 'no-repeat',
+                                                            WebkitMaskPosition: 'center',
+                                                        }}
+                                                    />
+                                                )}
+                                            </div>
+                                        </div>
 
-                                            {/* IKONA 2 (PNG - Druk) - Używamy Maski */}
-                                            {i === 1 && (
-                                                <div
-                                                    className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
-                                                    style={{
-                                                        maskImage: "url('/images/icons/3d_printer.png')",
-                                                        maskSize: 'contain',
-                                                        maskRepeat: 'no-repeat',
-                                                        maskPosition: 'center',
-                                                        WebkitMaskImage: "url('/images/icons/3d_printer.png')", // Dla Safari/Chrome
-                                                        WebkitMaskSize: 'contain',
-                                                        WebkitMaskRepeat: 'no-repeat',
-                                                        WebkitMaskPosition: 'center'
-                                                    }}
-                                                />
-                                            )}
+                                        <h3 className="text-2xl md:text-3xl font-light tracking-tight mb-4 leading-snug">
+                                            {t(`process.steps.${step.key}.title`)}
+                                        </h3>
 
-                                            {/* IKONA 3 (PNG - Wysyłka) - Używamy Maski */}
-                                            {i === 2 && (
-                                                <div
-                                                    className="w-full h-full bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300"
-                                                    style={{
-                                                        maskImage: "url('/images/icons/delivery.png')",
-                                                        maskSize: 'contain',
-                                                        maskRepeat: 'no-repeat',
-                                                        maskPosition: 'center',
-                                                        WebkitMaskImage: "url('/images/icons/delivery.png')", // Dla Safari/Chrome
-                                                        WebkitMaskSize: 'contain',
-                                                        WebkitMaskRepeat: 'no-repeat',
-                                                        WebkitMaskPosition: 'center'
-                                                    }}
-                                                />
-                                            )}
+                                        <p className="text-zinc-500 text-sm md:text-base leading-relaxed flex-1">
+                                            {t(`process.steps.${step.key}.description`)}
+                                        </p>
+
+                                        <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center gap-2">
+                                            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
+                                            <span className="text-xs text-zinc-600 tracking-wider uppercase">
+                                                {t(`process.steps.${step.key}.time`)}
+                                            </span>
                                         </div>
                                     </div>
+                                </FadeIn>
 
-                                    {/* Title */}
-                                    <h3 className="text-2xl md:text-3xl font-light tracking-tight mb-4 leading-snug">
-                                        {t(`process.steps.${step.key}.title`)}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-zinc-500 text-sm md:text-base leading-relaxed flex-1">
-                                        {t(`process.steps.${step.key}.description`)}
-                                    </p>
-
-                                    {/* Bottom time tag */}
-                                    <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
-                                        <span className="text-xs text-zinc-600 tracking-wider uppercase">
-                                {t(`process.steps.${step.key}.time`)}
-                            </span>
-                                    </div>
-                                </motion.div>
-
-                                {/* ── Connector arrow (between cards, desktop only) ── */}
+                                {/* Connector desktop — scaleX only, no opacity flash */}
                                 {i < steps.length - 1 && (
                                     <div className="hidden md:flex items-center justify-center w-10 flex-shrink-0 px-1">
                                         <motion.div
@@ -265,14 +234,14 @@ export default function ProcessPage() {
                                     </div>
                                 )}
 
-                                {/* Mobile connector (vertical) - UPROSZCZONY */}
+                                {/* Connector mobile */}
                                 {i < steps.length - 1 && (
                                     <div className="flex md:hidden justify-center py-4">
                                         <motion.div
-                                            initial={{ opacity: 0, scaleY: 0 }}
-                                            whileInView={{ opacity: 1, scaleY: 1 }}
+                                            variants={mobileConnectorVariants}
+                                            initial="hidden"
+                                            whileInView="visible"
                                             viewport={{ once: true, amount: 0.3 }}
-                                            transition={{ duration: 0.6, delay: 0.2 }}
                                             className="flex flex-col items-center gap-1 origin-top"
                                         >
                                             <div className="w-px h-8" style={{ backgroundColor: 'rgba(59,130,246,0.3)' }} />
@@ -291,16 +260,10 @@ export default function ProcessPage() {
             {/* ─── SUMMARY METRICS ──────────────────────────── */}
             <section className="relative px-6 py-24 border-t border-zinc-900">
                 <div className="max-w-7xl mx-auto">
-
                     <div className="grid md:grid-cols-2 gap-16 items-center">
 
                         {/* Left — headline */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
+                        <FadeIn x={-30} y={0}>
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} />
                                 <span className="text-xs uppercase tracking-[0.3em] text-zinc-500">
@@ -319,37 +282,28 @@ export default function ProcessPage() {
                             <p className="text-xs text-zinc-700 leading-relaxed max-w-sm">
                                 {t('process.summary.disclaimer')}
                             </p>
-                        </motion.div>
+                        </FadeIn>
 
                         {/* Right — stats */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.1 }}
-                            className="grid grid-cols-2 gap-4"
-                        >
-                            {Array.isArray(stats) && stats.map((stat, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2 + i * 0.1 }}
-                                    className="p-6 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 transition-colors group"
-                                >
-                                    <div
-                                        className="text-3xl md:text-4xl font-light mb-2 tracking-tight"
-                                        style={{ color: i === 0 ? ACCENT : 'white' }}
-                                    >
-                                        {stat.value}
-                                    </div>
-                                    <div className="text-xs text-zinc-600 uppercase tracking-wider">
-                                        {stat.label}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                        <FadeIn x={30} y={0} delay={0.1}>
+                            <div className="grid grid-cols-2 gap-4">
+                                {Array.isArray(stats) && stats.map((stat, i) => (
+                                    <FadeIn key={i} delay={0.2 + i * 0.1} y={16}>
+                                        <div className="p-6 rounded-2xl border border-zinc-800/60 bg-zinc-950/40 hover:border-zinc-700 transition-colors group">
+                                            <div
+                                                className="text-3xl md:text-4xl font-light mb-2 tracking-tight"
+                                                style={{ color: i === 0 ? ACCENT : 'white' }}
+                                            >
+                                                {stat.value}
+                                            </div>
+                                            <div className="text-xs text-zinc-600 uppercase tracking-wider">
+                                                {stat.label}
+                                            </div>
+                                        </div>
+                                    </FadeIn>
+                                ))}
+                            </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
@@ -357,12 +311,7 @@ export default function ProcessPage() {
             {/* ─── CTA ──────────────────────────────────────── */}
             <section className="relative px-6 py-24 border-t border-zinc-900 bg-gradient-to-b from-black to-zinc-950">
                 <div className="max-w-3xl mx-auto text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
+                    <FadeIn y={20}>
                         <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-4">
                             {t('process.cta.title')}
                         </h2>
@@ -387,9 +336,10 @@ export default function ProcessPage() {
                                 {t('process.cta.products')}
                             </Link>
                         </div>
-                    </motion.div>
+                    </FadeIn>
                 </div>
             </section>
+
         </div>
     );
 }

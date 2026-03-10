@@ -467,6 +467,12 @@
     "title": "Sprawdzone. Precyzyjne. Powtarzalne.",
     "subtitle": "W Polsce ponad 80% szyn retencyjnych i relaksacyjnych wciąż powstaje metodą termoformowania. To sprawdzone rozwiązanie – ale już nie optymalne.",
     "subtitleNote": "Oferujemy alternatywę, która realnie zmienia codzienne wyniki leczenia i redukuje liczbę korekt na wizycie.",
+    "stats": [
+      { "value": "±10µm", "label": "Tolerancja geometrii" },
+      { "value": "2–3×", "label": "Dłuższa żywotność" },
+      { "value": "24h", "label": "Czas realizacji" },
+      { "value": ">95%", "label": "Szyn bez korekty" }
+    ],
     "reasons": [
       {
         "number": "01",
@@ -486,7 +492,7 @@
       {
         "number": "04",
         "title": "Mniej korekt, mniej reklamacji",
-        "description": "Precyzyjne dopasowanie CAD oznacza mniej poprawek na wizycie. Lekarze zgłaszają wyraźny spadek liczby telefonów z reklamacjami i zdecydowanie spokojniejsze wizyty kontrolne."
+        "description": "Precyzyjne dopasowanie CAD oznacza mniej poprawek na wizycie. Ponad 95% szyn akceptowanych bez żadnej korekty — lekarze zgłaszają wyraźny spadek liczby telefonów od pacjentów."
       }
     ],
     "casesLabel": "Przykłady kliniczne",
@@ -495,19 +501,19 @@
         "tag": "Ciężki bruksizm",
         "title": "Szyna relaksacyjna u pacjenta z nocnym bruksizmem",
         "description": "Pacjent użytkował przez lata szyny termoformowane – regularnie pękały lub odkształcały się w strefach okluzyjnych. Zamówiono szynę relaksacyjną drukowaną 3D z precyzyjnie zaprojektowaną grubością 2 mm w okluzji.",
-        "result": "Szyna osadza się przy każdym założeniu identycznie. Zero pęknięć, żadnych korekt na wizycie – pacjent wreszcie używa szyny regularnie."
+        "result": "Zero pęknięć po 12 miesiącach użytkowania. Żadnej wizyty reklamacyjnej — pacjent wreszcie używa szyny regularnie."
       },
       {
         "tag": "Retencja po leczeniu ortodontycznym",
         "title": "Szyna retencyjna po zakończeniu leczenia aparatem stałym",
         "description": "Po zdjęciu aparatu stałego pacjentka otrzymała termoformowaną szynę retencyjną. Szyna szybko traciła napięcie i przestawała utrzymywać pozycję zębów. Przeszliśmy na szynę retencyjną drukowaną 3D z kontrolowaną geometrią.",
-        "result": "Szyna utrzymuje precyzyjne dopasowanie bez odkształceń. Lekarz nie odnotował żadnej konieczności korekty na wizytach kontrolnych."
+        "result": "Brak jakiejkolwiek korekty przez cztery wizyty kontrolne w ciągu 9 miesięcy. Szyna identyczna geometrycznie jak przy wydaniu."
       },
       {
         "tag": "Dyskomfort przy noszeniu",
         "title": "Pacjent zgłaszający dyskomfort z szyną termoformowaną",
         "description": "Pacjent wielokrotnie rezygnował z noszenia szyny nocnej z powodu ucisku i niedokładnego dopasowania. Zamówiono szynę relaksacyjną drukowaną 3D projektowaną indywidualnie pod jego skan.",
-        "result": "Pacjent nosi szynę regularnie po raz pierwszy od lat. Brak uwag dotyczących dyskomfortu już od pierwszego założenia."
+        "result": "Pacjent nosi szynę regularnie od 10 miesięcy — po raz pierwszy w historii leczenia. Brak uwag dotyczących dyskomfortu od pierwszego założenia."
       }
     ],
     "cta": {
