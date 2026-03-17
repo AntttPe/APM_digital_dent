@@ -2,14 +2,19 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { useTranslation } from '@/lib/i18n';
 
 export default function ProfessionalGate() {
     const { t } = useTranslation();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
     useEffect(() => {
+        // Nie pokazuj na stronach przeznaczonych dla pacjentów
+        if (pathname === '/pacjent') return;
+
         const hasConfirmed = localStorage.getItem('professional_confirmed');
         if (hasConfirmed) return;
 

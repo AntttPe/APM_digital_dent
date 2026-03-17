@@ -144,6 +144,150 @@
     "responseTime": "Response within 24h",
     "formats": "All scan formats accepted"
   },
+  "patient": {
+    "tag": "Care instructions",
+    "title": "Your dental splint",
+    "subtitle": "Simple care, cleaning, and wearing guidelines — for lasting comfort and durability.",
+    "warning": {
+      "title": "Important",
+      "text": "If you experience pain, significant discomfort, or have any doubts — contact your dentist. Do not modify your splint or discontinue treatment on your own."
+    },
+    "tabLabel": "Select your splint type:",
+    "tabs": {
+      "retainers": "Retainer",
+      "guards": "Occlusal",
+      "aligners": "Whitening"
+    },
+    "sections": {
+      "cleaning": "Cleaning",
+      "wearing": "Wearing",
+      "normalTitle": "What's normal?",
+      "warningTitle": "Contact your dentist if:"
+    },
+    "products": {
+      "retainers": {
+        "title": "Retention splint",
+        "description": "A retention splint keeps your teeth in their corrected position after orthodontic treatment. Consistent wear as prescribed is essential — teeth have a natural tendency to shift back over time.",
+        "cleaning": [
+          "Rinse the splint with cool water after each use.",
+          "Once a day, gently clean it with a soft toothbrush — without toothpaste (it's abrasive and can scratch the material).",
+          "Once a week, soak in retainer cleaning tablets (e.g. Retainer Brite) for about 15 minutes.",
+          "Always store in the provided case — not in a tissue or loose in a bag."
+        ],
+        "wearing": [
+          "Wear as directed by your dentist — typically full-time at first, then nights only.",
+          "Remove before eating and drinking (cold water is fine).",
+          "Brush your teeth before re-inserting after meals.",
+          "Do not bend or try to adjust the fit yourself."
+        ],
+        "normal": [
+          "Slight pressure — especially after a break in wearing. This means the splint is working correctly.",
+          "A short adjustment period (1–3 days) when first inserted.",
+          "Slightly altered speech during the first few days."
+        ],
+        "watchOut": [
+          "Pain or strong discomfort that doesn't ease after several days.",
+          "The splint no longer fits — noticeably loose or impossible to seat.",
+          "Visible cracks or deformation.",
+          "Uncertainty about your wearing schedule."
+        ]
+      },
+      "guards": {
+        "title": "Occlusal splint",
+        "description": "An occlusal splint protects your teeth and jaw joints from the effects of bruxism — grinding and clenching, often unconscious during sleep. Most patients wear it only at night.",
+        "cleaning": [
+          "Rinse with cool water every morning after removing.",
+          "Gently clean with a soft brush — no toothpaste, or use a dedicated splint cleaner.",
+          "Once a week, soak in retainer cleaning tablets for about 15 minutes.",
+          "Store in the case, away from heat (not in a parked car or in direct sunlight)."
+        ],
+        "wearing": [
+          "Insert just before sleep, as directed by your dentist.",
+          "The splint should seat firmly without excessive force.",
+          "Do not eat or drink (except cold water) while wearing.",
+          "If your dentist advised daytime wear as well — follow their instructions."
+        ],
+        "normal": [
+          "Increased saliva production during the first few nights — resolves on its own.",
+          "A sense of unfamiliarity at first — typically passes within 1–2 weeks.",
+          "Over time, wear marks may appear on the splint surface — this means it's protecting your teeth."
+        ],
+        "watchOut": [
+          "Jaw, ear, or morning headaches that don't ease after several weeks of wearing.",
+          "The splint noticeably changes your bite — teeth meet differently than before.",
+          "The splint is cracked or visibly deformed.",
+          "Jaw muscle tension or headaches that don't improve with regular wear."
+        ]
+      },
+      "aligners": {
+        "title": "Whitening tray",
+        "description": "Your whitening tray is precision-fitted to your teeth and designed to hold the whitening gel prescribed by your dentist. Use only the product recommended by your doctor — other gels may damage the tray or irritate tissue.",
+        "cleaning": [
+          "After each use, thoroughly rinse the tray with cool water to remove all gel residue.",
+          "Gently clean with a soft toothbrush without toothpaste.",
+          "Make sure the tray is clean and dry before the next use.",
+          "Store in the provided case, in a cool, dry place away from direct sunlight."
+        ],
+        "wearing": [
+          "Use only the whitening gel prescribed by your dentist.",
+          "Apply a small amount of gel to the inner surface of the tray — only on the section covering visible teeth. Don't overfill.",
+          "Wear for the duration instructed by your dentist (typically 1–4 hours or overnight, per individual recommendation).",
+          "Do not eat, drink (except water), or smoke while wearing the tray with gel.",
+          "After removing, rinse your mouth thoroughly with water and brush your teeth."
+        ],
+        "normal": [
+          "Temporary tooth sensitivity to cold and heat — especially during the first few days. It resolves on its own or with a sensitivity toothpaste.",
+          "Mild gum irritation if gel contacts them — passes within a few minutes.",
+          "Whitening results appear gradually — typically after several sessions, not after just one."
+        ],
+        "watchOut": [
+          "Strong sensitivity or tooth pain that doesn't resolve after taking a break.",
+          "White spots, changes, or soreness on gums or oral mucosa.",
+          "Uneven whitening or unexpected spots on teeth.",
+          "Any doubts about dosage or application time."
+        ]
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How long should I wear the splint each day?",
+          "a": "Always follow your dentist's instructions — the wearing schedule is tailored individually. If you're unsure, call your practice."
+        },
+        {
+          "q": "What if I lose my splint?",
+          "a": "Contact your dental practice as soon as possible. Thanks to digital design, an exact duplicate can be produced from the saved file."
+        },
+        {
+          "q": "My splint feels slightly loose — is that normal?",
+          "a": "Gradual loosening can indicate tooth movement — mention it to your dentist at your next visit. If it suddenly no longer fits — call your practice."
+        },
+        {
+          "q": "Can I eat and drink while wearing it?",
+          "a": "No — except cold water. Food and coloured drinks can damage the material, stain it, and promote decay underneath. Always remove before eating."
+        },
+        {
+          "q": "How should I store the splint?",
+          "a": "In the provided case, at room temperature. Avoid heat — hot water, sunlight, or a warm car can permanently deform the material."
+        },
+        {
+          "q": "My splint is cracked or damaged — what should I do?",
+          "a": "Do not use a damaged splint. Contact your dentist, who will arrange a replacement."
+        },
+        {
+          "q": "Can I clean it with toothpaste?",
+          "a": "No — toothpaste is abrasive and can scratch the surface, making it easier for bacteria to accumulate. Use only a soft brush with cool water, or retainer cleaning tablets."
+        }
+      ]
+    },
+    "dentistContact": {
+      "title": "Always contact your dentist",
+      "text": "Your dentist knows your treatment history and is best placed to help with any situation — whether it's discomfort, a fitting issue, or general questions about wearing your splint.",
+      "note": "This page is informational only and does not replace professional dental advice."
+    },
+    "footerLink": "Patient care guide"
+  },
   "footer": {
     "company": {
       "title": "About us",
