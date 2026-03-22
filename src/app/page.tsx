@@ -5,6 +5,7 @@ import Technology from '@/sections/Technology';
 import Contact from '@/sections/Contact';
 import WhyDigital from '@/sections/WhyDigital';
 import WhyChooseUs from '@/sections/WhyChooseUs';
+import FirstCollaboration from '@/sections/FirstCollaboration';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <WhyDigital />
             <WhyChooseUs />
             <Technology />
+            <FirstCollaboration />
             <Contact />
         </>
     );

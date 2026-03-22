@@ -11,7 +11,7 @@
   },
   "hero": {
     "title": "Twój skan. Nasza szyna.",
-    "subtitle": "Szyny retencyjne, relaksacyjne i wybielające — drukowane z certyfikowanych żywic medycznych.",
+    "subtitle": "Szyny retencyjne, relaksacyjne i wybielające - drukowane z certyfikowanych żywic medycznych.",
     "tag": "Szyny drukowane cyfrowo",
     "processLink": "Zobacz proces współpracy",
     "productsLink": "Nasze produkty"
@@ -21,15 +21,15 @@
     "subtitle": "Od skanu do produktu. Kontrolowana precyzja na każdym etapie.",
     "label": "Jak to działa",
     "cta": "Poznaj szczegóły procesu",
-    "ctaNote": "Każdy etap szczegółowo opisany — terminy, formaty plików, realizacja.",
+    "ctaNote": "Produkcja: 24h od zatwierdzenia projektu. Wysyłka: 1–3 dni (InPost / kurier). Przyjmujemy skany ze wszystkich skanerów wewnątrzustnych.",
     "steps": {
       "scan": {
         "title": "Skan 3D",
-        "desc": "Wysyłasz plik ze skanera wewnątrzustnego lub z laboratorium. Przyjmujemy wszystkie standardowe formaty."
+        "desc": "Wysyłasz plik ze skanera wewnątrzustnego — współpracujemy ze wszystkimi skanerami dostępnymi na rynku. Przyjmujemy pliki STL, OBJ i PLY."
       },
       "design": {
         "title": "Projektowanie",
-        "desc": "Projektujemy szynę z pełną kontrolą grubości, toru wprowadzania i stref retencji — niemożliwą w termoformowaniu."
+        "desc": "Projektujemy szynę z pełną kontrolą grubości, toru wprowadzania i stref retencji - niemożliwą w termoformowaniu."
       },
       "print": {
         "title": "Druk 3D",
@@ -41,9 +41,30 @@
       }
     }
   },
+  "firstCollab": {
+    "label": "Zanim wyślesz pierwsze zlecenie",
+    "title": "Sprawdź nas bez ryzyka.",
+    "subtitle": "Dwie drogi do pierwszej współpracy — bez zobowiązań, bez faktur.",
+    "options": [
+      {
+        "num": "01",
+        "title": "Wyślij nam skan",
+        "desc": "Prześlij skan zębów pacjenta. Zaprojektujemy, wyprodukujemy i wyślemy gotową szynę — bezpłatnie. Oceń jakość na własnym modelu, zanim zdecydujesz o współpracy.",
+        "tag": "Twój skan → gotowy produkt"
+      },
+      {
+        "num": "02",
+        "title": "Zamów próbkę",
+        "desc": "Wyślemy Ci gotową nakładkę wraz z wydrukowanym modelem zębowym — bezpłatnie. Poczuj materiał, sprawdź precyzję dopasowania, pokaż pacjentom.",
+        "tag": "Produkt + model w Twoje ręce"
+      }
+    ],
+    "cta": "Napisz do nas",
+    "note": "Odpowiadamy w ciągu 24h."
+  },
   "products": {
     "title": "Produkty",
-    "subtitle": "Zaprojektowane cyfrowo. Wyprodukowane precyzyjnie.",
+    "subtitle": "Trzy produkty. Jeden proces. Doprowadzony do perfekcji.",
     "cta": "Szczegóły produktu",
     "retainers": {
       "title": "Szyny retencyjne",
@@ -134,12 +155,13 @@
         "title": "Materiały medyczne",
         "desc": "Certyfikowane tworzywa biokompatybilne"
       }
-    }
+    },
+    "researchLink": "Metodologia doboru materiałów — Badania R&D"
   },
   "contact": {
     "tag": "Kontakt",
     "title": "Napisz do nas.",
-    "subtitle": "Opisz rodzaj szyny, dołącz plik ze skanera — zajmiemy się resztą.",
+    "subtitle": "Opisz rodzaj szyny, dołącz plik ze skanera - zajmiemy się resztą.",
     "hint": "Kliknij adres, by otworzyć klienta pocztowego",
     "responseTime": "Odpowiedź w ciągu 24h",
     "formats": "Przyjmujemy wszystkie formaty skanów"
@@ -147,10 +169,10 @@
   "patient": {
     "tag": "Instrukcja pielęgnacji",
     "title": "Twoja nakładka dentystyczna",
-    "subtitle": "Proste zasady czyszczenia, noszenia i codziennej opieki — dla długiej trwałości i komfortu.",
+    "subtitle": "Proste zasady czyszczenia, noszenia i codziennej opieki - dla długiej trwałości i komfortu.",
     "warning": {
       "title": "Ważne",
-      "text": "W przypadku bólu, silnego dyskomfortu lub jakichkolwiek wątpliwości — skontaktuj się ze swoim stomatologiem. Nie modyfikuj nakładki ani nie przerywaj leczenia samodzielnie bez konsultacji."
+      "text": "W przypadku bólu, silnego dyskomfortu lub jakichkolwiek wątpliwości - skontaktuj się ze swoim stomatologiem. Nie modyfikuj nakładki ani nie przerywaj leczenia samodzielnie bez konsultacji."
     },
     "tabLabel": "Wybierz typ nakładki:",
     "tabs": {
@@ -167,37 +189,37 @@
     "products": {
       "retainers": {
         "title": "Szyna retencyjna",
-        "description": "Szyna retencyjna utrzymuje zęby w ustalonej pozycji po leczeniu ortodontycznym. Regularne noszenie zgodnie z zaleceniami jest kluczowe — zęby mają naturalną tendencję do powrotu na poprzednie miejsce.",
+        "description": "Szyna retencyjna utrzymuje zęby w ustalonej pozycji po leczeniu ortodontycznym. Regularne noszenie zgodnie z zaleceniami jest kluczowe - zęby mają naturalną tendencję do powrotu na poprzednie miejsce.",
         "cleaning": [
           "Po każdym noszeniu opłucz szynę chłodną wodą.",
-          "Raz dziennie delikatnie wyczyść miękką szczoteczką — bez pasty do zębów (jest ścierna i może porysować materiał).",
+          "Raz dziennie delikatnie wyczyść miękką szczoteczką - bez pasty do zębów (jest ścierna i może porysować materiał).",
           "Raz w tygodniu namocz w tabletkach do czyszczenia aparatów ortodontycznych (np. Retainer Brite, Corega Tabs) przez ok. 15 minut.",
-          "Przechowuj zawsze w dołączonym etui — nie w serwetce ani luzem w torebce."
+          "Przechowuj zawsze w dołączonym etui - nie w serwetce ani luzem w torebce."
         ],
         "wearing": [
-          "Noś zgodnie z zaleceniem stomatologa — zazwyczaj całą dobę na początku, następnie wyłącznie w nocy.",
+          "Noś zgodnie z zaleceniem stomatologa - zazwyczaj całą dobę na początku, następnie wyłącznie w nocy.",
           "Zdejmij przed jedzeniem i piciem (poza zimną wodą).",
           "Po jedzeniu umyj zęby przed ponownym założeniem szyny.",
           "Nie zginaj ani nie próbuj samodzielnie korygować dopasowania."
         ],
         "normal": [
-          "Lekkie uczucie ucisku — szczególnie po dłuższej przerwie w noszeniu. To oznacza, że szyna pracuje prawidłowo.",
+          "Lekkie uczucie ucisku - szczególnie po dłuższej przerwie w noszeniu. To oznacza, że szyna pracuje prawidłowo.",
           "Krótki okres adaptacji (1–3 dni) przy pierwszym założeniu.",
           "Nieznacznie zmieniona wymowa przez pierwsze dni."
         ],
         "watchOut": [
           "Ból lub silny dyskomfort nieustępujący po kilku dniach noszenia.",
-          "Szyna przestała pasować — jest wyraźnie luźna lub nie daje się założyć.",
+          "Szyna przestała pasować - jest wyraźnie luźna lub nie daje się założyć.",
           "Widzisz pęknięcie lub deformację szyny.",
           "Masz wątpliwości co do harmonogramu noszenia."
         ]
       },
       "guards": {
         "title": "Szyna relaksacyjna",
-        "description": "Szyna relaksacyjna chroni zęby i stawy żuchwowe przed skutkami bruksizmu — zgrzytania i zaciskania zębów, często nieświadomego w czasie snu. Większość pacjentów nosi ją wyłącznie w nocy.",
+        "description": "Szyna relaksacyjna chroni zęby i stawy żuchwowe przed skutkami bruksizmu - zgrzytania i zaciskania zębów, często nieświadomego w czasie snu. Większość pacjentów nosi ją wyłącznie w nocy.",
         "cleaning": [
           "Każdego ranka po zdjęciu opłucz szynę chłodną wodą.",
-          "Delikatnie wyczyść miękką szczoteczką bez pasty — lub specjalnym płynem do szyn.",
+          "Delikatnie wyczyść miękką szczoteczką bez pasty - lub specjalnym płynem do szyn.",
           "Raz w tygodniu namocz w tabletkach do czyszczenia aparatów przez ok. 15 minut.",
           "Przechowuj w etui, z dala od ciepła (nie zostawiaj w samochodzie ani na słońcu)."
         ],
@@ -205,40 +227,40 @@
           "Zakładaj tuż przed snem, zgodnie z zaleceniem stomatologa.",
           "Szyna powinna wchodzić pewnie, bez nadmiernego siłowania.",
           "Nie jedz ani nie pij (poza zimną wodą) w czasie noszenia szyny.",
-          "Jeśli stomatolog zalecił noszenie również w ciągu dnia — stosuj się do tych wskazówek."
+          "Jeśli stomatolog zalecił noszenie również w ciągu dnia - stosuj się do tych wskazówek."
         ],
         "normal": [
-          "Zwiększone wydzielanie śliny przez pierwsze kilka nocy — ustępuje samoistnie.",
-          "Uczucie obcości w jamie ustnej na początku — zwykle mija po 1–2 tygodniach.",
-          "Z czasem na powierzchni szyny mogą pojawić się ślady zgrzytania — to znak, że skutecznie chroni zęby."
+          "Zwiększone wydzielanie śliny przez pierwsze kilka nocy - ustępuje samoistnie.",
+          "Uczucie obcości w jamie ustnej na początku - zwykle mija po 1–2 tygodniach.",
+          "Z czasem na powierzchni szyny mogą pojawić się ślady zgrzytania - to znak, że skutecznie chroni zęby."
         ],
         "watchOut": [
           "Ból szczęki, uszu lub głowy rano, nieustępujący po kilku tygodniach noszenia.",
-          "Szyna wyraźnie zmienia zgryz — zęby stykają się inaczej niż przed leczeniem.",
+          "Szyna wyraźnie zmienia zgryz - zęby stykają się inaczej niż przed leczeniem.",
           "Szyna jest pęknięta lub widocznie zdeformowana.",
           "Bóle głowy lub napięcie mięśni żucia nie zmniejszają się mimo regularnego noszenia."
         ]
       },
       "aligners": {
         "title": "Nakładka wybielająca",
-        "description": "Nakładka wybielająca jest precyzyjnie dopasowana do Twoich zębów i służy do aplikacji żelu wybielającego zaleconego przez stomatologa. Używaj wyłącznie z preparatem przepisanym przez lekarza — inne żele mogą uszkodzić nakładkę lub podrażnić tkanki.",
+        "description": "Nakładka wybielająca jest precyzyjnie dopasowana do Twoich zębów i służy do aplikacji żelu wybielającego zaleconego przez stomatologa. Używaj wyłącznie z preparatem przepisanym przez lekarza - inne żele mogą uszkodzić nakładkę lub podrażnić tkanki.",
         "cleaning": [
           "Po każdym użyciu dokładnie wypłucz nakładkę chłodną wodą, usuwając wszystkie pozostałości żelu.",
           "Delikatnie wyczyść miękką szczoteczką bez pasty do zębów.",
           "Przed kolejnym użyciem upewnij się, że nakładka jest czysta i sucha.",
-          "Przechowuj w etui, w chłodnym i suchym miejscu — z dala od bezpośredniego słońca."
+          "Przechowuj w etui, w chłodnym i suchym miejscu - z dala od bezpośredniego słońca."
         ],
         "wearing": [
           "Stosuj wyłącznie żel wybielający zalecony przez stomatologa.",
-          "Nałóż małą ilość żelu na wewnętrzną powierzchnię nakładki — tylko na część odpowiadającą widocznym zębom. Nie przesadzaj z ilością.",
-          "Noś przez czas wskazany przez stomatologa (zazwyczaj 1–4 godziny lub przez noc — zgodnie z indywidualnym zaleceniem).",
+          "Nałóż małą ilość żelu na wewnętrzną powierzchnię nakładki - tylko na część odpowiadającą widocznym zębom. Nie przesadzaj z ilością.",
+          "Noś przez czas wskazany przez stomatologa (zazwyczaj 1–4 godziny lub przez noc - zgodnie z indywidualnym zaleceniem).",
           "W czasie noszenia nakładki z żelem nie jedz, nie pij (poza wodą) i nie pal.",
           "Po zdjęciu dokładnie wypłucz usta wodą i umyj zęby."
         ],
         "normal": [
-          "Przejściowa nadwrażliwość zębów na zimno i ciepło — szczególnie w pierwszych dniach kuracji. Ustępuje samoistnie lub po użyciu pasty na nadwrażliwość.",
-          "Lekkie pieczenie dziąseł jeśli żel miał z nimi kontakt — mija po kilku minutach.",
-          "Efekty wybielania pojawiają się stopniowo — zwykle po kilku sesjach, nie po jednej."
+          "Przejściowa nadwrażliwość zębów na zimno i ciepło - szczególnie w pierwszych dniach kuracji. Ustępuje samoistnie lub po użyciu pasty na nadwrażliwość.",
+          "Lekkie pieczenie dziąseł jeśli żel miał z nimi kontakt - mija po kilku minutach.",
+          "Efekty wybielania pojawiają się stopniowo - zwykle po kilku sesjach, nie po jednej."
         ],
         "watchOut": [
           "Silna nadwrażliwość lub ból zębów, które nie ustępują po przerwie w zabiegu.",
@@ -253,37 +275,37 @@
       "items": [
         {
           "q": "Jak długo nosić nakładkę każdego dnia?",
-          "a": "Zawsze zgodnie z zaleceniem Twojego stomatologa — harmonogram ustalany jest indywidualnie dla każdego pacjenta. Jeśli nie pamiętasz wskazówek, zadzwoń do gabinetu."
+          "a": "Zawsze zgodnie z zaleceniem Twojego stomatologa - harmonogram ustalany jest indywidualnie dla każdego pacjenta. Jeśli nie pamiętasz wskazówek, zadzwoń do gabinetu."
         },
         {
           "q": "Co zrobić, jeśli zgubiłem/am nakładkę?",
           "a": "Skontaktuj się ze swoim gabinetem jak najszybciej. Dzięki cyfrowemu projektowaniu możliwe jest wykonanie dokładnego duplikatu na podstawie zachowanego pliku."
         },
         {
-          "q": "Nakładka jest lekko luźna — czy to normalne?",
-          "a": "Niewielka luźność, która pojawiła się stopniowo, może być sygnałem zmiany pozycji zębów — poinformuj o tym stomatologa przy najbliższej wizycie. Jeśli nakładka nagle przestała pasować — zadzwoń do gabinetu."
+          "q": "Nakładka jest lekko luźna - czy to normalne?",
+          "a": "Niewielka luźność, która pojawiła się stopniowo, może być sygnałem zmiany pozycji zębów - poinformuj o tym stomatologa przy najbliższej wizycie. Jeśli nakładka nagle przestała pasować - zadzwoń do gabinetu."
         },
         {
           "q": "Czy mogę jeść i pić w nakładce?",
-          "a": "Nie — z wyjątkiem zimnej wody. Jedzenie i kolorowe napoje mogą uszkodzić nakładkę, zabarwić materiał i sprzyjać próchnicy pod nakładką. Zawsze zdejmuj ją przed posiłkiem."
+          "a": "Nie - z wyjątkiem zimnej wody. Jedzenie i kolorowe napoje mogą uszkodzić nakładkę, zabarwić materiał i sprzyjać próchnicy pod nakładką. Zawsze zdejmuj ją przed posiłkiem."
         },
         {
           "q": "Jak przechowywać nakładkę?",
-          "a": "W dołączonym etui, w temperaturze pokojowej. Unikaj ciepła — gorąca woda, słońce czy nagrzany samochód mogą trwale zdeformować materiał."
+          "a": "W dołączonym etui, w temperaturze pokojowej. Unikaj ciepła - gorąca woda, słońce czy nagrzany samochód mogą trwale zdeformować materiał."
         },
         {
-          "q": "Nakładka jest pęknięta lub uszkodzona — co robić?",
+          "q": "Nakładka jest pęknięta lub uszkodzona - co robić?",
           "a": "Nie używaj uszkodzonej nakładki. Skontaktuj się ze swoim stomatologiem, który zleci wykonanie nowej."
         },
         {
           "q": "Czy mogę czyścić nakładkę pastą do zębów?",
-          "a": "Nie — pasta do zębów jest ścierna i może porysować powierzchnię nakładki, co sprzyja osadzaniu się bakterii. Używaj wyłącznie miękkiej szczoteczki i chłodnej wody lub tabletek do czyszczenia aparatów."
+          "a": "Nie - pasta do zębów jest ścierna i może porysować powierzchnię nakładki, co sprzyja osadzaniu się bakterii. Używaj wyłącznie miękkiej szczoteczki i chłodnej wody lub tabletek do czyszczenia aparatów."
         }
       ]
     },
     "dentistContact": {
       "title": "Zawsze skontaktuj się ze stomatologiem",
-      "text": "Twój stomatolog zna historię Twojego leczenia i najlepiej doradzi w każdej sytuacji — zarówno w przypadku dyskomfortu, jak i wątpliwości dotyczących noszenia lub dopasowania nakładki.",
+      "text": "Twój stomatolog zna historię Twojego leczenia i najlepiej doradzi w każdej sytuacji - zarówno w przypadku dyskomfortu, jak i wątpliwości dotyczących noszenia lub dopasowania nakładki.",
       "note": "Ta strona ma charakter wyłącznie informacyjny i nie zastępuje porady lekarskiej."
     },
     "footerLink": "Instrukcja dla pacjentów"
@@ -307,10 +329,10 @@
     "tag": "Nad czym pracujemy",
     "title": "Next-generation CAD/CAM",
     "subtitle": "dla stomatologii cyfrowej",
-    "vision": "Pracujemy nad nową generacją oprogramowania CAD/CAM, zaprojektowanego od podstaw z myślą o nowoczesnej stomatologii cyfrowej. Nie jako kolejna warstwa interfejsu — lecz jako nowy silnik.",
+    "vision": "Pracujemy nad nową generacją oprogramowania CAD/CAM, zaprojektowanego od podstaw z myślą o nowoczesnej stomatologii cyfrowej. Nie jako kolejna warstwa interfejsu - lecz jako nowy silnik.",
     "why": {
       "title": "Dlaczego nowy system?",
-      "description": "Dzisiejsze rozwiązania CAD/CAM powstały ponad dekadę temu. Są stabilne, sprawdzone — ale technologicznie oparte na architekturze, która nie była projektowana pod AI ani GPU.",
+      "description": "Dzisiejsze rozwiązania CAD/CAM powstały ponad dekadę temu. Są stabilne, sprawdzone - ale technologicznie oparte na architekturze, która nie była projektowana pod AI ani GPU.",
       "old": [
         "ręczna praca na ciężkich meshach",
         "dziesiątki kliknięć",
@@ -518,15 +540,15 @@
       },
       "ship": {
         "title": "Wysyłka i aplikacja",
-        "description": "Gotowy produkt trafia do gabinetu kurierem w ciągu 1–3 dni roboczych. Dzięki cyfrowemu dopasowaniu jest gotowy do aplikacji od razu po odbiorze — bez dodatkowych korekt.",
+        "description": "Gotowy produkt trafia do gabinetu kurierem w ciągu 1–3 dni roboczych. Dzięki cyfrowemu dopasowaniu jest gotowy do aplikacji od razu po odbiorze - bez dodatkowych korekt.",
         "time": "Dostawa 1–3 dni robocze"
       }
     },
     "summary": {
       "label": "Szybka realizacja",
       "title": "Projektowanie i produkcja w jednym dniu roboczym.",
-      "subtitle": "Cyfrowy workflow eliminuje zbędne etapy. Od zatwierdzenia danych do gotowego produktu — wszystko dzieje się u nas tego samego dnia.",
-      "disclaimer": "Podane czasy odnoszą się do standardowych zamówień. Jesteśmy przygotowani na produkcję wielkoseryjną — w przypadku większych zleceń czas realizacji może ulec nieznacznej zmianie, choć robimy wszystko, by tak się nie zdarzało.",
+      "subtitle": "Cyfrowy workflow eliminuje zbędne etapy. Od zatwierdzenia danych do gotowego produktu - wszystko dzieje się u nas tego samego dnia.",
+      "disclaimer": "Podane czasy odnoszą się do standardowych zamówień. Jesteśmy przygotowani na produkcję wielkoseryjną - w przypadku większych zleceń czas realizacji może ulec nieznacznej zmianie, choć robimy wszystko, by tak się nie zdarzało.",
       "stats": [
         { "value": "24h", "label": "Projekt + produkcja" },
         { "value": "±10µm", "label": "Precyzja druku" },
@@ -536,7 +558,7 @@
     },
     "cta": {
       "title": "Zainteresowanie współpracą?",
-      "subtitle": "Skontaktuj się z nami — omówimy szczegóły i przygotujemy pierwsze zamówienie.",
+      "subtitle": "Skontaktuj się z nami - omówimy szczegóły i przygotujemy pierwsze zamówienie.",
       "button": "Skontaktuj się",
       "products": "Zobacz produkty"
     }
@@ -575,23 +597,23 @@
       }
     ],
     "processComparison": {
-      "heading": "Dwa podejścia — fundamentalna różnica",
+      "heading": "Dwa podejścia - fundamentalna różnica",
       "traditional": {
         "label": "Termoformowanie",
         "steps": [
-          { "text": "Odcisk fizyczny lub model gipsowy", "risk": "Ręczna zmienność — zależy od operatora i materiału" },
-          { "text": "Termoformowanie folii pod ciepłem", "risk": "Niekontrolowane rozciąganie — do 35% zmiany grubości" },
+          { "text": "Odcisk fizyczny lub model gipsowy", "risk": "Ręczna zmienność - zależy od operatora i materiału" },
+          { "text": "Termoformowanie folii pod ciepłem", "risk": "Niekontrolowane rozciąganie - do 35% zmiany grubości" },
           { "text": "Przymiarki i korekty przy osadzeniu", "risk": "1 na 4–5 szyn wymaga ingerencji narzędziem" },
-          { "text": "Wymiana = cały proces od nowa", "risk": "Brak archiwum cyfrowego — zero powtarzalności" }
+          { "text": "Wymiana = cały proces od nowa", "risk": "Brak archiwum cyfrowego - zero powtarzalności" }
         ]
       },
       "digital": {
         "label": "Druk 3D CAD/CAM",
         "steps": [
           { "text": "Skan wewnątrzustny (STL/PLY)", "ok": "Pełna geometria bez fizycznego odcisku" },
-          { "text": "Projekt CAD — pełna kontrola kształtu i grubości", "ok": "Strefowa geometria, tor wprowadzania, okluzja" },
+          { "text": "Projekt CAD - pełna kontrola kształtu i grubości", "ok": "Strefowa geometria, tor wprowadzania, okluzja" },
           { "text": "Druk z certyfikowanego biomateriału", "ok": "Żywice dopuszczone do kontaktu z jamą ustną" },
-          { "text": "Gotowe do osadzenia + archiwum cyfrowe", "ok": "Identyczny duplikat na zawołanie — bez nowej wyceny" }
+          { "text": "Gotowe do osadzenia + archiwum cyfrowe", "ok": "Identyczny duplikat na zawołanie - bez nowej wyceny" }
         ]
       }
     },
@@ -601,21 +623,21 @@
         "suffix": "%",
         "prefix": ">",
         "label": "Szyn bez korekty",
-        "sub": "Akceptowanych przy pierwszym osadzeniu — bez dotykania narzędzia korygującego"
+        "sub": "Akceptowanych przy pierwszym osadzeniu - bez dotykania narzędzia korygującego"
       },
       {
         "value": 3,
         "suffix": "×",
         "prefix": "do",
         "label": "Dłuższa żywotność",
-        "sub": "U pacjentów z bruksizmem vs szyna termoformowana — mniej wymian, mniej reklamacji"
+        "sub": "U pacjentów z bruksizmem vs szyna termoformowana - mniej wymian, mniej reklamacji"
       },
       {
         "value": 100,
         "suffix": "%",
         "prefix": "",
         "label": "Identyczny duplikat",
-        "sub": "Każde zamówienie zgodne z projektem CAD — zero odchyleń między egzemplarzami"
+        "sub": "Każde zamówienie zgodne z projektem CAD - zero odchyleń między egzemplarzami"
       }
     ],
     "table": {
@@ -682,7 +704,7 @@
       {
         "number": "04",
         "title": "Mniej korekt, mniej reklamacji",
-        "description": "Precyzyjne dopasowanie CAD oznacza mniej poprawek na wizycie. Ponad 95% szyn akceptowanych bez żadnej korekty — lekarze zgłaszają wyraźny spadek liczby telefonów od pacjentów."
+        "description": "Precyzyjne dopasowanie CAD oznacza mniej poprawek na wizycie. Ponad 95% szyn akceptowanych bez żadnej korekty - lekarze zgłaszają wyraźny spadek liczby telefonów od pacjentów."
       }
     ],
     "casesLabel": "Przykłady kliniczne",
@@ -691,7 +713,7 @@
         "tag": "Ciężki bruksizm",
         "title": "Szyna relaksacyjna u pacjenta z nocnym bruksizmem",
         "description": "Pacjent użytkował przez lata szyny termoformowane – regularnie pękały lub odkształcały się w strefach okluzyjnych. Zamówiono szynę relaksacyjną drukowaną 3D z precyzyjnie zaprojektowaną grubością 2 mm w okluzji.",
-        "result": "Zero pęknięć po 12 miesiącach użytkowania. Żadnej wizyty reklamacyjnej — pacjent wreszcie używa szyny regularnie."
+        "result": "Zero pęknięć po 12 miesiącach użytkowania. Żadnej wizyty reklamacyjnej - pacjent wreszcie używa szyny regularnie."
       },
       {
         "tag": "Retencja po leczeniu ortodontycznym",
@@ -703,7 +725,7 @@
         "tag": "Dyskomfort przy noszeniu",
         "title": "Pacjent zgłaszający dyskomfort z szyną termoformowaną",
         "description": "Pacjent wielokrotnie rezygnował z noszenia szyny nocnej z powodu ucisku i niedokładnego dopasowania. Zamówiono szynę relaksacyjną drukowaną 3D projektowaną indywidualnie pod jego skan.",
-        "result": "Pacjent nosi szynę regularnie od 10 miesięcy — po raz pierwszy w historii leczenia. Brak uwag dotyczących dyskomfortu od pierwszego założenia."
+        "result": "Pacjent nosi szynę regularnie od 10 miesięcy - po raz pierwszy w historii leczenia. Brak uwag dotyczących dyskomfortu od pierwszego założenia."
       }
     ],
     "cta": {

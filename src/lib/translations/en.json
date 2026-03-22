@@ -21,11 +21,11 @@
     "subtitle": "From scan to product. Controlled precision at every step.",
     "label": "How it works",
     "cta": "See process details",
-    "ctaNote": "Every step explained — timelines, file formats, delivery.",
+    "ctaNote": "Production: 24h from design approval. Shipping: 1–3 days. We accept scans from all intraoral scanners.",
     "steps": {
       "scan": {
         "title": "3D Scan",
-        "desc": "Send us the scan file from your intraoral scanner or lab. We accept all standard formats."
+        "desc": "Send us the file from your intraoral scanner — we work with every scanner on the market. We accept STL, OBJ and PLY files."
       },
       "design": {
         "title": "Design",
@@ -41,9 +41,30 @@
       }
     }
   },
+  "firstCollab": {
+    "label": "Before your first order",
+    "title": "Try us risk-free.",
+    "subtitle": "Two ways to start — no commitment, no invoice.",
+    "options": [
+      {
+        "num": "01",
+        "title": "Send us a scan",
+        "desc": "Send a patient's dental scan. We'll design, manufacture and ship a finished splint — free of charge. Evaluate the quality on a real case before committing to a partnership.",
+        "tag": "Your scan → finished product"
+      },
+      {
+        "num": "02",
+        "title": "Request a sample",
+        "desc": "We'll send you a finished splint together with a printed dental model — free of charge. Feel the material, check the fit precision, show patients what to expect.",
+        "tag": "Product + model in your hands"
+      }
+    ],
+    "cta": "Get in touch",
+    "note": "We respond within 24h."
+  },
   "products": {
     "title": "Products",
-    "subtitle": "Digitally designed. Precisely manufactured.",
+    "subtitle": "Three products. One process. Taken to perfection.",
     "cta": "Product details",
     "retainers": {
       "title": "Retention Splints",
@@ -134,7 +155,8 @@
         "title": "Medical materials",
         "desc": "Certified biocompatible resins"
       }
-    }
+    },
+    "researchLink": "Material selection methodology — R&D Research"
   },
   "contact": {
     "tag": "Contact",
