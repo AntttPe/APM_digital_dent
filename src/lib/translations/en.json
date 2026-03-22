@@ -11,7 +11,7 @@
   },
   "hero": {
     "title": "Your scan. Our splint.",
-    "subtitle": "Retention, occlusal, and whitening splints — printed from certified biocompatible Class IIa material.",
+    "subtitle": "Retention, occlusal, and whitening splints — printed from certified medical-grade resins.",
     "tag": "3D-printed splints",
     "processLink": "View the workflow",
     "productsLink": "Our products"
@@ -33,7 +33,7 @@
       },
       "print": {
         "title": "3D Print",
-        "desc": "Printed in certified Class IIa medical-grade material. Ready within 24 hours of design approval."
+        "desc": "Printed from certified medical-grade biomaterial. Ready within 24 hours of design approval."
       },
       "precision": {
         "title": "QC & Delivery",
@@ -543,7 +543,7 @@
   },
   "whyDigital": {
     "label": "Technical advantage",
-    "title": "Digital precision vs thermoforming",
+    "title": "Designed. Not formed.",
     "subtitle": "Digital production eliminates manual and material variability – every product is identical to the CAD design.",
     "bars": [
       {
@@ -574,9 +574,53 @@
         "lowerIsBetter": false
       }
     ],
+    "processComparison": {
+      "heading": "Two approaches — one fundamental difference",
+      "traditional": {
+        "label": "Thermoforming",
+        "steps": [
+          { "text": "Physical impression or plaster model", "risk": "Manual variability — depends on operator and material" },
+          { "text": "Thermoforming film under heat", "risk": "Uncontrolled stretching — up to 35% thickness change" },
+          { "text": "Try-in and occlusal adjustments at seating", "risk": "1 in 4–5 splints requires chairside correction" },
+          { "text": "Replacement = entire process repeated", "risk": "No digital archive — zero repeatability" }
+        ]
+      },
+      "digital": {
+        "label": "3D Printing CAD/CAM",
+        "steps": [
+          { "text": "Intraoral scan (STL/PLY)", "ok": "Complete geometry without physical impression" },
+          { "text": "CAD design — full shape and thickness control", "ok": "Zone geometry, insertion path, occlusion" },
+          { "text": "Print from certified biomaterial", "ok": "Resins approved for intraoral contact" },
+          { "text": "Ready to seat + digital archive", "ok": "Identical duplicate on demand — no re-quoting" }
+        ]
+      }
+    },
+    "outcomes": [
+      {
+        "value": 95,
+        "suffix": "%",
+        "prefix": ">",
+        "label": "Splints without adjustment",
+        "sub": "Accepted at first seating — without chairside correction tools"
+      },
+      {
+        "value": 3,
+        "suffix": "×",
+        "prefix": "up to",
+        "label": "Longer lifespan",
+        "sub": "In bruxism patients vs thermoformed splint — fewer replacements, fewer complaints"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "prefix": "",
+        "label": "Identical duplicate",
+        "sub": "Every order matches the CAD design — zero deviation between units"
+      }
+    ],
     "table": {
       "colFeature": "Feature",
-      "colDigital": "3D Printing (APM Digital Lab – KeySplint Hard/Soft)",
+      "colDigital": "3D Printing (APM Digital Lab)",
       "colTraditional": "Thermoformed (Essix / Duran / PET-G)",
       "rows": [
         {
@@ -593,7 +637,7 @@
         },
         {
           "feature": "Mechanical strength",
-          "digital": "KeySplint Hard: 60–65 MPa flexural strength, wear resistance equal to lab-processed PMMA",
+          "digital": "60–65 MPa flexural strength, wear resistance comparable to lab-processed PMMA",
           "traditional": "Good initially — higher susceptibility to creep and local weakening under bruxism load",
           "highlight": false
         },
@@ -605,7 +649,7 @@
         }
       ]
     },
-    "footnote": "Comparison based on material studies (ISO 20795-2, wear studies KeySplint vs Lucitone 199) and publications on accuracy of 3D-printed vs vacuum-formed retainers/splints (2018–2024). Actual values may vary slightly depending on thickness and clinical protocol.",
+    "footnote": "Data based on certified medical resin specifications and scientific publications on 3D-printed vs thermoformed splints (2018–2024). Actual values may vary slightly depending on material used and clinical protocol.",
     "evidenceButton": "Research & scientific sources"
   },
   "whyChooseUs": {
@@ -628,7 +672,7 @@
       {
         "number": "02",
         "title": "Significantly longer intraoral lifespan",
-        "description": "KeySplint Hard withstands bruxism loads better than standard PET-G. Patients with heavy bruxism typically wear our splints 2–3× longer than thermoformed ones."
+        "description": "Certified medical-grade resins for 3D printing withstand bruxism loads better than standard PET-G. Patients with heavy bruxism typically wear our splints 2–3× longer than thermoformed ones."
       },
       {
         "number": "03",

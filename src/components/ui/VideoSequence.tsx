@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform, MotionValue } from 'framer-motion';
 
 interface VideoSequenceProps {
     frameCount: number;
@@ -11,17 +11,19 @@ interface VideoSequenceProps {
     fileExtension?: string;
     filePrefix?: string;
     transparent?: boolean;
+    frameValue?: MotionValue<number>; // tryb kontrolowany z zewnątrz
 }
 
 export default function VideoSequence({
-                                          frameCount,
-                                          basePath,
-                                          scrollTarget,
-                                          className = '',
-                                          fileExtension = 'webp',
-                                          filePrefix = '',
-                                          transparent = false,
-                                      }: VideoSequenceProps) {
+    frameCount,
+    basePath,
+    scrollTarget,
+    className = '',
+    fileExtension = 'webp',
+    filePrefix = '',
+    transparent = false,
+    frameValue,
+}: VideoSequenceProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [images, setImages] = useState<HTMLImageElement[]>([]);
@@ -29,18 +31,21 @@ export default function VideoSequence({
     const [shouldLoad, setShouldLoad] = useState(false);
     const lastFrameRef = useRef<number>(-1);
 
+    // Wewnętrzny tryb scroll (używany gdy frameValue nie podano)
     const { scrollYProgress } = useScroll({
         target: scrollTarget as any,
         offset: ['start end', 'end start'],
     });
 
-    const frameIndex = useTransform(
+    const internalFrameIndex = useTransform(
         scrollYProgress,
         [0, 1],
         [0, frameCount - 1]
     );
 
-    // Intersection Observer - wykrywa czy sekcja jest blisko
+    const activeFrame = frameValue ?? internalFrameIndex;
+
+    // Intersection Observer
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
@@ -49,21 +54,17 @@ export default function VideoSequence({
             (entries) => {
                 if (entries[0].isIntersecting) {
                     setShouldLoad(true);
-                    observer.disconnect(); // Przestań obserwować po załadowaniu
+                    observer.disconnect();
                 }
             },
-            {
-                rootMargin: '300px', // Zacznij ładować 300px przed wejściem w viewport
-                threshold: 0,
-            }
+            { rootMargin: '300px', threshold: 0 }
         );
 
         observer.observe(container);
-
         return () => observer.disconnect();
     }, []);
 
-    // Preload wszystkich obrazów - tylko gdy shouldLoad = true
+    // Preload obrazów
     useEffect(() => {
         if (!shouldLoad) return;
 
@@ -97,7 +98,6 @@ export default function VideoSequence({
         loadImages();
     }, [shouldLoad, frameCount, basePath, fileExtension, filePrefix]);
 
-    // Renderuj ramkę z throttling dla płynności
     const renderFrame = useCallback((frameNumber: number) => {
         const canvas = canvasRef.current;
         if (!canvas || !images.length) return;
@@ -109,33 +109,36 @@ export default function VideoSequence({
         if (!context) return;
 
         const index = Math.min(Math.max(Math.round(frameNumber), 0), images.length - 1);
-
         if (index === lastFrameRef.current) return;
         lastFrameRef.current = index;
 
         const img = images[index];
-
         if (img && img.complete && img.naturalWidth > 0) {
             if (canvas.width !== img.width || canvas.height !== img.height) {
                 canvas.width = img.width;
                 canvas.height = img.height;
             }
-
             context.clearRect(0, 0, canvas.width, canvas.height);
             context.drawImage(img, 0, 0);
         }
-    }, [images]);
+    }, [images, transparent]);
 
-    // Nasłuchuj zmian scroll progress
+    // Renderuj klatkę 0 od razu po załadowaniu
+    useEffect(() => {
+        if (!imagesLoaded) return;
+        renderFrame(activeFrame.get());
+    }, [imagesLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    // Subskrybuj zmiany klatki
     useEffect(() => {
         if (!imagesLoaded) return;
 
-        const unsubscribe = frameIndex.on('change', (latest) => {
+        const unsubscribe = activeFrame.on('change', (latest) => {
             requestAnimationFrame(() => renderFrame(latest));
         });
 
         return () => unsubscribe();
-    }, [frameIndex, imagesLoaded, renderFrame]);
+    }, [activeFrame, imagesLoaded, renderFrame]);
 
     return (
         <div ref={containerRef} className={`w-full h-full ${className}`}>
@@ -152,10 +155,7 @@ export default function VideoSequence({
                 <canvas
                     ref={canvasRef}
                     className="w-full h-full object-contain"
-                    style={{
-                        imageRendering: 'crisp-edges',
-                        WebkitFontSmoothing: 'antialiased',
-                    }}
+                    style={{ imageRendering: 'crisp-edges' }}
                 />
             )}
         </div>

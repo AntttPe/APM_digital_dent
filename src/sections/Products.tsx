@@ -7,15 +7,11 @@ import VideoSequence from '@/components/ui/VideoSequence';
 import FadeIn from '@/components/ui/FadeIn';
 import Link from 'next/link';
 
-interface ProductsProps {
-    showFixedRetainer?: boolean;
-}
-
-export default function Products({ showFixedRetainer = false }: ProductsProps) {
+export default function Products() {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const allProducts = [
+    const products = [
         {
             key: 'retainers',
             slug: 'szyny-retencyjne',
@@ -24,7 +20,6 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
             hasSequence: true,
             sequencePath: '/images/products/retainers/sequence',
             frameCount: 120,
-            production: true,
         },
         {
             key: 'guards',
@@ -34,7 +29,6 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
             hasSequence: true,
             sequencePath: '/images/products/guards/sequence',
             frameCount: 120,
-            production: true,
         },
         {
             key: 'aligners',
@@ -44,21 +38,8 @@ export default function Products({ showFixedRetainer = false }: ProductsProps) {
             hasSequence: true,
             sequencePath: '/images/products/aligners/sequence',
             frameCount: 120,
-            production: true,
-        },
-        {
-            key: 'fixedRetainer',
-            slug: 'retencja-stala-drukowana',
-            gradient: 'from-emerald-500/10 to-teal-500/10',
-            accentColor: 'from-emerald-500 to-teal-500',
-            hasSequence: false,
-            sequencePath: '/images/products/fixed-retainer/sequence',
-            frameCount: 120,
-            production: false,
         },
     ];
-
-    const products = allProducts.filter(p => p.production || showFixedRetainer);
 
     return (
         <section

@@ -11,7 +11,7 @@
   },
   "hero": {
     "title": "Twój skan. Nasza szyna.",
-    "subtitle": "Szyny retencyjne, relaksacyjne i wybielające — drukowane z certyfikowanego biokompatybilnego materiału Class IIa.",
+    "subtitle": "Szyny retencyjne, relaksacyjne i wybielające — drukowane z certyfikowanych żywic medycznych.",
     "tag": "Szyny drukowane cyfrowo",
     "processLink": "Zobacz proces współpracy",
     "productsLink": "Nasze produkty"
@@ -33,7 +33,7 @@
       },
       "print": {
         "title": "Druk 3D",
-        "desc": "Druk z certyfikowanego materiału medycznego Class IIa. Realizacja w 24 godziny od zatwierdzenia projektu."
+        "desc": "Druk z certyfikowanego biomateriału medycznego. Realizacja w 24 godziny od zatwierdzenia projektu."
       },
       "precision": {
         "title": "Kontrola i wysyłka",
@@ -543,7 +543,7 @@
   },
   "whyDigital": {
     "label": "Przewaga technologiczna",
-    "title": "Cyfrowa precyzja vs termoformowanie",
+    "title": "Zaprojektowane. Nie uformowane.",
     "subtitle": "Projektowanie cyfrowe eliminuje niekontrolowaną zmienność procesu termoformowania. Każda nakładka powstaje bezpośrednio z danych skanu 3D, z pełną kontrolą geometrii, grubości i toru wprowadzania.\nDla Państwa pacjentów oznacza to przewidywalne dopasowanie i powtarzalną jakość – zgodną z projektem CAD, a nie z ograniczeniami materiału.",
     "bars": [
       {
@@ -574,9 +574,53 @@
         "lowerIsBetter": false
       }
     ],
+    "processComparison": {
+      "heading": "Dwa podejścia — fundamentalna różnica",
+      "traditional": {
+        "label": "Termoformowanie",
+        "steps": [
+          { "text": "Odcisk fizyczny lub model gipsowy", "risk": "Ręczna zmienność — zależy od operatora i materiału" },
+          { "text": "Termoformowanie folii pod ciepłem", "risk": "Niekontrolowane rozciąganie — do 35% zmiany grubości" },
+          { "text": "Przymiarki i korekty przy osadzeniu", "risk": "1 na 4–5 szyn wymaga ingerencji narzędziem" },
+          { "text": "Wymiana = cały proces od nowa", "risk": "Brak archiwum cyfrowego — zero powtarzalności" }
+        ]
+      },
+      "digital": {
+        "label": "Druk 3D CAD/CAM",
+        "steps": [
+          { "text": "Skan wewnątrzustny (STL/PLY)", "ok": "Pełna geometria bez fizycznego odcisku" },
+          { "text": "Projekt CAD — pełna kontrola kształtu i grubości", "ok": "Strefowa geometria, tor wprowadzania, okluzja" },
+          { "text": "Druk z certyfikowanego biomateriału", "ok": "Żywice dopuszczone do kontaktu z jamą ustną" },
+          { "text": "Gotowe do osadzenia + archiwum cyfrowe", "ok": "Identyczny duplikat na zawołanie — bez nowej wyceny" }
+        ]
+      }
+    },
+    "outcomes": [
+      {
+        "value": 95,
+        "suffix": "%",
+        "prefix": ">",
+        "label": "Szyn bez korekty",
+        "sub": "Akceptowanych przy pierwszym osadzeniu — bez dotykania narzędzia korygującego"
+      },
+      {
+        "value": 3,
+        "suffix": "×",
+        "prefix": "do",
+        "label": "Dłuższa żywotność",
+        "sub": "U pacjentów z bruksizmem vs szyna termoformowana — mniej wymian, mniej reklamacji"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "prefix": "",
+        "label": "Identyczny duplikat",
+        "sub": "Każde zamówienie zgodne z projektem CAD — zero odchyleń między egzemplarzami"
+      }
+    ],
     "table": {
       "colFeature": "Cecha",
-      "colDigital": "Druk 3D (APM Digital Lab – KeySplint Hard/Soft)",
+      "colDigital": "Druk 3D (APM Digital Lab)",
       "colTraditional": "Termoformowalne (Essix / Duran / PET-G)",
       "rows": [
         {
@@ -593,7 +637,7 @@
         },
         {
           "feature": "Wytrzymałość mechaniczna",
-          "digital": "KeySplint Hard: wytrzymałość zginania 60–65 MPa (ISO 20795-2), odporność na ścieranie porównywalna z laboratoryjnym PMMA (Lucitone 199)",
+          "digital": "Wytrzymałość zginania 60–65 MPa, odporność na ścieranie porównywalna z laboratoryjnym PMMA",
           "traditional": "Dobra początkowo, ale większa podatność na pełzanie (creep) i lokalne osłabienie pod obciążeniem bruksistycznym",
           "highlight": false
         },
@@ -605,7 +649,7 @@
         }
       ]
     },
-    "footnote": "Dane oparte na specyfikacji producenta KeySplint (ISO 20795-2) oraz publikacjach naukowych (2018–2024). Rzeczywiste wartości mogą się minimalnie różnić w zależności od grubości i protokołu klinicznego.",
+    "footnote": "Dane oparte na specyfikacjach certyfikowanych żywic medycznych oraz publikacjach naukowych dotyczących drukowanych i termoformowanych szyn (2018–2024). Rzeczywiste wartości mogą się minimalnie różnić w zależności od zastosowanego materiału i protokołu klinicznego.",
     "evidenceButton": "Badania i źródła naukowe"
   },
   "whyChooseUs": {
@@ -628,7 +672,7 @@
       {
         "number": "02",
         "title": "Znacznie dłuższa żywotność w jamie ustnej",
-        "description": "KeySplint Hard lepiej znosi obciążenia bruksistyczne niż klasyczne PET-G. Pacjenci z silnym bruksizmem noszą nasze szyny 2–3× dłużej niż termoformowane."
+        "description": "Certyfikowane żywice medyczne do druku 3D lepiej znoszą obciążenia bruksistyczne niż klasyczne PET-G. Pacjenci z silnym bruksizmem noszą nasze szyny 2–3× dłużej niż termoformowane."
       },
       {
         "number": "03",

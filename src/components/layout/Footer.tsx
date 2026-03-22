@@ -55,6 +55,12 @@ export default function Footer() {
                             >
                                 {t('patient.footerLink')}
                             </Link>
+                            <Link
+                                href="/dental-cad"
+                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                R&amp;D — DentalCAD
+                            </Link>
                         </div>
                     </div>
                 </div>
