@@ -7,13 +7,13 @@ import { useTranslation } from '@/lib/i18n';
 import VideoSequence from '@/components/ui/VideoSequence';
 
 // ─── Flip to true when Blender frames are placed in: ──────────────────────────
-//     /public/images/hero/sequence/0001.webp … 0120.webp
+//     /public/images/hero/sequence/0001.webp … 0060.webp
 // ──────────────────────────────────────────────────────────────────────────────
 const ANIMATION_READY = true;
 
 const EASE             = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
-const TOTAL_FRAMES     = 120;
-const ANIM_DURATION_MS = 4500; // czas trwania intro animacji (ms)
+const TOTAL_FRAMES     = 60;
+const ANIM_DURATION_MS = 2000; // czas trwania intro animacji (ms)
 
 // Easing: ease-in-out cubic — powolny start, gładkie zatrzymanie
 const easeInOutCubic = (t: number) =>
@@ -74,11 +74,11 @@ export default function Hero() {
                         fileExtension="webp"
                         frameValue={frameValue}
                         transparent
-                        className="w-[min(75vmin,720px)] h-[min(75vmin,720px)]"
+                        className="w-[500%] aspect-[2/1] md:w-full md:max-h-[85vh] mix-blend-multiply dark:mix-blend-screen"
                     />
                 ) : (
                     /* Placeholder — soft glowing orbs */
-                    <div className="relative flex items-center justify-center w-[min(75vmin,720px)] h-[min(75vmin,720px)]">
+                    <div className="relative flex items-center justify-center w-full aspect-[2/1] max-h-[85vh]">
                         <motion.div
                             animate={{ scale: [1, 1.12, 1], opacity: [0.5, 1, 0.5] }}
                             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -113,7 +113,7 @@ export default function Hero() {
             <motion.div
                 style={{ opacity: textOpacity, y: textY }}
                 className="relative z-10 flex flex-col items-center text-center
-                           pt-32 md:pt-40 px-6 pb-8"
+                           pt-24 md:pt-40 px-6 pb-8"
             >
                 <motion.p
                     initial={{ opacity: 0, y: 10 }}
@@ -159,6 +159,9 @@ export default function Hero() {
                     </Link>
                 </motion.div>
             </motion.div>
+
+            {/* Bottom fade — płynne przejście do następnej sekcji */}
+            <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-black to-transparent pointer-events-none z-10" />
 
             {/* Scroll indicator — desktop only */}
             <motion.div

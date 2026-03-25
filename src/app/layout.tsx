@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -12,6 +12,13 @@ const inter = Inter({
     subsets: ['latin', 'latin-ext'],
     display: 'swap',
     variable: '--font-inter',
+});
+
+const cormorant = Cormorant_Garamond({
+    subsets: ['latin'],
+    weight: '300',
+    display: 'swap',
+    variable: '--font-cormorant',
 });
 
 export const metadata: Metadata = {
@@ -32,7 +39,7 @@ const themeScript = `(function(){try{var s=localStorage.getItem('theme');var p=w
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="pl" className={inter.variable} suppressHydrationWarning>
+        <html lang="pl" className={`${inter.variable} ${cormorant.variable}`} suppressHydrationWarning>
         <head>
             <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         </head>

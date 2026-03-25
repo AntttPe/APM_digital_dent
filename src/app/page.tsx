@@ -15,8 +15,8 @@ export default function Home() {
             <Products />
             <WhyDigital />
             <WhyChooseUs />
-            <Technology />
             <FirstCollaboration />
+            <Technology />
             <Contact />
         </>
     );

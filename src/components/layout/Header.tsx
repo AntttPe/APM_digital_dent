@@ -7,7 +7,6 @@ import { useTheme } from '@/lib/theme';
 import LanguageSwitch from '@/components/ui/LanguageSwitch';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const EASE = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
@@ -66,15 +65,28 @@ export default function Header() {
             >
                 <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="hover:opacity-75 transition-opacity" onClick={() => setIsOpen(false)}>
-                        <Image
-                            src="/images/logos/website.svg"
-                            alt="APM Dental Lab"
-                            width={160}
-                            height={25}
-                            priority
-                            className="invert dark:invert-0"
-                        />
+                    <Link href="/" className="hover:opacity-80 transition-opacity" onClick={() => setIsOpen(false)}>
+                        <div className="flex items-baseline gap-[14px]">
+                            {/* APM — Cormorant Garamond, tonal fade A→P→M */}
+                            <div
+                                className="flex items-baseline leading-none"
+                                style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: '28px', letterSpacing: '-0.5px' }}
+                            >
+                                <span style={{ color: theme === 'dark' ? '#FFFFFF' : '#1A1816' }}>A</span>
+                                <span style={{ color: theme === 'dark' ? '#C4C1BB' : '#666360' }}>P</span>
+                                <span style={{ color: theme === 'dark' ? '#9A9890' : '#B0ADA8' }}>M</span>
+                            </div>
+                            {/* pipe */}
+                            <span
+                                className="leading-none pb-0.5"
+                                style={{ fontWeight: 200, fontSize: '13px', color: theme === 'dark' ? 'rgba(255,255,255,0.18)' : '#D0CCC6' }}
+                            >|</span>
+                            {/* Dental Lab */}
+                            <span
+                                className="leading-none pb-0.5 uppercase"
+                                style={{ fontWeight: 300, fontSize: '9px', letterSpacing: '0.35em', color: theme === 'dark' ? '#505050' : '#B0ADA8' }}
+                            >Dental&nbsp;Lab</span>
+                        </div>
                     </Link>
 
                     <div className="flex items-center gap-4">

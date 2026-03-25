@@ -149,6 +149,30 @@ export default function Products() {
                         );
                     })}
                 </div>
+
+                {/* Gallery CTA */}
+                <FadeIn y={16} delay={0.2} className="mt-24 flex flex-col items-center gap-4 text-center">
+                    <p className="text-sm text-zinc-400 dark:text-zinc-600">
+                        {t('products.galleryLabel')}
+                    </p>
+                    <Link href="/galeria">
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/30 hover:border-zinc-500 dark:hover:border-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-900/60 transition-all"
+                        >
+                            <svg className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3 3h18M3 9h18" />
+                            </svg>
+                            <span className="text-sm text-zinc-600 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                                {t('products.galleryCta')}
+                            </span>
+                            <svg className="w-4 h-4 text-zinc-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </motion.button>
+                    </Link>
+                </FadeIn>
             </div>
         </section>
     );

@@ -30,6 +30,10 @@ const CONTENT = {
         softwareP: 'Istniejące systemy zarządzania laboratoriami były pisane z myślą o ogólnych pracowniach protetycznych. Zbudowaliśmy własne — śledzące każde zlecenie od przyjęcia skanu do wydania gotowego produktu, z pełnym logiem parametrów druku, numeru partii żywicy i wyników kontroli jakości. Jeśli pojawi się odchylenie, jesteśmy w stanie skorelować je z konkretną partią materiału, dniem produkcyjnym lub parametrem maszyny.',
         softwareNote: 'Panel klienta z podglądem statusu zleceń w trakcie planowania.',
 
+        livingLabel: 'Ten proces nigdy nie jest skończony',
+        livingP: 'Zbudowaliśmy metodologię — ale nie uważamy jej za zamkniętą. Każda nakładka, która opuszcza laboratorium, to punkt danych. Każda opinia lekarza lub pacjenta — o dopasowaniu, komforcie, trwałości, albo o szczególe którego nie przewidzieliśmy — trafia bezpośrednio do kolejnej iteracji procesu. Nie do listy życzeń. Nie na przyszły roadmap. Do następnego cyklu produkcyjnego.',
+        livingAccent: 'Jakość mierzymy nie standardem, który ustaliliśmy na początku — lecz tym, o ile jesteśmy lepsi niż miesiąc temu.',
+
         back: '← R&D',
         backHref: '/rd',
     },
@@ -58,6 +62,10 @@ const CONTENT = {
         softwareLabel: 'Production software',
         softwareP: 'Existing lab management systems were written with general prosthetic workshops in mind. We built our own — tracking every order from scan receipt to finished product, with a full log of print parameters, resin batch number, and quality control results. If a deviation appears, we can correlate it with a specific material batch, production day, or machine parameter.',
         softwareNote: 'Client panel with order status tracking is in planning.',
+
+        livingLabel: 'This process is never finished',
+        livingP: 'We built the methodology — but we don\'t consider it complete. Every splint that leaves the laboratory is a data point. Every piece of feedback from a dentist or patient — about fit, comfort, durability, or a detail we hadn\'t considered — goes directly into the next iteration of the process. Not into a backlog. Not into a future roadmap. Into the next production cycle.',
+        livingAccent: 'We measure quality not by the standard we set at the start, but by how much better we are than last month.',
 
         back: '← R&D',
         backHref: '/rd',
@@ -115,6 +123,13 @@ export default function MaterialyPage() {
                     <p className="text-zinc-400 dark:text-zinc-500 text-sm pl-4 border-l border-zinc-200 dark:border-zinc-800">
                         {c.softwareNote}
                     </p>
+                </Section>
+
+                <Section label={c.livingLabel}>
+                    <p>{c.livingP}</p>
+                    <div className="mt-8 pl-6 border-l border-zinc-200 dark:border-zinc-800">
+                        <p className="text-zinc-900 dark:text-white font-light">{c.livingAccent}</p>
+                    </div>
                 </Section>
 
                 <div className="mt-4">

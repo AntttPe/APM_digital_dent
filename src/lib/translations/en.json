@@ -66,6 +66,8 @@
     "title": "Products",
     "subtitle": "Three products. One process. Taken to perfection.",
     "cta": "Product details",
+    "galleryLabel": "What does it look like on a patient?",
+    "galleryCta": "Photo gallery — real cases",
     "retainers": {
       "title": "Retention Splints",
       "description": "Digitally engineered retention splints providing full control over the insertion path and seating stability. Based on 3D scans, they allow for precise management of geometry, thickness, and retention zones—capabilities unattainable with traditional thermoforming methods.",
