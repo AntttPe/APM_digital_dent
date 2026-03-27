@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useMotionValue } from 'framer-motion';
 import { useTranslation } from '@/lib/i18n';
@@ -12,8 +12,8 @@ import VideoSequence from '@/components/ui/VideoSequence';
 const ANIMATION_READY = true;
 
 const EASE             = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
-const TOTAL_FRAMES     = 60;
-const ANIM_DURATION_MS = 2000; // czas trwania intro animacji (ms)
+const TOTAL_FRAMES     = 30;
+const ANIM_DURATION_MS = 1000; // czas trwania intro animacji (ms)
 
 // Easing: ease-in-out cubic — powolny start, gładkie zatrzymanie
 const easeInOutCubic = (t: number) =>
@@ -23,6 +23,7 @@ export default function Hero() {
     const { t } = useTranslation();
     const sectionRef = useRef<HTMLElement>(null);
     const frameValue = useMotionValue(0);
+    const [canvasReady, setCanvasReady] = useState(false);
 
     // Fade tekstu i animacji podczas scrollowania sekcji
     const { scrollYProgress } = useScroll({
@@ -35,23 +36,31 @@ export default function Hero() {
     const animOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
     const animScale   = useTransform(scrollYProgress, [0, 0.65], [1, 1.06]);
 
-    // ── Auto-play: klatki 0→119 po wejściu na stronę ─────────────────────────
+    // ── Auto-play: klatki 0→N po wejściu na stronę ───────────────────────────
+    // 200ms delay: daje przeglądarce czas na wyrenderowanie pierwszej klatki
+    // zanim pętla rAF zacznie obciążać główny wątek
     useEffect(() => {
         if (!ANIMATION_READY) return;
 
         let startTime: number | null = null;
         let rafId: number;
+        let timeoutId: ReturnType<typeof setTimeout>;
 
         const tick = (timestamp: number) => {
             if (!startTime) startTime = timestamp;
             const progress = Math.min(1, (timestamp - startTime) / ANIM_DURATION_MS);
             frameValue.set(easeInOutCubic(progress) * (TOTAL_FRAMES - 1));
             if (progress < 1) rafId = requestAnimationFrame(tick);
-            // po zakończeniu zostaje na klatce 119
         };
 
-        rafId = requestAnimationFrame(tick);
-        return () => cancelAnimationFrame(rafId);
+        timeoutId = setTimeout(() => {
+            rafId = requestAnimationFrame(tick);
+        }, 200);
+
+        return () => {
+            clearTimeout(timeoutId);
+            cancelAnimationFrame(rafId);
+        };
     }, [frameValue]);
 
     return (
@@ -61,6 +70,21 @@ export default function Hero() {
         >
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-white dark:from-black dark:via-zinc-950 dark:to-black" />
+
+            {/* LCP anchor — poza motion.div, nie dotknięty przez Framer Motion opacity.
+                Serwer renderuje ten img w HTML natychmiast. Lighthouse mierzy LCP
+                od załadowania tego zasobu (preloaded), nie od hydratacji JS. */}
+            {ANIMATION_READY && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                    src="/images/hero/sequence/0001.webp"
+                    alt=""
+                    aria-hidden="true"
+                    fetchPriority="high"
+                    className="absolute inset-x-0 top-14 bottom-0 m-auto w-full max-h-[70vh] md:max-h-[85vh] object-contain mix-blend-multiply dark:mix-blend-screen pointer-events-none"
+                    style={{ opacity: canvasReady ? 0 : 1, transition: 'opacity 0.3s' }}
+                />
+            )}
 
             {/* ── 3D Animation — centered below header ──────────────────────── */}
             <motion.div
@@ -74,7 +98,8 @@ export default function Hero() {
                         fileExtension="webp"
                         frameValue={frameValue}
                         transparent
-                        className="w-[500%] aspect-[2/1] md:w-full md:max-h-[85vh] mix-blend-multiply dark:mix-blend-screen"
+                        onFirstFrameReady={() => setCanvasReady(true)}
+                        className="w-full max-h-[70vh] md:max-h-[85vh] mix-blend-multiply dark:mix-blend-screen"
                     />
                 ) : (
                     /* Placeholder — soft glowing orbs */

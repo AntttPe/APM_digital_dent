@@ -42,6 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="pl" className={`${inter.variable} ${cormorant.variable}`} suppressHydrationWarning>
         <head>
             <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+            {/* Preload pierwszej klatki hero — skraca LCP na mobile */}
+            <link rel="preload" as="image" href="/images/hero/sequence/0001.webp" fetchPriority="high" />
         </head>
         <body className="font-sans" suppressHydrationWarning>
         <ThemeProvider>

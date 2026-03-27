@@ -11,7 +11,8 @@ interface VideoSequenceProps {
     fileExtension?: string;
     filePrefix?: string;
     transparent?: boolean;
-    frameValue?: MotionValue<number>; // tryb kontrolowany z zewnątrz
+    frameValue?: MotionValue<number>;
+    onFirstFrameReady?: () => void;
 }
 
 export default function VideoSequence({
@@ -23,15 +24,16 @@ export default function VideoSequence({
     filePrefix = '',
     transparent = false,
     frameValue,
+    onFirstFrameReady,
 }: VideoSequenceProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
-    const [images, setImages] = useState<HTMLImageElement[]>([]);
-    const [imagesLoaded, setImagesLoaded] = useState(false);
-    const [shouldLoad, setShouldLoad] = useState(false);
+    const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
     const lastFrameRef = useRef<number>(-1);
+    const [firstFrameReady, setFirstFrameReady] = useState(false);
+    const [animationReady, setAnimationReady] = useState(false);
+    const [shouldLoad, setShouldLoad] = useState(false);
 
-    // Wewnętrzny tryb scroll (używany gdy frameValue nie podano)
     const { scrollYProgress } = useScroll({
         target: scrollTarget as any,
         offset: ['start end', 'end start'],
@@ -45,7 +47,7 @@ export default function VideoSequence({
 
     const activeFrame = frameValue ?? internalFrameIndex;
 
-    // Intersection Observer
+    // Intersection Observer — lazy load
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
@@ -64,43 +66,9 @@ export default function VideoSequence({
         return () => observer.disconnect();
     }, []);
 
-    // Preload obrazów
-    useEffect(() => {
-        if (!shouldLoad) return;
-
-        const loadImages = async () => {
-            const imageArray: HTMLImageElement[] = [];
-            const promises: Promise<void>[] = [];
-
-            for (let i = 1; i <= frameCount; i++) {
-                const img = new Image();
-                const frameNumber = String(i).padStart(4, '0');
-                img.src = `${basePath}/${filePrefix}${frameNumber}.${fileExtension}`;
-
-                const promise = new Promise<void>((resolve, reject) => {
-                    img.onload = () => resolve();
-                    img.onerror = () => reject(new Error(`Failed to load frame ${i}`));
-                });
-
-                promises.push(promise);
-                imageArray.push(img);
-            }
-
-            try {
-                await Promise.all(promises);
-                setImages(imageArray);
-                setImagesLoaded(true);
-            } catch (error) {
-                console.error('Error loading sequence:', error);
-            }
-        };
-
-        loadImages();
-    }, [shouldLoad, frameCount, basePath, fileExtension, filePrefix]);
-
     const renderFrame = useCallback((frameNumber: number) => {
         const canvas = canvasRef.current;
-        if (!canvas || !images.length) return;
+        if (!canvas) return;
 
         const context = canvas.getContext('2d', {
             alpha: transparent,
@@ -108,41 +76,81 @@ export default function VideoSequence({
         });
         if (!context) return;
 
-        const index = Math.min(Math.max(Math.round(frameNumber), 0), images.length - 1);
+        const images = imagesRef.current;
+        const index = Math.min(Math.max(Math.round(frameNumber), 0), Math.max(images.length - 1, 0));
         if (index === lastFrameRef.current) return;
-        lastFrameRef.current = index;
 
         const img = images[index];
-        if (img && img.complete && img.naturalWidth > 0) {
-            if (canvas.width !== img.width || canvas.height !== img.height) {
-                canvas.width = img.width;
-                canvas.height = img.height;
-            }
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.drawImage(img, 0, 0);
+        // Jeśli klatka jeszcze nie załadowana — zostaw ostatnią wyświetloną
+        if (!img || !img.complete || img.naturalWidth === 0) return;
+
+        lastFrameRef.current = index;
+
+        if (canvas.width !== img.width || canvas.height !== img.height) {
+            canvas.width = img.width;
+            canvas.height = img.height;
         }
-    }, [images, transparent]);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(img, 0, 0);
+    }, [transparent]);
 
-    // Renderuj klatkę 0 od razu po załadowaniu
+    // Progresywne ładowanie: klatka 0 → batch 1-9 → reszta w tle
     useEffect(() => {
-        if (!imagesLoaded) return;
+        if (!shouldLoad) return;
+
+        const loadOne = (index: number): Promise<void> =>
+            new Promise((resolve) => {
+                const img = new Image();
+                const frameNumber = String(index + 1).padStart(4, '0');
+                img.src = `${basePath}/${filePrefix}${frameNumber}.${fileExtension}`;
+                img.onload = () => { imagesRef.current[index] = img; resolve(); };
+                img.onerror = () => resolve();
+            });
+
+        const loadImages = async () => {
+            imagesRef.current = new Array(frameCount).fill(null);
+
+            // Faza 1: pierwsza klatka — pokaż natychmiast
+            await loadOne(0);
+            setFirstFrameReady(true);
+            onFirstFrameReady?.();
+
+            // Faza 2: pierwsze 10 klatek — animacja może startować
+            const FIRST_BATCH = Math.min(10, frameCount);
+            await Promise.all(
+                Array.from({ length: FIRST_BATCH - 1 }, (_, i) => loadOne(i + 1))
+            );
+            setAnimationReady(true);
+
+            // Faza 3: reszta w tle — nie blokuje animacji
+            await Promise.all(
+                Array.from({ length: frameCount - FIRST_BATCH }, (_, i) => loadOne(i + FIRST_BATCH))
+            );
+        };
+
+        loadImages();
+    }, [shouldLoad, frameCount, basePath, fileExtension, filePrefix, renderFrame]);
+
+    // Pokaż klatkę 0 natychmiast po załadowaniu
+    useEffect(() => {
+        if (!firstFrameReady) return;
         renderFrame(activeFrame.get());
-    }, [imagesLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [firstFrameReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
-    // Subskrybuj zmiany klatki
+    // Subskrybuj zmiany klatki gdy animacja gotowa
     useEffect(() => {
-        if (!imagesLoaded) return;
+        if (!animationReady) return;
 
         const unsubscribe = activeFrame.on('change', (latest) => {
             requestAnimationFrame(() => renderFrame(latest));
         });
 
         return () => unsubscribe();
-    }, [activeFrame, imagesLoaded, renderFrame]);
+    }, [activeFrame, animationReady, renderFrame]);
 
     return (
         <div ref={containerRef} className={`w-full h-full ${className}`}>
-            {!imagesLoaded ? (
+            {!firstFrameReady ? (
                 <div className="w-full h-full flex items-center justify-center bg-zinc-900/30 rounded-3xl">
                     <div className="flex flex-col items-center gap-3">
                         <div className="w-8 h-8 border-2 border-zinc-700 border-t-white rounded-full animate-spin" />
