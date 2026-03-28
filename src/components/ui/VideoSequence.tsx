@@ -148,24 +148,23 @@ export default function VideoSequence({
         return () => unsubscribe();
     }, [activeFrame, animationReady, renderFrame]);
 
+    const firstFrameSrc = `${basePath}/${filePrefix}0001.${fileExtension}`;
+
     return (
-        <div ref={containerRef} className={`w-full h-full ${className}`}>
-            {!firstFrameReady ? (
-                <div className="w-full h-full flex items-center justify-center bg-zinc-900/30 rounded-3xl">
-                    <div className="flex flex-col items-center gap-3">
-                        <div className="w-8 h-8 border-2 border-zinc-700 border-t-white rounded-full animate-spin" />
-                        <div className="text-zinc-600 text-sm">
-                            {shouldLoad ? 'Ładowanie sekwencji...' : 'Przygotowywanie...'}
-                        </div>
-                    </div>
-                </div>
-            ) : (
-                <canvas
-                    ref={canvasRef}
-                    className="w-full h-full object-contain"
-                    style={{ imageRendering: 'crisp-edges' }}
-                />
-            )}
+        <div ref={containerRef} className={`relative w-full h-full ${className}`}>
+            {/* Pierwsza klatka zawsze widoczna — nie ma efektu "pustego miejsca" przy szybkim scrolu */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src={firstFrameSrc}
+                alt=""
+                className="absolute inset-0 w-full h-full object-contain"
+                style={{ opacity: firstFrameReady ? 0 : 1, transition: 'opacity 0.3s' }}
+            />
+            <canvas
+                ref={canvasRef}
+                className="absolute inset-0 w-full h-full object-contain"
+                style={{ imageRendering: 'crisp-edges', opacity: firstFrameReady ? 1 : 0, transition: 'opacity 0.3s' }}
+            />
         </div>
     );
 }

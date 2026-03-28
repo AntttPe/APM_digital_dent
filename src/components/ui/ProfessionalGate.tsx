@@ -54,7 +54,7 @@ export default function ProfessionalGate() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute inset-0 bg-black/95 backdrop-blur-xl"
+                        className="absolute inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-xl"
                     />
 
                     {/* Modal */}
@@ -75,7 +75,7 @@ export default function ProfessionalGate() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl" />
 
                         {/* Content */}
-                        <div className="relative bg-zinc-950 border border-zinc-800/50 rounded-3xl p-8 md:p-12 text-white">
+                        <div className="relative bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800/50 rounded-3xl p-8 md:p-12 text-zinc-900 dark:text-white">
                             {/* Icon */}
                             <motion.div
                                 initial={{ scale: 0 }}
@@ -84,7 +84,7 @@ export default function ProfessionalGate() {
                                 className="w-16 h-16 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 flex items-center justify-center"
                             >
                                 <svg
-                                    className="w-8 h-8 text-blue-400"
+                                    className="w-8 h-8 text-blue-500 dark:text-blue-400"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -113,7 +113,7 @@ export default function ProfessionalGate() {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4, duration: 0.6 }}
-                                className="text-zinc-400 text-center mb-8 leading-relaxed"
+                                className="text-zinc-500 dark:text-zinc-400 text-center mb-8 leading-relaxed"
                             >
                                 {t('professionalGate.description')}
                             </motion.p>
@@ -131,7 +131,7 @@ export default function ProfessionalGate() {
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: 0.6 + index * 0.1 }}
-                                        className="px-4 py-2 rounded-full bg-zinc-900/50 border border-zinc-800 text-sm text-zinc-400"
+                                        className="px-4 py-2 rounded-full bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-sm text-zinc-500 dark:text-zinc-400"
                                     >
                                         {item}
                                     </motion.span>
@@ -146,7 +146,7 @@ export default function ProfessionalGate() {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 onClick={handleConfirm}
-                                className="w-full py-4 bg-white text-black rounded-full font-light text-lg hover:bg-zinc-100 transition-colors"
+                                className="w-full py-4 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full font-light text-lg hover:bg-zinc-700 dark:hover:bg-zinc-100 transition-colors"
                             >
                                 {t('professionalGate.confirm')}
                             </motion.button>
@@ -156,7 +156,7 @@ export default function ProfessionalGate() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.9, duration: 0.6 }}
-                                className="text-center text-xs text-zinc-600 mt-6"
+                                className="text-center text-xs text-zinc-400 dark:text-zinc-600 mt-6"
                             >
                                 {t('professionalGate.note')}
                             </motion.p>
