@@ -322,6 +322,8 @@
     },
     "legal": {
       "title": "Information",
+      "research": "Research & Development",
+      "info": "Legal Information",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
@@ -394,6 +396,8 @@
   "productPage": {
     "back": "Back",
     "about": "About the product",
+    "category": "3D Printed Splints · APM Dental Lab",
+    "specs": "Specifications",
     "keyFeatures": "Key features",
     "comparison": {
       "title": "Technical Comparison",
@@ -433,90 +437,89 @@
     },
     "retainers": {
       "title": "Retention Splints",
-      "tagline": "Precise retention with digital control",
+      "tagline": "±0.1 mm fit accuracy. Retention that holds after a year, not just at seating.",
       "description": [
-        "Digitally engineered retention splints provide complete control over the insertion path and seating stability. Unlike traditional thermoforming methods, our solution enables precise management of geometry, thickness, and retention zones.",
-        "By 3D printing with certified medical materials, we achieve significantly higher mechanical strength, translating to long-term reliability in daily use."
+        "Thermoformed splints have one key weakness: retention zone thickness depends on sheet temperature and press force — different every time. Our splints are CAD-designed, so geometry is deterministic. Retention forces, insertion path, wall thickness — every parameter is planned, not accidental.",
+        "3D printing with Class IIa medical resin delivers 3.5× higher flexural strength than thermoformed materials (Mattiello et al., 2024, RCT). Fewer fractures at 6 months, fewer adjustment appointments, fewer patient complaints."
       ],
       "features": [
-        "Precise retention zone geometry designed from 3D data",
-        "Controlled insertion and removal path for patient comfort",
-        "Optimized thickness in functional zones",
-        "Significantly higher durability than thermoformed splints",
-        "Medical material certified for long-term contact",
-        "Predictable retention thanks to digital process control"
+        "Engineered retention zones — not random sheet deformation",
+        "Consistent insertion path with every repeat order",
+        "3.5× higher flexural strength than thermoformed (RCT 2024)",
+        "Thickness 0.75–1.5 mm defined in CAD, not forced by sheet stock",
+        "Class IIa material approved for long-term intraoral contact",
+        "Digital file archive — identical replica on demand"
       ],
       "specs": [
-        { "label": "Material", "value": "Class IIa Medical Resin" },
-        { "label": "Thickness", "value": "0.75 - 1.5 mm" },
-        { "label": "Production Time", "value": "3-5 business days" }
+        { "label": "Material", "value": "Class IIa Resin (Formlabs BioMed)" },
+        { "label": "Thickness", "value": "0.75 – 1.5 mm" },
+        { "label": "Lead Time", "value": "3 – 5 business days" }
       ],
       "price": "from 180 PLN"
     },
     "guards": {
       "title": "Occlusal Splints",
-      "tagline": "Bruxism protection with digital precision",
+      "tagline": "Variable thickness engineered for force distribution — not pulled from a sheet.",
       "description": [
-        "Splints designed for maximum protection against bruxism. We utilize advanced CAD/CAM design to create variable material thickness—2mm in occlusal zones for force absorption, and 1mm in non-load bearing areas for comfort.",
-        "Digitally controlled thickness zones ensure optimal load distribution and long-term tissue protection. Significantly higher material strength compared to traditional thermoforming guarantees product longevity."
+        "A bruxism patient can wear through a thermoformed splint in 3–4 months because uniform thickness concentrates everywhere it isn't needed. In our CAD design, the occlusal zone is always 2 mm, non-load-bearing areas are 1 mm. Thickness comes from force analysis, not sheet gauge.",
+        "High-strength resin withstands years of occlusal loading without plastic deformation. For a repeat order of the same splint — identical geometry, no new impressions required."
       ],
       "features": [
-        "Variable thickness adapted to occlusal force distribution",
-        "Precise anatomical fit",
-        "Optimal load distribution in occlusal zones",
-        "Multi-fold higher strength than thermoformed splints",
-        "Enhanced comfort via ergonomic geometry",
-        "Material resistant to long-term mechanical stress"
+        "Occlusal zone 2 mm / lateral areas 1 mm — defined in CAD",
+        "Occlusal force absorption without plastic deformation",
+        "Mechanical strength exceeds thermoformed sheet materials",
+        "Full occlusal coverage designed from scan data",
+        "Fewer occlusal adjustments post-seating than traditional methods",
+        "Digital archive — identical replica without a new scan"
       ],
       "specs": [
         { "label": "Material", "value": "High-strength Medical Resin" },
-        { "label": "Thickness", "value": "1-2 mm (variable zones)" },
-        { "label": "Production Time", "value": "3-5 business days" }
+        { "label": "Thickness", "value": "1 mm / 2 mm (CAD zones)" },
+        { "label": "Lead Time", "value": "3 – 5 business days" }
       ],
       "price": "from 220 PLN"
     },
     "aligners": {
       "title": "Whitening Trays",
-      "tagline": "Precision and comfort in whitening therapy",
+      "tagline": "Digitally engineered gel reservoir. Gel where it should be — not on the gingiva.",
       "description": [
-        "Individually designed whitening trays based on precise 3D scans. Each tray is engineered with patient anatomy in mind, ensuring a perfect fit and controlled thickness for comfort during therapy.",
-        "Optimized gel reservoirs guarantee even distribution of the whitening agent, while controlled geometry ensures predictable therapy results with minimal patient discomfort."
+        "Whitening efficacy depends on sustained gel contact with enamel. Thermoformed trays have no controlled reservoir — gel distributes unevenly and often contacts soft tissue. We design the gel reservoir in CAD: depth, volume, and gingival margin contour are defined, not accidental.",
+        "Precise scan-based fit eliminates micro-gaps between tray and tooth that cause agent leakage. Fewer soft tissue complications, better patient tolerance, repeatable results between sessions."
       ],
       "features": [
-        "Designed from 3D scan data for a perfect fit",
-        "Controlled gel reservoirs for even whitening",
-        "Optimized wall thickness for wear comfort",
-        "Precise adaptation to patient anatomy",
-        "Medical material safe for oral tissues",
-        "Predictable whitening effects via digital control"
+        "Digitally designed gel reservoir — controlled volume and depth",
+        "Precise gingival margin — whitening agent stays off soft tissue",
+        "0.5 mm wall thickness and flexible resin ensure enamel adhesion",
+        "No micro-gaps thanks to ±0.1 mm scan-based fit",
+        "Biocompatible material safe for direct contact with whitening agents",
+        "Digital archive — additional trays without a new impression"
       ],
       "specs": [
-        { "label": "Material", "value": "Biocompatible Medical Resin" },
-        { "label": "Thickness", "value": "0.5-0.75 mm" },
-        { "label": "Production Time", "value": "2-4 business days" }
+        { "label": "Material", "value": "Class IIa Biocompatible Resin" },
+        { "label": "Thickness", "value": "0.5 – 0.75 mm" },
+        { "label": "Lead Time", "value": "2 – 4 business days" }
       ],
       "price": "from 150 PLN"
     },
     "fixedRetainer": {
       "title": "Printed Fixed Retainers",
-      "tagline": "Digital precision instead of manual bending",
+      "tagline": "Every retainer seats first time. No chairside adjustments.",
       "description": [
-        "Digitally designed fixed retention crafted via 3D printing using biocompatible medical resin. Each retainer is individually designed based on 3D scans, ensuring a perfect fit to the patient's dental arch anatomy.",
-        "Unlike traditional steel wires bent by hand on a model, our method eliminates the risk of manual error, ensures full geometry repeatability, and controlled material strength. The biocompatible resin features high mechanical resistance and long-term retention stability."
+        "The main failure mode of traditional wire retainers is manual variability: different technicians bend differently, different models produce different seating tensions. Our retainers are designed in 3D from scan data — arch geometry is reproduced digitally, not approximated on a plaster model.",
+        "Class IIa biocompatible resin eliminates nickel allergy risk and offers lower visibility than steel wire. Full shape repeatability on every repeat order — no new scans required."
       ],
       "features": [
-        "CAD/CAM design from precise 3D scan data",
-        "Ultra-accurate fit to dental arch anatomy",
-        "Medically certified biocompatible resin",
-        "Predictable mechanical material strength",
-        "Elimination of manual wire-bending variability",
-        "Controlled retention geometry and thickness",
-        "Full shape repeatability between productions"
+        "Arch geometry from digital scan data, not hand-bent approximation",
+        "Seats first time — no model or chairside correction needed",
+        "Eliminates nickel allergy risk — Class IIa material",
+        "Lower visibility than 0.8 mm steel wire",
+        "Full shape repeatability on repeat orders",
+        "Controlled stiffness — resin resists occlusal deformation"
       ],
       "specs": [
         { "label": "Material", "value": "Class IIa Biocompatible Resin" },
-        { "label": "Thickness", "value": "0.6-0.8 mm" },
-        { "label": "Production Time", "value": "3-5 business days" }
+        { "label": "Thickness", "value": "0.6 – 0.8 mm" },
+        { "label": "Lead Time", "value": "3 – 5 business days" }
       ],
       "price": "from 200 PLN"
     }
@@ -735,6 +738,28 @@
       "description": "Send us a scan – we'll produce the first splint free of charge so you can compare fit and finish against your current provider.",
       "button": "Send your first scan",
       "secondary": "See our process"
+    }
+  },
+  "legal": {
+    "title": "Legal Information",
+    "updated": "Last updated: March 2026",
+    "back": "Back to homepage",
+    "operator": {
+      "title": "Website operator",
+      "intro": "The website apmdental.pl and the trade name APM Dental Lab are operated by:",
+      "note": "APM Dental Lab is a trade name used by the above entity. VAT invoices are issued by the above company under its full legal name and tax identification number."
+    },
+    "medical": {
+      "title": "Medical devices",
+      "body": "Dental splints produced by APM Dental Lab are Class IIa medical devices within the meaning of Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices (EU MDR). Products are manufactured individually on the order of a dentist based on patient clinical data."
+    },
+    "invoices": {
+      "title": "Invoices and payments",
+      "body": "All VAT invoices for services and products ordered through APM Dental Lab are issued by [FULL COMPANY NAME] registered in [CITY], VAT No.: [NIP]. Prices shown on the website are net prices and do not include VAT, which will be added in accordance with applicable regulations."
+    },
+    "contact": {
+      "title": "Legal contact",
+      "body": "For legal matters and complaints, please contact us at:"
     }
   }
 }

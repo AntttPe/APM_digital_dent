@@ -13,22 +13,23 @@ interface ProductPageProps {
     gradient: string;
 }
 
-export default function ProductPage({
-                                        productKey,
-                                        imagePath,
-                                        accentColor,
-                                        gradient
-                                    }: ProductPageProps) {
+const EASE = [0.6, 0.05, 0.01, 0.9] as [number, number, number, number];
+
+export default function ProductPage({ productKey, imagePath, accentColor, gradient }: ProductPageProps) {
     const { t } = useTranslation();
 
-    const description = t(`productPage.${productKey}.description`);
-    const features = t(`productPage.${productKey}.features`);
-    const specs = t(`productPage.${productKey}.specs`);
-    const pricingIncludes = t('productPage.pricing.includes');
+    const title       = t(`productPage.${productKey}.title`) as string;
+    const tagline     = t(`productPage.${productKey}.tagline`) as string;
+    const description = t(`productPage.${productKey}.description`) as string[];
+    const features    = t(`productPage.${productKey}.features`) as string[];
+    const specs       = t(`productPage.${productKey}.specs`) as { label: string; value: string }[];
+    const price       = t(`productPage.${productKey}.price`) as string;
+    const includes    = t('productPage.pricing.includes') as string[];
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-white">
-            {/* Back button */}
+
+            {/* Back */}
             <div className="fixed top-20 left-6 z-50">
                 <Link href="/#products">
                     <motion.button
@@ -38,240 +39,203 @@ export default function ProductPage({
                         whileHover={{ x: -5 }}
                         className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all group"
                     >
-                        <svg
-                            className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-white transition-colors"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
+                        <svg className="w-4 h-4 text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
-                        <span className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                        <span className="text-sm text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                             {t('productPage.back')}
                         </span>
                     </motion.button>
                 </Link>
             </div>
 
-            {/* Hero section */}
-            <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-white dark:from-zinc-950 dark:via-black dark:to-black" />
+            {/* Main layout */}
+            <div className="max-w-7xl mx-auto px-6 pt-28 pb-24">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
-                <div className="relative z-10 max-w-7xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
-                    >
-                        <div className="inline-block mb-4">
-                            <div className={`h-1 w-16 mx-auto bg-gradient-to-r ${accentColor}`} />
-                        </div>
-
-                        <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
-                            {t(`productPage.${productKey}.title`)}
-                        </h1>
-
-                        <p className="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 max-w-3xl mx-auto font-light">
-                            {t(`productPage.${productKey}.tagline`)}
-                        </p>
-                    </motion.div>
-
-                    {/* Main product image — always dark container */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="relative aspect-[16/10] max-w-5xl mx-auto mb-20"
-                    >
-                        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-3xl`} />
-                        <div className="relative w-full h-full rounded-3xl overflow-hidden border border-zinc-800/50">
+                    {/* ── LEFT — sticky image ── */}
+                    <div className="w-full lg:w-[48%] lg:sticky lg:top-28">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.97 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.9, ease: EASE }}
+                            className="relative aspect-[4/3] lg:aspect-[5/4] rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800/60"
+                        >
+                            <div className={`absolute inset-0 bg-gradient-to-br ${gradient}`} />
                             <Image
                                 src={imagePath}
-                                alt={t(`productPage.${productKey}.title`)}
+                                alt={title}
                                 fill
-                                className="object-contain p-8"
+                                className="object-contain p-8 md:p-12"
                                 priority
                             />
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+                        </motion.div>
 
-            {/* Description & Features */}
-            <section className="relative py-20 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-16 mb-24">
+                        {/* Specs under image — desktop only */}
+                        <div className="hidden lg:grid grid-cols-3 gap-3 mt-4">
+                            {Array.isArray(specs) && specs.map((spec, i) => (
+                                <FadeIn key={i} delay={0.4 + i * 0.08} y={10}>
+                                    <div className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/50">
+                                        <div className="text-xs text-zinc-400 dark:text-zinc-600 mb-1">{spec.label}</div>
+                                        <div className="text-sm font-light text-zinc-800 dark:text-zinc-200 leading-snug">{spec.value}</div>
+                                    </div>
+                                </FadeIn>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* ── RIGHT — content ── */}
+                    <div className="w-full lg:w-[52%]">
+
+                        {/* Tag + title */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: EASE }}
+                        >
+                            <div className={`h-0.5 w-10 bg-gradient-to-r ${accentColor} mb-6`} />
+                            <p className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-500 mb-3">
+                                {t('productPage.category')}
+                            </p>
+                            <h1 className="text-4xl md:text-5xl font-light tracking-tight leading-[1.05] mb-4">
+                                {title}
+                            </h1>
+                            <p className="text-base md:text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
+                                {tagline}
+                            </p>
+                        </motion.div>
+
                         {/* Description */}
-                        <FadeIn x={-20} y={0}>
-                            <h2 className="text-3xl font-light mb-6">{t('productPage.about')}</h2>
-                            <div className="space-y-4 text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                                {Array.isArray(description) && description.map((paragraph, i) => (
-                                    <p key={i}>{paragraph}</p>
+                        <FadeIn y={16} delay={0.15}>
+                            <div className="space-y-3 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-10 pb-10 border-b border-zinc-100 dark:border-zinc-800/60">
+                                {Array.isArray(description) && description.map((p, i) => (
+                                    <p key={i}>{p}</p>
                                 ))}
                             </div>
                         </FadeIn>
 
-                        {/* Key features */}
-                        <FadeIn x={20} y={0}>
-                            <h2 className="text-3xl font-light mb-6">{t('productPage.keyFeatures')}</h2>
-                            <ul className="space-y-4">
+                        {/* Features */}
+                        <FadeIn y={16} delay={0.2}>
+                            <p className="text-xs uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-600 mb-4">
+                                {t('productPage.keyFeatures')}
+                            </p>
+                            <ul className="space-y-2.5 mb-10 pb-10 border-b border-zinc-100 dark:border-zinc-800/60">
                                 {Array.isArray(features) && features.map((feature, i) => (
-                                    <FadeIn key={i} delay={i * 0.08} y={12}>
-                                        <li className="flex items-start gap-3">
-                                            <div className={`w-1.5 h-1.5 rounded-full mt-2.5 flex-shrink-0 bg-gradient-to-r ${accentColor}`} />
-                                            <span className="text-zinc-500 dark:text-zinc-400">{feature}</span>
-                                        </li>
-                                    </FadeIn>
+                                    <li key={i} className="flex items-start gap-3">
+                                        <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${accentColor}`} />
+                                        <span className="text-sm text-zinc-600 dark:text-zinc-400 leading-snug">{feature}</span>
+                                    </li>
                                 ))}
                             </ul>
                         </FadeIn>
-                    </div>
 
-                    {/* Technical specs */}
-                    <FadeIn y={20} className="grid md:grid-cols-3 gap-8 mb-24">
-                        {Array.isArray(specs) && specs.map((spec: {label: string, value: string}, i) => (
-                            <FadeIn key={i} delay={i * 0.1} y={16}>
-                                <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800/50">
-                                    <div className="text-sm text-zinc-500 mb-2">{spec.label}</div>
-                                    <div className="text-xl font-light text-zinc-800 dark:text-zinc-200">{spec.value}</div>
-                                </div>
-                            </FadeIn>
-                        ))}
-                    </FadeIn>
-
-                    {/* Comparison bars - TYLKO dla fixedRetainer */}
-                    {productKey === 'fixedRetainer' && (
-                        <FadeIn y={20} className="mb-32">
-                            <h2 className="text-2xl font-light text-center mb-12 text-zinc-700 dark:text-zinc-300">
-                                {t('productPage.comparison.title')}
-                            </h2>
-
-                            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-                                {(t(`productPage.comparison.items`) as Array<{
-                                    label: string;
-                                    wire: number;
-                                    printed: number;
-                                    description: string;
-                                }>).map((item, index) => (
-                                    <FadeIn key={index} delay={index * 0.15} y={16}>
-                                        {/* Label */}
-                                        <div className="mb-6">
-                                            <h3 className="text-lg font-light text-zinc-700 dark:text-zinc-300 mb-2">
-                                                {item.label}
-                                            </h3>
-                                            <p className="text-sm text-zinc-500 leading-relaxed">
-                                                {item.description}
-                                            </p>
-                                        </div>
-
-                                        {/* Bars */}
-                                        <div className="space-y-5">
-                                            {/* 3D printed - full bar */}
-                                            <div>
-                                                <span className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block mb-2">
-                                                    {t('productPage.comparison.printed')}
-                                                </span>
-                                                <div className="w-full h-2 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
-                                                    <motion.div
-                                                        initial={{ width: 0 }}
-                                                        whileInView={{ width: `${item.printed}%` }}
-                                                        viewport={{ once: true }}
-                                                        transition={{
-                                                            duration: 1.4,
-                                                            delay: index * 0.15 + 0.3,
-                                                            ease: [0.6, 0.05, 0.01, 0.9]
-                                                        }}
-                                                        className={`h-full bg-gradient-to-r ${accentColor} rounded-full`}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            {/* Wire retainer */}
-                                            <div>
-                                                <span className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-wider block mb-2">
-                                                    {t('productPage.comparison.wire')}
-                                                </span>
-                                                <div className="w-full h-2 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
-                                                    <motion.div
-                                                        initial={{ width: 0 }}
-                                                        whileInView={{ width: `${item.wire}%` }}
-                                                        viewport={{ once: true }}
-                                                        transition={{
-                                                            duration: 1.2,
-                                                            delay: index * 0.15 + 0.4,
-                                                            ease: [0.6, 0.05, 0.01, 0.9]
-                                                        }}
-                                                        className="h-full bg-zinc-300 dark:bg-zinc-700 rounded-full"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </FadeIn>
-                                ))}
-                            </div>
-                        </FadeIn>
-                    )}
-
-                    {/* Pricing */}
-                    <FadeIn y={20} className="max-w-2xl mx-auto text-center">
-                        <div className="p-12 rounded-3xl bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900/50 dark:to-zinc-950/50 border border-zinc-200 dark:border-zinc-800/50">
-                            <h2 className="text-2xl font-light mb-4">{t('productPage.pricing.title')}</h2>
-
-                            <div className="mb-8">
-                                <div className={`text-6xl font-light bg-gradient-to-r ${accentColor} bg-clip-text text-transparent`}>
-                                    {t(`productPage.${productKey}.price`)}
-                                </div>
-                                <div className="text-zinc-500 mt-2">
-                                    {t('productPage.pricing.perUnit')}
-                                </div>
-                            </div>
-
-                            <div className="space-y-3 text-sm text-zinc-500 dark:text-zinc-400 mb-8">
-                                {Array.isArray(pricingIncludes) && pricingIncludes.map((item, i) => (
-                                    <div key={i} className="flex items-center justify-center gap-2">
-                                        <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>{item}</span>
+                        {/* Specs — mobile only */}
+                        <FadeIn y={16} delay={0.25} className="lg:hidden mb-10 pb-10 border-b border-zinc-100 dark:border-zinc-800/60">
+                            <p className="text-xs uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-600 mb-4">
+                                {t('productPage.specs')}
+                            </p>
+                            <div className="grid grid-cols-2 gap-3">
+                                {Array.isArray(specs) && specs.map((spec, i) => (
+                                    <div key={i} className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/50">
+                                        <div className="text-xs text-zinc-400 dark:text-zinc-600 mb-1">{spec.label}</div>
+                                        <div className="text-sm font-light text-zinc-800 dark:text-zinc-200 leading-snug">{spec.value}</div>
                                     </div>
                                 ))}
                             </div>
+                        </FadeIn>
 
-                            <Link
-                                href="/#contact"
-                                className="inline-block px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full font-light hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
-                            >
-                                {t('productPage.pricing.cta')}
-                            </Link>
+                        {/* Comparison bars — fixedRetainer only */}
+                        {productKey === 'fixedRetainer' && (
+                            <FadeIn y={20} delay={0.25} className="mb-10 pb-10 border-b border-zinc-100 dark:border-zinc-800/60">
+                                <p className="text-xs uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-600 mb-6">
+                                    {t('productPage.comparison.title')}
+                                </p>
+                                <div className="space-y-8">
+                                    {(t('productPage.comparison.items') as Array<{ label: string; wire: number; printed: number; description: string }>).map((item, i) => (
+                                        <div key={i}>
+                                            <h3 className="text-sm font-light text-zinc-700 dark:text-zinc-300 mb-1">{item.label}</h3>
+                                            <p className="text-xs text-zinc-400 mb-3">{item.description}</p>
+                                            <div className="space-y-2">
+                                                <div>
+                                                    <span className="text-xs text-zinc-500 uppercase tracking-wider block mb-1">{t('productPage.comparison.printed')}</span>
+                                                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
+                                                        <motion.div
+                                                            initial={{ width: 0 }}
+                                                            whileInView={{ width: `${item.printed}%` }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ duration: 1.4, delay: i * 0.15 + 0.3, ease: EASE }}
+                                                            className={`h-full bg-gradient-to-r ${accentColor} rounded-full`}
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span className="text-xs text-zinc-400 uppercase tracking-wider block mb-1">{t('productPage.comparison.wire')}</span>
+                                                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
+                                                        <motion.div
+                                                            initial={{ width: 0 }}
+                                                            whileInView={{ width: `${item.wire}%` }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ duration: 1.2, delay: i * 0.15 + 0.4, ease: EASE }}
+                                                            className="h-full bg-zinc-300 dark:bg-zinc-700 rounded-full"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </FadeIn>
+                        )}
 
-                            <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-6">
-                                {t('productPage.pricing.note')}
-                            </p>
-                        </div>
-                    </FadeIn>
+                        {/* Pricing */}
+                        <FadeIn y={16} delay={0.3}>
+                            <div className="mb-8">
+                                <p className="text-xs uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-600 mb-4">
+                                    {t('productPage.pricing.title')}
+                                </p>
+
+                                <div className="flex items-baseline gap-2 mb-5">
+                                    <span className={`text-5xl font-light bg-gradient-to-r ${accentColor} bg-clip-text text-transparent`}>
+                                        {price}
+                                    </span>
+                                    <span className="text-sm text-zinc-400">{t('productPage.pricing.perUnit')} · netto</span>
+                                </div>
+
+                                <div className="space-y-2 mb-3">
+                                    {Array.isArray(includes) && includes.map((item, i) => (
+                                        <div key={i} className="flex items-center gap-2.5">
+                                            <svg className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span className="text-sm text-zinc-500 dark:text-zinc-400">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <p className="text-xs text-zinc-400 dark:text-zinc-600 mb-7">
+                                    {t('productPage.pricing.note')}
+                                </p>
+
+                                {/* CTAs */}
+                                <div className="flex flex-col sm:flex-row gap-3">
+                                    <Link
+                                        href="/#contact"
+                                        className="flex-1 text-center px-6 py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-full text-sm font-light hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"
+                                    >
+                                        Zapytaj o zamówienie
+                                    </Link>
+                                    <Link
+                                        href="/proces"
+                                        className="flex-1 text-center px-6 py-3.5 rounded-full border border-zinc-300 dark:border-zinc-700 text-sm font-light hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+                                    >
+                                        Jak zamawiać?
+                                    </Link>
+                                </div>
+                            </div>
+                        </FadeIn>
+                    </div>
                 </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="relative py-32 px-6 border-t border-zinc-200 dark:border-zinc-900">
-                <div className="max-w-4xl mx-auto text-center">
-                    <FadeIn y={16}>
-                        <h2 className="text-4xl md:text-5xl font-light mb-6">
-                            {t('productPage.cta.title')}
-                        </h2>
-                        <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-12">
-                            {t('productPage.cta.subtitle')}
-                        </p>
-                        <Link
-                            href="/#contact"
-                            className="inline-block px-8 py-4 border border-zinc-300 dark:border-zinc-700 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
-                        >
-                            {t('productPage.cta.button')}
-                        </Link>
-                    </FadeIn>
-                </div>
-            </section>
+            </div>
         </div>
     );
 }

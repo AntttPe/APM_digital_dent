@@ -1,8 +1,8 @@
 import ProductPage from '@/components/ui/ProductPage';
 
 export const metadata = {
-    title: 'Szyny do wybielania nakładowego | Digital Dental Lab',
-    description: 'Precyzyjnie dopasowane szyny do wybielania z kontrolowaną grubością i rezerwuarami żelowymi',
+    title: 'Szyny do wybielania nakładowego 3D',
+    description: 'Szyny do wybielania z precyzyjnymi rezerwuarami żelowymi. Dopasowane na skanie 3D, bez tradycyjnego wycisku. Dostawa 1–3 dni robocze.',
 };
 
 export default function AlignersPage() {

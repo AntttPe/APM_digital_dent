@@ -322,6 +322,8 @@
     },
     "legal": {
       "title": "Informacje",
+      "research": "Badania i rozwój",
+      "info": "Informacje prawne",
       "privacy": "Polityka prywatności",
       "terms": "Warunki usługi"
     },
@@ -394,6 +396,8 @@
   "productPage": {
     "back": "Powrót",
     "about": "O produkcie",
+    "category": "Szyny drukowane 3D · APM Dental Lab",
+    "specs": "Specyfikacja",
     "keyFeatures": "Kluczowe cechy",
     "comparison": {
       "title": "Porównanie techniczne",
@@ -433,90 +437,89 @@
     },
     "retainers": {
       "title": "Szyny retencyjne",
-      "tagline": "Precyzyjna retencja z kontrolą cyfrową",
+      "tagline": "Dopasowanie z dokładnością ±0,1 mm. Retencja, która działa po roku, nie tylko po osadzeniu.",
       "description": [
-        "Cyfrowo projektowane szyny retencyjne zapewniają pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. W przeciwieństwie do tradycyjnych metod termoformowania, nasze rozwiązanie umożliwia precyzyjne zarządzanie geometrią, grubością oraz strefami retencji.",
-        "Dzięki drukowaniu 3D z certyfikowanych materiałów medycznych osiągamy wielokrotnie wyższą wytrzymałość mechaniczną, co przekłada się na długoterminową niezawodność w codziennym użytkowaniu."
+        "Szyny termoformowane mają jedną wadę: grubość w strefach retencji zależy od temperatury folii i siły nacisku — za każdym razem inaczej. Nasze szyny projektujemy w CAD, więc geometria jest deterministyczna. Siły retencji, tor wprowadzania, grubość ścianki — każdy parametr jest zaplanowany, nie przypadkowy.",
+        "Druk 3D z żywicy medycznej Class IIa daje wytrzymałość na zginanie 3,5× wyższą niż materiały termoformowalne (Mattiello et al., 2024, RCT). Mniej pęknięć po 6 miesiącach, mniej wizyt korygujących, mniej reklamacji od pacjentów."
       ],
       "features": [
-        "Precyzyjna geometria stref retencji zaprojektowana z danych 3D",
-        "Kontrolowany tor wprowadzania i zdejmowania dla komfortu pacjenta",
-        "Zoptymalizowana grubość w strefach funkcjonalnych",
-        "Znacząco wyższa wytrzymałość niż szyny termoformowalne",
-        "Materiał medyczny certyfikowany do długoterminowego kontaktu",
-        "Przewidywalna retencja dzięki cyfrowej kontroli procesu"
+        "Zaprojektowane strefy retencji — nie przypadkowe odkształcenie folii",
+        "Jednakowy tor wprowadzania przy każdym zamówieniu kolejnej szyny",
+        "Wytrzymałość na zginanie 3,5× wyższa niż termoformowalne (RCT 2024)",
+        "Grubość 0,75–1,5 mm zdefiniowana w projekcie, nie wymuszona przez arkusz",
+        "Materiał Class IIa dopuszczony do długotrwałego kontaktu wewnątrzustnego",
+        "Cyfrowe archiwum projektu — identyczna replika na życzenie"
       ],
       "specs": [
-        { "label": "Materiał", "value": "Żywica medyczna Class IIa" },
-        { "label": "Grubość", "value": "0.75 - 1.5 mm" },
-        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+        { "label": "Materiał", "value": "Żywica Class IIa (Formlabs BioMed)" },
+        { "label": "Grubość", "value": "0,75 – 1,5 mm" },
+        { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
       ],
       "price": "od 180 zł"
     },
     "guards": {
       "title": "Szyny relaksacyjne",
-      "tagline": "Ochrona przed bruksizmem z precyzją cyfrową",
+      "tagline": "Zmienna grubość zaprojektowana pod rozkład sił — nie wyciągnięta z arkusza.",
       "description": [
-        "Szyny zgryzowe zaprojektowane dla maksymalnej ochrony przed bruksizmem. Wykorzystujemy zaawansowane projektowanie CAD/CAM do stworzenia zmiennej grubości materiału – 2mm w strefach okluzyjnych dla absorpcji sił zgryzowych, 1mm w obszarach nieobciążonych dla komfortu.",
-        "Cyfrowo kontrolowane strefy grubości zapewniają optymalne rozłożenie obciążenia i długotrwałą ochronę tkanek. Znacznie wyższa wytrzymałość materiału w porównaniu z tradycyjnymi metodami termoformowania gwarantuje długą żywotność produktu."
+        "Pacjent z bruksizmem potrafi przetrzeć szynę termoformowalną w 3–4 miesiące, bo cała grubość koncentruje się równomiernie wszędzie tam, gdzie nie jest potrzebna. W naszym projekcie CAD strefa okluzyjna ma zawsze 2 mm, obszary nieobciążone — 1 mm. Grubość wynika z analizy sił, nie z grubości arkusza.",
+        "Żywica o wysokiej wytrzymałości mechanicznej wytrzymuje wieloletnie obciążenia zgryzowe bez odkształcenia plastycznego. Przy kolejnym zamówieniu tej samej szyny — identyczna geometria, bez konieczności nowych odcisków."
       ],
       "features": [
-        "Zmienna grubość dostosowana do rozkładu sił zgryzowych",
-        "Precyzyjne dopasowanie do anatomii pacjenta",
-        "Optymalne rozłożenie obciążenia w strefach okluzyjnych",
-        "Wielokrotnie wyższa wytrzymałość niż szyny termoformowalne",
-        "Zwiększony komfort użytkowania dzięki ergonomicznej geometrii",
-        "Materiał odporny na długotrwałe obciążenia mechaniczne"
+        "Strefa okluzyjna 2 mm / obszary boczne 1 mm — zdefiniowane w CAD",
+        "Absorpcja sił zgryzowych bez odkształcenia plastycznego materiału",
+        "Wytrzymałość mechaniczna przewyższa folie termoformowalne",
+        "Pełne pokrycie powierzchni okluzyjnych zaprojektowane na danych ze skanu",
+        "Mniej korekt okluzji po osadzeniu niż przy tradycyjnych metodach",
+        "Archiwum cyfrowe — identyczna replika bez nowego skanu"
       ],
       "specs": [
-        { "label": "Materiał", "value": "Żywica medyczna wysoka wytrzymałość" },
-        { "label": "Grubość", "value": "1-2 mm (zmienne strefy)" },
-        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+        { "label": "Materiał", "value": "Żywica wysokiej wytrzymałości" },
+        { "label": "Grubość", "value": "1 mm / 2 mm (strefy CAD)" },
+        { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
       ],
       "price": "od 220 zł"
     },
     "aligners": {
       "title": "Szyny do wybielania nakładowego",
-      "tagline": "Precyzja i komfort w terapii wybielającej",
+      "tagline": "Rezerwuar żelu zaprojektowany cyfrowo. Żel tam, gdzie powinien — nie na dziąśle.",
       "description": [
-        "Indywidualnie zaprojektowane szyny do wybielania nakładowego, oparte na precyzyjnych skanach 3D. Każda szyna jest projektowana z uwzględnieniem anatomii pacjenta, zapewniając idealne dopasowanie i kontrolowaną grubość dla komfortu podczas terapii.",
-        "Zoptymalizowane rezerwuary żelowe gwarantują równomierne rozprowadzenie preparatu wybielającego, a kontrolowana geometria zapewnia przewidywalne efekty terapii przy minimalnym dyskomforcie dla pacjenta."
+        "Efekt wybielania zależy od stałego kontaktu żelu z powierzchnią szkliwa. Szyny termoformowalne nie mają kontrolowanego rezerwuaru — żel rozkłada się nierównomiernie i często przedostaje się na tkanki miękkie. Projektujemy rezerwuar żelowy w CAD: głębokość, objętość i kontur zakończenia gingivalnego są zdefiniowane, nie przypadkowe.",
+        "Precyzyjne dopasowanie do skanu eliminuje mikroprzerwy między szyną a zębem, które powodują wyciekanie preparatu. Mniej powikłań z tkankami miękkimi, lepsza tolerancja terapii przez pacjenta, powtarzalne efekty między sesjami."
       ],
       "features": [
-        "Projektowanie z danych skanów 3D dla idealnego dopasowania",
-        "Kontrolowane rezerwuary żelowe dla równomiernego wybielania",
-        "Optymalizowana grubość ścianek dla komfortu noszenia",
-        "Precyzyjne dopasowanie do anatomii pacjenta",
-        "Materiał medyczny bezpieczny dla tkanek jamy ustnej",
-        "Przewidywalne efekty wybielania dzięki cyfrowej kontroli"
+        "Cyfrowo zaprojektowany rezerwuar żelu — kontrolowana objętość i głębokość",
+        "Precyzyjna linia gingiwalna — żel nie kontaktuje się z tkankami miękkimi",
+        "Grubość 0,5 mm i elastyczna żywica zapewniają adhezję do powierzchni zębów",
+        "Brak mikroprzerw dzięki dopasowaniu ±0,1 mm ze skanu",
+        "Materiał biokompatybilny, bezpieczny przy bezpośrednim kontakcie z preparatami wybielającymi",
+        "Archiwum cyfrowe — dodatkowe szyny bez ponownego pobierania odcisku"
       ],
       "specs": [
-        { "label": "Materiał", "value": "Żywica medyczna biokompatybilna" },
-        { "label": "Grubość", "value": "0.5-0.75 mm" },
-        { "label": "Czas produkcji", "value": "2-4 dni robocze" }
+        { "label": "Materiał", "value": "Żywica biokompatybilna Class IIa" },
+        { "label": "Grubość", "value": "0,5 – 0,75 mm" },
+        { "label": "Czas realizacji", "value": "2 – 4 dni robocze" }
       ],
       "price": "od 150 zł"
     },
     "fixedRetainer": {
       "title": "Retencja stała drukowana",
-      "tagline": "Precyzja cyfrowa zamiast ręcznego wyginania",
+      "tagline": "Każda retencja pasuje za pierwszym razem. Bez poprawek na fotelu.",
       "description": [
-        "Cyfrowo projektowana retencja stała wykonana w technologii druku 3D z biokompatybilnej żywicy medycznej. Każda retencja jest projektowana indywidualnie na podstawie skanów 3D, co zapewnia idealne dopasowanie do anatomii łuku zębowego pacjenta.",
-        "W przeciwieństwie do tradycyjnych drucików stalowych wyginanych ręcznie na modelu, nasza metoda eliminuje ryzyko błędów manualnych, zapewnia pełną powtarzalność geometrii oraz kontrolowaną wytrzymałość materiału. Żywica biokompatybilna charakteryzuje się wysoką odpornością mechaniczną i długotrwałą stabilnością retencji."
+        "Główna wada tradycyjnego drucika stalowego to zmienność manualna: różni technicy wyginają inaczej, różne modele dają różne napięcia przy osadzeniu. Nasza retencja jest projektowana w 3D na danych ze skanu — geometria łuku jest odtworzona cyfrowo, nie odgadnięta na modelu gipsowym.",
+        "Żywica biokompatybilna Class IIa eliminuje ryzyko alergii na nikiel i zapewnia niższą widoczność retencji niż drut stalowy. Pełna powtarzalność kształtu przy każdym kolejnym zamówieniu — bez konieczności nowych skanów."
       ],
       "features": [
-        "Projektowanie CAD/CAM z precyzyjnych danych skanów 3D",
-        "Ultradokładne dopasowanie do anatomii łuku zębowego",
-        "Żywica biokompatybilna certyfikowana medycznie",
-        "Przewidywalna wytrzymałość mechaniczna materiału",
-        "Eliminacja zmienności ręcznego wyginania drutu",
-        "Kontrolowana geometria i grubość retencji",
-        "Pełna powtarzalność kształtu między produkcjami"
+        "Geometria łuku zębowego odwzorowana z danych cyfrowych, nie ręcznie wyginana",
+        "Pasuje za pierwszym razem — bez korekty na modelu ani na fotelu",
+        "Eliminacja ryzyka alergii na nikiel — materiał Class IIa",
+        "Niższa widoczność niż drut stalowy 0,8 mm",
+        "Pełna powtarzalność kształtu przy zamówieniu repliki",
+        "Kontrolowana sztywność — żywica nie odkształca się pod siłami okluzji"
       ],
       "specs": [
         { "label": "Materiał", "value": "Żywica biokompatybilna Class IIa" },
-        { "label": "Grubość", "value": "0.6-0.8 mm" },
-        { "label": "Czas produkcji", "value": "3-5 dni roboczych" }
+        { "label": "Grubość", "value": "0,6 – 0,8 mm" },
+        { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
       ],
       "price": "od 200 zł"
     }
@@ -735,6 +738,28 @@
       "description": "Wyślij nam skan – wykonamy pierwszą szynę bezpłatnie, abyś mógł porównać jakość dopasowania i wykończenia z dotychczasowym dostawcą.",
       "button": "Wyślij pierwszy skan",
       "secondary": "Zobacz nasz proces"
+    }
+  },
+  "legal": {
+    "title": "Informacje prawne",
+    "updated": "Ostatnia aktualizacja: marzec 2026",
+    "back": "Powrót do strony głównej",
+    "operator": {
+      "title": "Podmiot prowadzący serwis",
+      "intro": "Serwis internetowy apmdental.pl oraz marka handlowa APM Dental Lab są prowadzone przez:",
+      "note": "APM Dental Lab jest nazwą handlową używaną przez powyższy podmiot. Faktury VAT są wystawiane przez ww. firmę pod jej pełną nazwą prawną i numerem NIP."
+    },
+    "medical": {
+      "title": "Wyroby medyczne",
+      "body": "Szyny stomatologiczne produkowane przez APM Dental Lab są wyrobami medycznymi klasy IIa w rozumieniu Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2017/745 z dnia 5 kwietnia 2017 r. w sprawie wyrobów medycznych (EU MDR). Produkty są wykonywane indywidualnie na zlecenie stomatologa na podstawie danych klinicznych pacjenta."
+    },
+    "invoices": {
+      "title": "Faktury i płatności",
+      "body": "Wszystkie faktury VAT za usługi i produkty zamówione za pośrednictwem APM Dental Lab są wystawiane przez [PEŁNA NAZWA FIRMY] z siedzibą w [MIEJSCOWOŚĆ], NIP: [NIP]. Ceny podane na stronie są cenami netto i nie zawierają podatku VAT, który zostanie doliczony zgodnie z obowiązującymi przepisami."
+    },
+    "contact": {
+      "title": "Kontakt w sprawach prawnych",
+      "body": "W sprawach prawnych oraz reklamacji prosimy o kontakt pod adresem:"
     }
   }
 }

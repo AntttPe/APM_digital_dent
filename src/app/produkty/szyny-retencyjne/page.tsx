@@ -1,8 +1,8 @@
 import ProductPage from '@/components/ui/ProductPage';
 
 export const metadata = {
-    title: 'Szyny retencyjne | Digital Dental Lab',
-    description: 'Cyfrowo projektowane szyny retencyjne z pełną kontrolą nad geometrią i retencją',
+    title: 'Szyny retencyjne drukowane 3D',
+    description: '95% szyn przyjętych bez korekty przy osadzeniu. Każda identyczna z projektem CAD. Zamów online, dostawa 1–3 dni robocze.',
 };
 
 export default function RetainersPage() {

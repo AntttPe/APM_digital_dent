@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 
 // ─── Zmień na docelowy adres email ────────────────────────────────────────────
-const EMAIL = 'kontakt@apmlab.pl';
+const EMAIL = 'kontakt@apmdental.pl';
 // ──────────────────────────────────────────────────────────────────────────────
 
 export default function Footer() {
@@ -43,23 +43,23 @@ export default function Footer() {
                             {t('footer.legal.title')}
                         </h3>
                         <div className="space-y-2 text-xs text-zinc-500 dark:text-zinc-600">
-                            <a href="#" className="block hover:text-zinc-900 dark:hover:text-white transition-colors">
-                                {t('footer.legal.privacy')}
-                            </a>
-                            <a href="#" className="block hover:text-zinc-900 dark:hover:text-white transition-colors">
-                                {t('footer.legal.terms')}
-                            </a>
+                            <Link
+                                href="/badania"
+                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                {t('footer.legal.research')}
+                            </Link>
+                            <Link
+                                href="/informacje-prawne"
+                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                {t('footer.legal.info')}
+                            </Link>
                             <Link
                                 href="/pacjent"
                                 className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
                             >
                                 {t('patient.footerLink')}
-                            </Link>
-                            <Link
-                                href="/rd"
-                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
-                            >
-                                R&amp;D
                             </Link>
                         </div>
                     </div>

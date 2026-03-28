@@ -5,7 +5,7 @@ import { useTranslation } from '@/lib/i18n';
 import FadeIn from '@/components/ui/FadeIn';
 
 // ─── Zmień na docelowy adres email ────────────────────────────────────────────
-const EMAIL = 'kontakt@apmlab.pl';
+const EMAIL = 'kontakt@apmdental.pl';
 // ──────────────────────────────────────────────────────────────────────────────
 
 export default function Contact() {

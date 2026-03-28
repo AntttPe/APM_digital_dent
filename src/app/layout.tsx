@@ -22,16 +22,29 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-    title: 'Digital Dental Laboratory | Precision 3D Printing',
-    description: 'Future of digital dentistry. Precision-engineered dental solutions from 3D scans.',
+    metadataBase: new URL('https://apmdental.pl'),
+    title: {
+        default: 'Szyny stomatologiczne 3D — APM Dental Lab',
+        template: '%s | APM Dental Lab',
+    },
+    description: 'Szyny retencyjne, relaksacyjne i do wybielania drukowane 3D. Od pliku STL do gotowej szyny w 24h. Cyfrowe laboratorium dla gabinetów i klinik stomatologicznych.',
     icons: {
         icon: '/images/logos/favicon.svg',
     },
     openGraph: {
-        title: 'Digital Dental Laboratory',
-        description: 'Precision 3D printing for digital dentistry',
+        siteName: 'APM Dental Lab',
         type: 'website',
+        locale: 'pl_PL',
+        images: [
+            {
+                url: '/api/og',
+                width: 1200,
+                height: 630,
+                alt: 'APM Dental Lab — Szyny stomatologiczne drukowane 3D',
+            },
+        ],
     },
+    robots: { index: true, follow: true },
 };
 
 // Anti-flash: reads localStorage/system preference before first paint
