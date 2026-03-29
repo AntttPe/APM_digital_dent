@@ -449,7 +449,7 @@
       ]
     },
     "cta": {
-      "title": "Zainteresowanie współpracą?",
+      "title": "Rozpocznij współprace",
       "subtitle": "Skontaktuj się z nami - omówimy szczegóły i przygotujemy pierwsze zamówienie.",
       "button": "Skontaktuj się",
       "products": "Zobacz produkty"
@@ -510,13 +510,6 @@
       }
     },
     "outcomes": [
-      {
-        "value": 95,
-        "suffix": "%",
-        "prefix": ">",
-        "label": "Szyn bez korekty",
-        "sub": "Akceptowanych przy pierwszym osadzeniu - bez dotykania narzędzia korygującego"
-      },
       {
         "value": 3,
         "suffix": "×",

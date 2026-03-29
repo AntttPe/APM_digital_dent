@@ -110,9 +110,29 @@ export default function Contact() {
                     </div>
                 </FadeIn>
 
+                {/* Generator button */}
+                <FadeIn y={8} delay={0.35} className="mt-12">
+                    <Link
+                        href="/zamowienie"
+                        className="group inline-flex items-center gap-3 px-5 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-500/5 transition-all duration-300"
+                    >
+                        <svg className="w-4 h-4 text-zinc-400 group-hover:text-blue-500 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <div>
+                            <span className="text-sm font-light text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors block">
+                                Wygeneruj szablon zamówienia →
+                            </span>
+                            <span className="text-xs text-zinc-400 dark:text-zinc-600">
+                                Wypełnij formularz, skopiuj i wyślij ze skanem
+                            </span>
+                        </div>
+                    </Link>
+                </FadeIn>
+
                 {/* FAQ hint */}
                 <FadeIn y={8} delay={0.4}>
-                    <Link href="/faq" className="inline-flex items-center gap-2 mt-10 group">
+                    <Link href="/faq" className="inline-flex items-center gap-2 mt-6 group">
                         <span className="text-xs text-zinc-400 dark:text-zinc-600 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors">
                             {t('faq.contactHint') as string}
                         </span>

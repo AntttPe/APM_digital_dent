@@ -511,13 +511,6 @@
     },
     "outcomes": [
       {
-        "value": 95,
-        "suffix": "%",
-        "prefix": ">",
-        "label": "Splints without adjustment",
-        "sub": "Accepted at first seating — without chairside correction tools"
-      },
-      {
         "value": 3,
         "suffix": "×",
         "prefix": "up to",
