@@ -12,7 +12,7 @@
   "hero": {
     "title": "Twój skan. Nasza szyna.",
     "subtitle": "Szyny retencyjne, relaksacyjne i wybielające - drukowane z certyfikowanych żywic medycznych.",
-    "tag": "Szyny drukowane cyfrowo",
+    "tag": "Szyny projektowane cyfrowo",
     "processLink": "Zobacz proces współpracy",
     "productsLink": "Nasze produkty"
   },
@@ -21,23 +21,23 @@
     "subtitle": "Od skanu do produktu. Kontrolowana precyzja na każdym etapie.",
     "label": "Jak to działa",
     "cta": "Poznaj szczegóły procesu",
-    "ctaNote": "Produkcja: 24h od zatwierdzenia projektu. Wysyłka: 1–3 dni (InPost / kurier). Przyjmujemy skany ze wszystkich skanerów wewnątrzustnych.",
+    "ctaNote": "Produkcja: 48h od zatwierdzenia projektu. Wysyłka: 1–3 dni (InPost / kurier). Przyjmujemy skany ze wszystkich skanerów wewnątrzustnych.",
     "steps": {
       "scan": {
         "title": "Skan 3D",
-        "desc": "Wysyłasz plik ze skanera wewnątrzustnego — współpracujemy ze wszystkimi skanerami dostępnymi na rynku. Przyjmujemy pliki STL, OBJ i PLY."
+        "desc": "Współpracujemy ze wszystkimi markami skanerów dostępnych na rynku. Przyjmujemy pliki w formacie STL, OBJ i PLY."
       },
       "design": {
         "title": "Projektowanie",
-        "desc": "Projektujemy szynę z pełną kontrolą grubości, toru wprowadzania i stref retencji - niemożliwą w termoformowaniu."
+        "desc": "Projektujemy szynę z pełną kontrolą grubości, toru wprowadzania oraz stref retencji."
       },
       "print": {
         "title": "Druk 3D",
-        "desc": "Druk z certyfikowanego biomateriału medycznego. Realizacja w 24 godziny od zatwierdzenia projektu."
+        "desc": "Druk z certyfikowanego, biokompatybilnego materiału. Realizacja w 48 godzin od zatwierdzenia projektu."
       },
       "precision": {
         "title": "Kontrola i wysyłka",
-        "desc": "Każda szyna sprawdzana pod kątem geometrii przed wysyłką. Gwarancja dopasowania lub wykonujemy ponownie."
+        "desc": "Każda szyna jest dokładnie sprawdzana pod kątem geometrii przed wysyłką."
       }
     }
   },
@@ -70,11 +70,11 @@
     "galleryCta": "Galeria realizacji — prawdziwe zdjęcia",
     "retainers": {
       "title": "Szyny retencyjne",
-      "description": "Cyfrowo projektowane szyny retencyjne zapewniające pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. Oparte na skanach 3D, umożliwiają precyzyjne zarządzanie geometrią, grubością i strefami retencji – niedostępne w tradycyjnych metodach termoformowania.",
+      "description": "Cyfrowo projektowane szyny retencyjne zapewniające pełną kontrolę nad torem wprowadzania oraz stabilnością osadzenia. Oparte na skanach 3D, umożliwiają precyzyjne zarządzanie geometrią, grubością i strefami retencji.",
       "features": [
         "Projektowanie z danych 3D",
-        "Kontrolowany tor wprowadzania i zdejmowania",
-        "Precyzyjna geometria stref retencji",
+        "Kontrolowany tor wprowadzania",
+        "Dokładna kontrola stref retencji",
         "Zoptymalizowana grubość w strefach funkcjonalnych",
         "Wielokrotnie wyższa trwałość niż szyny termoformowalne",
         "Druk 3D z certyfikowanego materiału medycznego"
@@ -82,64 +82,26 @@
     },
     "guards": {
       "title": "Szyny relaksacyjne",
-      "description": "Szyny zgryzowe zaprojektowane dla ochrony przed bruksizmem. Zmienna grubość materiału – 2mm w strefach okluzyjnych, 1mm w obszarach nieobciążonych. Znacznie wyższa wytrzymałość materiału i struktury w porównaniu z tradycyjnymi metodami termoformowania.",
+      "description": "Szyny zgryzowe zaprojektowane dla ochrony przed bruksizmem. Zmienna grubość materiału – 2mm w strefach okluzyjnych, 1mm w obszarach nieobciążonych. Znacznie wyższa wytrzymałość materiału w porównaniu z tradycyjnymi metodami.",
       "features": [
         "Ochrona przed bruksizmem",
         "Zmienne strefy grubości",
-        "Lepsze rozłożenie obciążenia",
         "Zwiększony komfort użytkowania",
-        "Wielokrotnie wyższa wytrzymałość niż metody tradycyjne",
+        "Wyższa wytrzymałość niż metody tradycyjne",
         "Projektowanie z danych 3D"
       ]
     },
     "aligners": {
-      "title": "Nakładki wybielające",
-      "description": "Indywidualnie zaprojektowane nakładki wybielające oparte na skanach 3D. Precyzyjne dopasowanie do anatomii pacjenta z kontrolowaną grubością dla komfortu i przewidywalności rezultatów wybielania.",
+      "title": "Nakładki do wybielania",
+      "description": "Indywidualnie zaprojektowane nakładki do wybielania oparte na skanach 3D. Precyzyjne dopasowanie do anatomii pacjenta z kontrolowaną grubością dla komfortu i przewidywalności rezultatów wybielania.",
       "features": [
         "Projektowanie z danych 3D",
         "Precyzyjne dopasowanie do anatomii",
         "Optymalizowana grubość ścianek",
-        "Kontrolowane rezerwuary żelowe",
         "Druk 3D z materiału medycznego",
         "Przewidywalne efekty wybielania"
       ]
-    },
-    "fixedRetainer": {
-      "title": "Retencja stała drukowana",
-      "description": "Cyfrowo projektowana retencja stała wykonana w technologii druku 3D z biokompatybilnej żywicy medycznej. W przeciwieństwie do tradycyjnych drucików wyginanych ręcznie na modelu, nasza metoda zapewnia ultraprecyzyjne dopasowanie, przewidywalną wytrzymałość oraz pełną powtarzalność.",
-      "features": [
-        "Projektowanie CAD/CAM z danych skanów 3D",
-        "Ultradokładne dopasowanie do anatomii pacjenta",
-        "Żywica biokompatybilna o wysokiej wytrzymałości",
-        "Powtarzalność i przewidywalność kształtu",
-        "Eliminacja błędów manualnego wyginania drutu",
-        "Kontrolowana grubość i geometria retencji"
-      ]
     }
-  },
-  "injection": {
-    "tag": "Innowacja",
-    "title": "System stempla iniekcyjnego",
-    "description": "Cyfrowy system do odbudowy ubytków typu I, oparty na skanie sprzed preparacji. Drukowana forma 3D umożliwia iniekcję kompozytu flow i odbudowę anatomii 1:1 jako alternatywę dla wkładów ceramicznych.",
-    "features": {
-      "precision": {
-        "title": "Odwzorowanie 1:1",
-        "desc": "Precyzyjna rekonstrukcja anatomii z danych przedoperacyjnych"
-      },
-      "time": {
-        "title": "Minimalna liczba kroków",
-        "desc": "Uproszczony protokół kliniczny bez etapu laboratoryjnego"
-      },
-      "cost": {
-        "title": "Optymalizacja kosztów",
-        "desc": "Ekonomiczna alternatywa dla wkładów ceramicznych"
-      },
-      "workflow": {
-        "title": "Cyfrowa kontrola",
-        "desc": "Przewidywalny wynik dzięki projektowaniu CAD/CAM"
-      }
-    },
-    "note": "Produkt w fazie rozwoju technologicznego"
   },
   "technology": {
     "title": "Technologia",
@@ -330,60 +292,6 @@
     },
     "copyright": "APM Digital Dental Lab. Wszelkie prawa zastrzeżone."
   },
-  "software": {
-    "tag": "Nad czym pracujemy",
-    "title": "Next-generation CAD/CAM",
-    "subtitle": "dla stomatologii cyfrowej",
-    "vision": "Pracujemy nad nową generacją oprogramowania CAD/CAM, zaprojektowanego od podstaw z myślą o nowoczesnej stomatologii cyfrowej. Nie jako kolejna warstwa interfejsu - lecz jako nowy silnik.",
-    "why": {
-      "title": "Dlaczego nowy system?",
-      "description": "Dzisiejsze rozwiązania CAD/CAM powstały ponad dekadę temu. Są stabilne, sprawdzone - ale technologicznie oparte na architekturze, która nie była projektowana pod AI ani GPU.",
-      "old": [
-        "ręczna praca na ciężkich meshach",
-        "dziesiątki kliknięć",
-        "kompromisy między czasem a jakością"
-      ],
-      "new": "System, który rozumie anatomię zęba"
-    },
-    "capabilities": {
-      "anatomy": {
-        "title": "Cyfrowa anatomia",
-        "desc": "Analiza kształtu, struktury i koloru bezpośrednio z danych skanów 3D"
-      },
-      "recognition": {
-        "title": "Inteligentne rozpoznawanie",
-        "desc": "Automatyczne wykrywanie, numeracja i klasyfikacja zębów"
-      },
-      "reconstruction": {
-        "title": "AI-driven reconstruction",
-        "desc": "Odbudowa geometrii z zachowaniem anatomii, okluzji i proporcji"
-      },
-      "gpu": {
-        "title": "GPU-accelerated",
-        "desc": "Projektowanie w czasie rzeczywistym z wykorzystaniem mocy GPU"
-      }
-    },
-    "focus": {
-      "title": "Skupienie na precyzji",
-      "items": {
-        "aligners": "Nakładki wybielające",
-        "retainers": "Szyny retencyjne",
-        "guards": "Szyny relaksacyjne"
-      },
-      "subtitle": "Bez kompromisów. Bez zbędnych funkcji."
-    },
-    "philosophy": {
-      "title": "Filozofia rozwoju",
-      "description": "Nie budujemy 'wszystkiego naraz'. Budujemy dokładnie to, co ma największe znaczenie kliniczne i technologiczne.",
-      "steps": [
-        "Jakość",
-        "Szybkość",
-        "Skala"
-      ]
-    },
-    "status": "Projekt w fazie intensywnych prac badawczo-rozwojowych",
-    "closing": "Nie poprawiamy istniejących narzędzi. Projektujemy to, co powinno powstać, gdyby CAD/CAM tworzono dziś od zera."
-  },
   "professionalGate": {
     "title": "Treści dla profesjonalistów",
     "description": "Ta strona zawiera specjalistyczne informacje przeznaczone dla osób związanych z branżą stomatologiczną. Kontynuując, potwierdzasz, że jesteś specjalistą w dziedzinie stomatologii lub techniki dentystycznej.",
@@ -501,28 +409,6 @@
         { "label": "Czas realizacji", "value": "2 – 4 dni robocze" }
       ],
       "price": "od 150 zł"
-    },
-    "fixedRetainer": {
-      "title": "Retencja stała drukowana",
-      "tagline": "Każda retencja pasuje za pierwszym razem. Bez poprawek na fotelu.",
-      "description": [
-        "Główna wada tradycyjnego drucika stalowego to zmienność manualna: różni technicy wyginają inaczej, różne modele dają różne napięcia przy osadzeniu. Nasza retencja jest projektowana w 3D na danych ze skanu — geometria łuku jest odtworzona cyfrowo, nie odgadnięta na modelu gipsowym.",
-        "Żywica biokompatybilna Class IIa eliminuje ryzyko alergii na nikiel i zapewnia niższą widoczność retencji niż drut stalowy. Pełna powtarzalność kształtu przy każdym kolejnym zamówieniu — bez konieczności nowych skanów."
-      ],
-      "features": [
-        "Geometria łuku zębowego odwzorowana z danych cyfrowych, nie ręcznie wyginana",
-        "Pasuje za pierwszym razem — bez korekty na modelu ani na fotelu",
-        "Eliminacja ryzyka alergii na nikiel — materiał Class IIa",
-        "Niższa widoczność niż drut stalowy 0,8 mm",
-        "Pełna powtarzalność kształtu przy zamówieniu repliki",
-        "Kontrolowana sztywność — żywica nie odkształca się pod siłami okluzji"
-      ],
-      "specs": [
-        { "label": "Materiał", "value": "Żywica biokompatybilna Class IIa" },
-        { "label": "Grubość", "value": "0,6 – 0,8 mm" },
-        { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
-      ],
-      "price": "od 200 zł"
     }
   },
   "process": {
@@ -542,7 +428,7 @@
       "produce": {
         "title": "Projektowanie, produkcja i kontrola",
         "description": "Projektujemy produkt indywidualnie w oparciu o dane ze skanu, drukujemy go z certyfikowanych materiałów medycznych, a następnie weryfikujemy zgodność z wymaganiami przed wysyłką.",
-        "time": "Projektowanie ~1 h · Druk ~6 h · QA ~2 h"
+        "time": "Projektowanie ~1 h · Druk ~6 h · Kontrola jakości ~2 h"
       },
       "ship": {
         "title": "Wysyłka i aplikacja",
@@ -556,8 +442,8 @@
       "subtitle": "Cyfrowy workflow eliminuje zbędne etapy. Od zatwierdzenia danych do gotowego produktu - wszystko dzieje się u nas tego samego dnia.",
       "disclaimer": "Podane czasy odnoszą się do standardowych zamówień. Jesteśmy przygotowani na produkcję wielkoseryjną - w przypadku większych zleceń czas realizacji może ulec nieznacznej zmianie, choć robimy wszystko, by tak się nie zdarzało.",
       "stats": [
-        { "value": "24h", "label": "Projekt + produkcja" },
-        { "value": "±10µm", "label": "Precyzja druku" },
+        { "value": "48h", "label": "Projekt + produkcja" },
+        { "value": "±100µm", "label": "Precyzja druku" },
         { "value": "1–3", "label": "Dni dostawy" },
         { "value": "100%", "label": "Cyfrowo" }
       ]
@@ -571,15 +457,15 @@
   },
   "whyDigital": {
     "label": "Przewaga technologiczna",
-    "title": "Zaprojektowane. Nie uformowane.",
-    "subtitle": "Projektowanie cyfrowe eliminuje niekontrolowaną zmienność procesu termoformowania. Każda nakładka powstaje bezpośrednio z danych skanu 3D, z pełną kontrolą geometrii, grubości i toru wprowadzania.\nDla Państwa pacjentów oznacza to przewidywalne dopasowanie i powtarzalną jakość – zgodną z projektem CAD, a nie z ograniczeniami materiału.",
+    "title": "Wydrukowane, nie uformowane.",
+    "subtitle": "Projektowanie cyfrowe eliminuje zmienność procesu termoformowania. Każda nakładka powstaje bezpośrednio z danych skanu 3D, z pełną kontrolą jej parametrów.\nDla Państwa pacjentów oznacza to przewidywalne dopasowanie i powtarzalną jakość zgodną z projektem CAD.",
     "bars": [
       {
-        "label": "Dokładność dopasowania",
+        "label": "Dokładność dopasowania (RMS)",
         "digitalLabel": "Druk 3D",
         "traditionalLabel": "Metoda tradycyjna",
-        "digital": 10,
-        "traditional": 300,
+        "digital": 100,
+        "traditional": 250,
         "unit": "µm",
         "lowerIsBetter": true
       },
@@ -607,10 +493,10 @@
       "traditional": {
         "label": "Termoformowanie",
         "steps": [
-          { "text": "Odcisk fizyczny lub model gipsowy", "risk": "Ręczna zmienność - zależy od operatora i materiału" },
-          { "text": "Termoformowanie folii pod ciepłem", "risk": "Niekontrolowane rozciąganie - do 35% zmiany grubości" },
-          { "text": "Przymiarki i korekty przy osadzeniu", "risk": "1 na 4–5 szyn wymaga ingerencji narzędziem" },
-          { "text": "Wymiana = cały proces od nowa", "risk": "Brak archiwum cyfrowego - zero powtarzalności" }
+          { "text": "Wykonanie modelu", "risk": "Duża zmienność, zależy od technika i zastosowanego materiału" },
+          { "text": "Proces termoformowania", "risk": "Niekontrolowane rozciąganie materiału, do 35% zmiany grubości ścianki szyny" },
+          { "text": "Przymiarki i korekty przy oddaniu pracy", "risk": "Około 20% szyn wymaga korekty lekarza" },
+          { "text": "Brak archiwum cyfrowego", "risk": "Ponowne wykonanie nakładki wymaga powtórzenia całego procesu od nowa" }
         ]
       },
       "digital": {
@@ -642,8 +528,8 @@
         "value": 100,
         "suffix": "%",
         "prefix": "",
-        "label": "Identyczny duplikat",
-        "sub": "Każde zamówienie zgodne z projektem CAD - zero odchyleń między egzemplarzami"
+        "label": "Produkcji cyfrowej",
+        "sub": "Każda szyna powstaje z tego samego pliku CAD — zero zmienności między egzemplarzami, niezależnie od daty zamówienia"
       }
     ],
     "table": {
@@ -653,8 +539,8 @@
       "rows": [
         {
           "feature": "Dokładność dopasowania",
-          "digital": "±10 µm – pełna kontrola CAD z danych skanu 3D",
-          "traditional": "150–450 µm – rozciąganie folii podczas termoformowania",
+          "digital": "±100 µm na 80% powierzchni intaglio (spec. Formlabs LT Clear V2)",
+          "traditional": "200–300 µm – rozciąganie folii podczas termoformowania (Orgev et al. 2023)",
           "highlight": true
         },
         {
@@ -686,7 +572,7 @@
     "subtitle": "W Polsce ponad 80% szyn retencyjnych i relaksacyjnych wciąż powstaje metodą termoformowania. To sprawdzone rozwiązanie – ale już nie optymalne.",
     "subtitleNote": "Oferujemy alternatywę, która realnie zmienia codzienne wyniki leczenia i redukuje liczbę korekt na wizycie.",
     "stats": [
-      { "value": "±10µm", "label": "Tolerancja geometrii" },
+      { "value": "±100µm", "label": "Tolerancja geometrii" },
       { "value": "2–3×", "label": "Dłuższa żywotność" },
       { "value": "24h", "label": "Czas realizacji" },
       { "value": ">95%", "label": "Szyn bez korekty" }
@@ -695,7 +581,7 @@
       {
         "number": "01",
         "title": "Precyzja, której nie da się uzyskać ręcznie",
-        "description": "Każda szyna projektowana jest dokładnie pod anatomię pacjenta z tolerancją ±10 µm. Żadnego thinningu, żadnych losowych odchyleń grubości, żadnego 'prawie pasuje'."
+        "description": "Każda szyna projektowana jest dokładnie pod anatomię pacjenta z tolerancją ±100 µm. Żadnego thinningu, żadnych losowych odchyleń grubości, żadnego 'prawie pasuje'."
       },
       {
         "number": "02",

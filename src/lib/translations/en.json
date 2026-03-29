@@ -12,7 +12,7 @@
   "hero": {
     "title": "Your scan. Our splint.",
     "subtitle": "Retention, occlusal, and whitening splints — printed from certified medical-grade resins.",
-    "tag": "3D-printed splints",
+    "tag": "Digitally designed splints",
     "processLink": "View the workflow",
     "productsLink": "Our products"
   },
@@ -21,23 +21,23 @@
     "subtitle": "From scan to product. Controlled precision at every step.",
     "label": "How it works",
     "cta": "See process details",
-    "ctaNote": "Production: 24h from design approval. Shipping: 1–3 days. We accept scans from all intraoral scanners.",
+    "ctaNote": "Production: 48h from design approval. Shipping: 1–3 days (InPost / courier). We accept scans from all intraoral scanners.",
     "steps": {
       "scan": {
         "title": "3D Scan",
-        "desc": "Send us the file from your intraoral scanner — we work with every scanner on the market. We accept STL, OBJ and PLY files."
+        "desc": "We work with every scanner brand on the market. We accept files in STL, OBJ and PLY format."
       },
       "design": {
         "title": "Design",
-        "desc": "We design the splint with full control over thickness, insertion path, and retention zones — impossible with thermoforming."
+        "desc": "We design the splint with full control over thickness, insertion path, and retention zones."
       },
       "print": {
         "title": "3D Print",
-        "desc": "Printed from certified medical-grade biomaterial. Ready within 24 hours of design approval."
+        "desc": "Printed from certified, biocompatible material. Ready within 48 hours of design approval."
       },
       "precision": {
         "title": "QC & Delivery",
-        "desc": "Every splint verified for geometry before shipping. Fit guaranteed — we remake it if needed."
+        "desc": "Every splint is precisely verified for geometry before shipping."
       }
     }
   },
@@ -70,11 +70,11 @@
     "galleryCta": "Photo gallery — real cases",
     "retainers": {
       "title": "Retention Splints",
-      "description": "Digitally engineered retention splints providing full control over the insertion path and seating stability. Based on 3D scans, they allow for precise management of geometry, thickness, and retention zones—capabilities unattainable with traditional thermoforming methods.",
+      "description": "Digitally designed retention splints providing full control over the insertion path and seating stability. Based on 3D scans, they allow precise management of geometry, thickness, and retention zones.",
       "features": [
         "Designed from 3D data",
-        "Controlled insertion and removal path",
-        "Precise retention zone geometry",
+        "Controlled insertion path",
+        "Precise retention zone control",
         "Optimized thickness in functional zones",
         "Superior durability compared to thermoforming",
         "3D printed with certified medical material"
@@ -82,11 +82,10 @@
     },
     "guards": {
       "title": "Occlusal Splints",
-      "description": "Splints designed for protection against bruxism. Variable material thickness—2mm in occlusal zones, 1mm in non-load bearing areas. Significantly higher structural and material durability compared to traditional thermoforming methods.",
+      "description": "Splints designed for protection against bruxism. Variable material thickness — 2mm in occlusal zones, 1mm in non-load bearing areas. Significantly higher material durability compared to traditional methods.",
       "features": [
         "Protection against bruxism",
         "Variable thickness zones",
-        "Optimized load distribution",
         "Enhanced comfort",
         "Superior strength over traditional methods",
         "Designed from 3D data"
@@ -94,52 +93,15 @@
     },
     "aligners": {
       "title": "Whitening Trays",
-      "description": "Custom-designed whitening trays based on 3D scans. Precise anatomical fit with controlled thickness for maximum comfort and predictable whitening results.",
+      "description": "Individually designed whitening trays based on 3D scans. Precise anatomical fit with controlled thickness for comfort and predictable whitening results.",
       "features": [
         "Designed from 3D data",
         "Precise anatomical fit",
         "Optimized wall thickness",
-        "Controlled gel reservoirs",
         "3D printed with medical-grade material",
         "Predictable whitening effects"
       ]
-    },
-    "fixedRetainer": {
-      "title": "Printed Fixed Retainers",
-      "description": "Digitally designed fixed retention crafted via 3D printing using biocompatible medical resin. Unlike traditional wires bent by hand on a model, our method ensures an ultra-precise fit, predictable strength, and complete repeatability.",
-      "features": [
-        "CAD/CAM design from 3D scan data",
-        "Ultra-precise anatomical fit",
-        "High-strength biocompatible resin",
-        "Shape repeatability and predictability",
-        "Elimination of manual wire-bending errors",
-        "Controlled retention thickness and geometry"
-      ]
     }
-  },
-  "injection": {
-    "tag": "Innovation",
-    "title": "Injection Template System",
-    "description": "A digital system for Class I restorations, based on pre-preparation scans. A 3D printed mold enables flow composite injection and 1:1 anatomy reconstruction as an alternative to ceramic inlays.",
-    "features": {
-      "precision": {
-        "title": "1:1 Replication",
-        "desc": "Precise anatomy reconstruction from pre-op data"
-      },
-      "time": {
-        "title": "Minimal steps",
-        "desc": "Simplified clinical protocol with no lab stage"
-      },
-      "cost": {
-        "title": "Cost optimization",
-        "desc": "Economical alternative to ceramic inlays"
-      },
-      "workflow": {
-        "title": "Digital control",
-        "desc": "Predictable results via CAD/CAM design"
-      }
-    },
-    "note": "Product in technological development phase"
   },
   "technology": {
     "title": "Technology",
@@ -330,60 +292,6 @@
     },
     "copyright": "APM Digital Dental Lab. All rights reserved."
   },
-  "software": {
-    "tag": "Current R&D",
-    "title": "Next-generation CAD/CAM",
-    "subtitle": "for digital dentistry",
-    "vision": "We are working on the next generation of CAD/CAM software, designed from the ground up for modern digital dentistry. Not as another interface layer—but as a new engine.",
-    "why": {
-      "title": "Why a new system?",
-      "description": "Today's CAD/CAM solutions originated over a decade ago. They are stable and proven—but technologically based on architecture not designed for AI or GPUs.",
-      "old": [
-        "manual work on heavy meshes",
-        "dozens of clicks",
-        "compromises between time and quality"
-      ],
-      "new": "A system that understands tooth anatomy"
-    },
-    "capabilities": {
-      "anatomy": {
-        "title": "Digital anatomy",
-        "desc": "Analysis of shape, structure, and color directly from 3D scan data"
-      },
-      "recognition": {
-        "title": "Smart recognition",
-        "desc": "Automatic detection, numbering, and classification of teeth"
-      },
-      "reconstruction": {
-        "title": "AI-driven reconstruction",
-        "desc": "Geometry restoration preserving anatomy, occlusion, and proportions"
-      },
-      "gpu": {
-        "title": "GPU-accelerated",
-        "desc": "Real-time design leveraging GPU power"
-      }
-    },
-    "focus": {
-      "title": "Focus on precision",
-      "items": {
-        "aligners": "Whitening Trays",
-        "retainers": "Retention Splints",
-        "guards": "Occlusal Splints"
-      },
-      "subtitle": "No compromises. No unnecessary features."
-    },
-    "philosophy": {
-      "title": "Development Philosophy",
-      "description": "We don't build 'everything at once'. We build exactly what has the greatest clinical and technological impact.",
-      "steps": [
-        "Quality",
-        "Speed",
-        "Scale"
-      ]
-    },
-    "status": "Project in intensive R&D phase",
-    "closing": "We aren't fixing existing tools. We are designing what should exist if CAD/CAM were created today from scratch."
-  },
   "professionalGate": {
     "title": "Professional Content",
     "description": "This site contains specialized information intended for the dental industry. By continuing, you confirm that you are a dental professional or dental technician.",
@@ -501,28 +409,6 @@
         { "label": "Lead Time", "value": "2 – 4 business days" }
       ],
       "price": "from 150 PLN"
-    },
-    "fixedRetainer": {
-      "title": "Printed Fixed Retainers",
-      "tagline": "Every retainer seats first time. No chairside adjustments.",
-      "description": [
-        "The main failure mode of traditional wire retainers is manual variability: different technicians bend differently, different models produce different seating tensions. Our retainers are designed in 3D from scan data — arch geometry is reproduced digitally, not approximated on a plaster model.",
-        "Class IIa biocompatible resin eliminates nickel allergy risk and offers lower visibility than steel wire. Full shape repeatability on every repeat order — no new scans required."
-      ],
-      "features": [
-        "Arch geometry from digital scan data, not hand-bent approximation",
-        "Seats first time — no model or chairside correction needed",
-        "Eliminates nickel allergy risk — Class IIa material",
-        "Lower visibility than 0.8 mm steel wire",
-        "Full shape repeatability on repeat orders",
-        "Controlled stiffness — resin resists occlusal deformation"
-      ],
-      "specs": [
-        { "label": "Material", "value": "Class IIa Biocompatible Resin" },
-        { "label": "Thickness", "value": "0.6 – 0.8 mm" },
-        { "label": "Lead Time", "value": "3 – 5 business days" }
-      ],
-      "price": "from 200 PLN"
     }
   },
   "process": {
@@ -557,7 +443,7 @@
       "disclaimer": "Times refer to standard orders. We are prepared for high-volume production — for larger batches lead time may vary slightly, though we do everything to prevent that.",
       "stats": [
         { "value": "24h", "label": "Design + production" },
-        { "value": "±10µm", "label": "Print precision" },
+        { "value": "±100µm", "label": "Print precision" },
         { "value": "1–3", "label": "Days delivery" },
         { "value": "100%", "label": "Digital" }
       ]
@@ -571,15 +457,15 @@
   },
   "whyDigital": {
     "label": "Technical advantage",
-    "title": "Designed. Not formed.",
-    "subtitle": "Digital production eliminates manual and material variability – every product is identical to the CAD design.",
+    "title": "Printed, not formed.",
+    "subtitle": "Digital design eliminates thermoforming variability. Every splint is produced directly from 3D scan data, with full parameter control.\nFor your patients, this means predictable fit and consistent quality aligned with the CAD design.",
     "bars": [
       {
-        "label": "Fit accuracy",
+        "label": "Fit accuracy (RMS)",
         "digitalLabel": "3D Printing",
         "traditionalLabel": "Traditional method",
-        "digital": 10,
-        "traditional": 300,
+        "digital": 100,
+        "traditional": 250,
         "unit": "µm",
         "lowerIsBetter": true
       },
@@ -607,10 +493,10 @@
       "traditional": {
         "label": "Thermoforming",
         "steps": [
-          { "text": "Physical impression or plaster model", "risk": "Manual variability — depends on operator and material" },
-          { "text": "Thermoforming film under heat", "risk": "Uncontrolled stretching — up to 35% thickness change" },
-          { "text": "Try-in and occlusal adjustments at seating", "risk": "1 in 4–5 splints requires chairside correction" },
-          { "text": "Replacement = entire process repeated", "risk": "No digital archive — zero repeatability" }
+          { "text": "Model fabrication", "risk": "High variability — depends on technician and material used" },
+          { "text": "Thermoforming process", "risk": "Uncontrolled material stretching — up to 35% wall thickness change" },
+          { "text": "Try-in and adjustments at delivery", "risk": "Around 20% of splints require chairside correction" },
+          { "text": "No digital archive", "risk": "Replacement requires repeating the entire process from scratch" }
         ]
       },
       "digital": {
@@ -642,8 +528,8 @@
         "value": 100,
         "suffix": "%",
         "prefix": "",
-        "label": "Identical duplicate",
-        "sub": "Every order matches the CAD design — zero deviation between units"
+        "label": "Digital production",
+        "sub": "Every splint is produced from the same CAD file — zero variability between units, regardless of order date"
       }
     ],
     "table": {
@@ -653,8 +539,8 @@
       "rows": [
         {
           "feature": "Fit accuracy",
-          "digital": "±10 µm — full CAD control from 3D scan data",
-          "traditional": "150–450 µm — film stretching during thermoforming",
+          "digital": "±100 µm on 80% of intaglio surface (Formlabs LT Clear V2 spec)",
+          "traditional": "200–300 µm — film stretching during thermoforming (Orgev et al. 2023)",
           "highlight": true
         },
         {
@@ -686,7 +572,7 @@
     "subtitle": "In Poland, over 80% of retainers and occlusal splints are still made by thermoforming. A proven method – but no longer the optimal one.",
     "subtitleNote": "We offer an alternative that genuinely changes daily treatment outcomes and reduces the number of chairside adjustments.",
     "stats": [
-      { "value": "±10µm", "label": "Geometry tolerance" },
+      { "value": "±100µm", "label": "Geometry tolerance" },
       { "value": "2–3×", "label": "Longer lifespan" },
       { "value": "24h", "label": "Turnaround time" },
       { "value": ">95%", "label": "Splints without adjustment" }
@@ -695,7 +581,7 @@
       {
         "number": "01",
         "title": "Precision that cannot be achieved manually",
-        "description": "Every splint is designed precisely to the patient's anatomy with ±10 µm tolerance. No thinning, no random thickness variation, no 'almost fits'."
+        "description": "Every splint is designed precisely to the patient's anatomy with ±100 µm tolerance. No thinning, no random thickness variation, no 'almost fits'."
       },
       {
         "number": "02",

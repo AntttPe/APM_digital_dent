@@ -144,48 +144,6 @@ export default function ProductPage({ productKey, imagePath, accentColor, gradie
                             </div>
                         </FadeIn>
 
-                        {/* Comparison bars — fixedRetainer only */}
-                        {productKey === 'fixedRetainer' && (
-                            <FadeIn y={20} delay={0.25} className="mb-10 pb-10 border-b border-zinc-100 dark:border-zinc-800/60">
-                                <p className="text-xs uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-600 mb-6">
-                                    {t('productPage.comparison.title')}
-                                </p>
-                                <div className="space-y-8">
-                                    {(t('productPage.comparison.items') as Array<{ label: string; wire: number; printed: number; description: string }>).map((item, i) => (
-                                        <div key={i}>
-                                            <h3 className="text-sm font-light text-zinc-700 dark:text-zinc-300 mb-1">{item.label}</h3>
-                                            <p className="text-xs text-zinc-400 mb-3">{item.description}</p>
-                                            <div className="space-y-2">
-                                                <div>
-                                                    <span className="text-xs text-zinc-500 uppercase tracking-wider block mb-1">{t('productPage.comparison.printed')}</span>
-                                                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
-                                                        <motion.div
-                                                            initial={{ width: 0 }}
-                                                            whileInView={{ width: `${item.printed}%` }}
-                                                            viewport={{ once: true }}
-                                                            transition={{ duration: 1.4, delay: i * 0.15 + 0.3, ease: EASE }}
-                                                            className={`h-full bg-gradient-to-r ${accentColor} rounded-full`}
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <span className="text-xs text-zinc-400 uppercase tracking-wider block mb-1">{t('productPage.comparison.wire')}</span>
-                                                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-900 rounded-full overflow-hidden">
-                                                        <motion.div
-                                                            initial={{ width: 0 }}
-                                                            whileInView={{ width: `${item.wire}%` }}
-                                                            viewport={{ once: true }}
-                                                            transition={{ duration: 1.2, delay: i * 0.15 + 0.4, ease: EASE }}
-                                                            className="h-full bg-zinc-300 dark:bg-zinc-700 rounded-full"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </FadeIn>
-                        )}
 
                         {/* Pricing */}
                         <FadeIn y={16} delay={0.3}>

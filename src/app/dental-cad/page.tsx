@@ -8,32 +8,33 @@ import { useLanguage } from '@/lib/i18n';
 const CONTENT = {
     pl: {
         tag: 'APM Digital Lab — R&D',
-        thesis1: 'Zęby to nie siatki wielokątów.',
-        thesis2: 'Zęby to pola.',
-        intro: 'Każdy istniejący system CAD/CAM w stomatologii reprezentuje anatomię pacjenta jako siatkę wielokątów — zdyskretyzowane przybliżenie ciągłej geometrii. Każda operacja: przycięcie, offset, boolowskie łączenie — wprowadza nowe błędy topologiczne. Działają tak od trzydziestu lat. I przez trzydzieści lat wszyscy akceptowali te ograniczenia jako nieuniknione.',
-        introAccent: 'My nie.',
+        thesis1: 'Ręczne projektowanie szyn stomatologicznych.',
+        thesis2: 'Zastąpione algorytmem.',
+        intro: 'Każdy istniejący workflow CAD/CAM w stomatologii wymaga ręcznej ingerencji technika przy każdym przypadku: korekty modelu, dopasowania konturów, weryfikacji geometrii. Czas od skanu do gotowego projektu to godziny pracy. Jakość i powtarzalność zależą od osoby siedzącej przy klawiaturze.',
+        introAccent: 'Budujemy coś innego.',
 
-        engineLabel: 'Nie narzędzie. Silnik.',
-        engineP1: 'Budujemy silnik CAD nowej generacji — warstwę geometryczną opartą na wolumetrycznej reprezentacji pola. Każdy ząb istnieje w nim jako trójwymiarowe pole skalarne: siatka wokseli, gdzie każda wartość koduje dokładną odległość ze znakiem od najbliższej powierzchni anatomicznej. Gradient tego pola wyznacza normalną. Izopowierzchnia wyznacza geometrię. Nie wielokąty. Nie przybliżenia.',
-        engineP2: 'Ta matematyka — Signed Distance Fields, zaimplementowana na bibliotece wolumetrycznej OpenVDB (open-source DreamWorks/Disney) — leży u podstaw symulacji fizycznych w produkcjach Pixara, systemu globalnego oświetlenia Lumen w Unreal Engine 5 oraz optymalizacji topologicznej komponentów strukturalnych w przemyśle aerospace i obronnym. Sprawdzona podstawa systemów wymagających deterministycznej precyzji w skali przemysłowej. My przenosimy ją do stomatologii.',
+        engineLabel: 'Pipeline, nie narzędzie',
+        engineP1: 'Budujemy zautomatyzowany pipeline CAD napisany w C++. Jego zadaniem jest przyjęcie cyfrowego skanu zębowego i wygenerowanie gotowej geometrii szyny — bez ręcznej ingerencji na żadnym etapie. System zastępuje komercyjne narzędzia CAD/CAM w tej jednej, precyzyjnie zdefiniowanej klasie zadań.',
+        engineP2: 'Pipeline składa się z trzech spójnych etapów. Najpierw skan wczytywany jest jako siatka trójkątów i automatycznie segmentowany — algorytm wyznacza granice każdego zęba na podstawie analizy krzywizny powierzchni i nadaje mu numer FDI. Następnie dla każdego zęba generowana jest geometria nakładki: dwustronny offset tworzy zamknięty shell o zadanej grubości i luzie klinicznym. Krawędź dziąsłowa jest przycinana i wygładzana z interpolowanym przejściem w przestrzeniach międzyzębowych. Wynik eksportowany jest jako plik STL do slicera.',
 
         practiceLabel: 'Co to oznacza w praktyce',
-        practiceP: 'Kiedy silnik generuje nakładkę, nie "dopasowuje szablonu". On rozumie kształt łuku zębowego — krzywizny, marginesy dziąsłowe, relacje okluzyjne — i buduje geometrię punkt po punkcie, z dokładnością do setnych części milimetra.',
+        practiceP: 'Technik wysyła skan. System zwraca gotową geometrię. Grubość, luz kliniczny, linia dziąsłowa — wszystko jako parametry, nie jako efekt ręcznego kształtowania. Ten sam skan i te same parametry zawsze dają matematycznie identyczny wynik.',
         practiceItems: [
-            'Kliniczny luz jako parametr izopowierzchni — nie ręczny offset siatki podatny na artefakty krawędziowe',
-            'Indywidualna linia dziąsłowa obliczana z lokalnej topografii każdego zęba — nie globalna płaszczyzna cięcia',
-            'Output jako topologicznie spójna, zamknięta sieć — gwarantowana poprawność geometryczna bez manualnego postprocessingu',
+            'Automatyczna segmentacja zębów z numeracją FDI i możliwością ręcznej korekty w interfejsie graficznym',
+            'Grubość nakładki i luz kliniczny jako zdefiniowane parametry — nie ręczne przybliżenia',
+            'Gładka krawędź dziąsłowa z interpolowanym przejściem w przestrzeniach międzyzębowych',
+            'Output: topologicznie spójny plik STL gotowy bezpośrednio do slicera i druku',
         ],
-        practiceNote: 'Czas generowania pełnego łuku: kilkadziesiąt sekund na stacji roboczej. Na GPU — szybciej.',
+        practiceNote: 'Stan aktualny: działający system end-to-end na skanach klinicznych. Trwają prace rozwojowe, udoskonalające i optymalizacyjne.',
 
-        whyLabel: 'Dlaczego to ważne',
-        whyP1: 'Mesh-based pipeline oznacza, że każda operacja boolowska, każdy offset, każde zaokrąglenie krawędzi wprowadza potencjalne błędy: non-manifold edges, odwrócone normalne, dziury w geometrii. Systemy CAD/CAM radzą sobie z tym przez warstwę napraw — automatyczną i ręczną — którą technik wykonuje przy każdym przypadku. Godzinami.',
-        whyP2: 'Nasz pipeline jest immutable i deterministyczny. Operacje na polu SDF są algebraicznie czyste — min(), max(), lerp() na polach skalarnych nie generują artefaktów topologicznych. Ta sama anatomia, te same parametry kliniczne — zawsze matematycznie poprawny output.',
-        whyQuote1: 'To nie jest ulepszenie istniejącego podejścia.',
-        whyQuote2: 'To jest wymiana fundamentów.',
+        whyLabel: 'Dlaczego to ma znaczenie',
+        whyP1: 'Ręczny workflow CAD/CAM oznacza, że jakość projektu zależy od technika: jego doświadczenia, zmęczenia, dnia tygodnia. Każdy przypadek to kilkadziesiąt minut do kilku godzin pracy. Każda korekta to nowy czas. Wyniki są powtarzalne tylko o tyle, o ile powtarzalny jest człowiek.',
+        whyP2: 'Nasz pipeline jest deterministyczny. Te same dane wejściowe zawsze generują ten sam output — nie przybliżony, nie "wystarczająco dobry", lecz matematycznie identyczny. Skalowalność tego modelu to nie przyspieszenie istniejącego procesu. To eliminacja jego zmienności.',
+        whyQuote1: 'Nie zamiast technika.',
+        whyQuote2: 'Technik kontroluje. Algorytm eliminuje powtarzalną robotę.',
 
         roadmapLabel: 'Roadmap',
-        roadmapIntro: 'Silnik to platforma. Moduły kliniczne to aplikacje zbudowane na jej fundamencie — każdy kolejny korzysta z tych samych wolumetrycznych operacji geometrycznych.',
+        roadmapIntro: 'Silnik to platforma. Moduły kliniczne to aplikacje zbudowane na jego fundamencie — każdy kolejny korzysta z tych samych geometrycznych operacji.',
 
         forLabel: 'Dla kogo',
         forItems: [
@@ -42,38 +43,39 @@ const CONTENT = {
             'Dla podmiotów, które dostrzegają, że fundamenty cyfrowej stomatologii są przepisywane od nowa — i chcą uczestniczyć w tej rozmowie zanim stanie się to oczywiste.',
         ],
 
-        ctaText: 'Jesteśmy w fazie budowy silnika. Jeśli chcesz być wśród pierwszych, którzy to zobaczą — napisz.',
+        ctaText: 'Jesteśmy w fazie aktywnego rozwoju. Jeśli chcesz być wśród pierwszych, którzy to zobaczą — napisz.',
         back: '← APM Digital Lab',
     },
 
     en: {
         tag: 'APM Digital Lab — R&D',
-        thesis1: 'Teeth are not polygon meshes.',
-        thesis2: 'Teeth are fields.',
-        intro: 'Every existing CAD/CAM system in dentistry represents patient anatomy as a polygon mesh — a discretized approximation of continuous geometry. Every operation: trimming, offsetting, boolean union — introduces new topological errors. They have worked this way for thirty years. And for thirty years, everyone accepted those limitations as unavoidable.',
-        introAccent: 'We don\'t.',
+        thesis1: 'Manual dental splint design.',
+        thesis2: 'Replaced by an algorithm.',
+        intro: 'Every existing CAD/CAM workflow in dentistry requires manual technician intervention on every case: model corrections, contour adjustments, geometry verification. Time from scan to finished design is measured in hours. Quality and repeatability depend on the person at the keyboard.',
+        introAccent: 'We\'re building something different.',
 
-        engineLabel: 'Not a tool. An engine.',
-        engineP1: 'We\'re building a next-generation CAD engine — a geometric layer based on volumetric field representation. Every tooth exists in it as a three-dimensional scalar field: a voxel grid where every value encodes the exact signed distance to the nearest anatomical surface. The field gradient defines the surface normal. The isosurface defines the geometry. No polygons. No approximations.',
-        engineP2: 'This mathematics — Signed Distance Fields, implemented on the OpenVDB volumetric library (open-source DreamWorks/Disney) — underlies physical simulations in Pixar productions, the Lumen global illumination system in Unreal Engine 5, and topological optimization of structural components in aerospace and defense. A proven foundation for systems requiring deterministic precision at industrial scale. We\'re bringing it to dentistry.',
+        engineLabel: 'A pipeline, not a tool',
+        engineP1: 'We are building an automated CAD pipeline written in C++. Its purpose is to receive a digital dental scan and produce finished splint geometry — without manual intervention at any stage. The system replaces commercial CAD/CAM tools for this one, precisely defined class of tasks.',
+        engineP2: 'The pipeline consists of three coherent stages. First, the scan is loaded as a triangle mesh and automatically segmented — an algorithm identifies each tooth boundary using surface curvature analysis and assigns FDI numbering. Then, for each tooth, the splint geometry is generated: a bilateral mesh offset creates a closed shell with defined thickness and clinical clearance. The gingival margin is trimmed and smoothed with an interpolated transition at interproximal spaces. The result is exported as an STL file for the slicer.',
 
         practiceLabel: 'What this means in practice',
-        practiceP: 'When the engine generates a splint, it doesn\'t "fit a template". It understands the shape of the dental arch — its curvatures, gingival margins, occlusal relationships — and builds geometry point by point, with accuracy down to hundredths of a millimeter.',
+        practiceP: 'The technician sends a scan. The system returns finished geometry. Thickness, clinical clearance, gingival line — all defined as parameters, not as the result of manual shaping. The same scan and the same parameters always produce a mathematically identical result.',
         practiceItems: [
-            'Clinical clearance as an isosurface parameter — not a manual mesh offset prone to edge artifacts',
-            'Individual gingival margin computed from local topography of each tooth — not a global cutting plane',
-            'Output as a topologically consistent, closed manifold — guaranteed geometric correctness without manual postprocessing',
+            'Automatic tooth segmentation with FDI numbering and manual correction tools in the graphical interface',
+            'Splint thickness and clinical clearance as defined parameters — not manual approximations',
+            'Smooth gingival margin with interpolated transitions at interproximal spaces',
+            'Output: topologically consistent STL file ready directly for the slicer and printing',
         ],
-        practiceNote: 'Full arch generation time: seconds on a workstation. On GPU — faster.',
+        practiceNote: 'Current state: working end-to-end system on clinical scans. Development, refinement, and optimisation work ongoing.',
 
         whyLabel: 'Why this matters',
-        whyP1: 'A mesh-based pipeline means every boolean operation, every offset, every edge fillet introduces potential errors: non-manifold edges, flipped normals, holes in geometry. CAD/CAM systems handle this through a repair layer — automated and manual — that technicians run on every case. For hours.',
-        whyP2: 'Our pipeline is immutable and deterministic. Operations on SDF fields are algebraically clean — min(), max(), lerp() on scalar fields generate no topological artifacts. Same anatomy, same clinical parameters — always a mathematically correct output.',
-        whyQuote1: 'This is not an improvement on the existing approach.',
-        whyQuote2: 'This is a replacement of the foundations.',
+        whyP1: 'A manual CAD/CAM workflow means quality depends on the technician: their experience, fatigue, day of the week. Each case takes tens of minutes to several hours. Each correction means additional time. Results are repeatable only to the degree that a human is repeatable.',
+        whyP2: 'Our pipeline is deterministic. The same inputs always produce the same output — not approximate, not "good enough", but mathematically identical. The scalability of this model is not an acceleration of the existing process. It is the elimination of its variability.',
+        whyQuote1: 'Not a replacement for the technician.',
+        whyQuote2: 'The technician stays in control. The algorithm eliminates the repetitive work.',
 
         roadmapLabel: 'Roadmap',
-        roadmapIntro: 'The engine is a platform. Clinical modules are applications built on its foundation — each subsequent one reuses the same volumetric geometric operations.',
+        roadmapIntro: 'The engine is a platform. Clinical modules are applications built on its foundation — each subsequent one reuses the same geometric operations.',
 
         forLabel: 'Who it\'s for',
         forItems: [
@@ -82,7 +84,7 @@ const CONTENT = {
             'Those who see that the foundations of digital dentistry are being rewritten — and want to be part of that conversation before it becomes obvious.',
         ],
 
-        ctaText: 'We\'re in the engine-building phase. If you want to be among the first to see it — write.',
+        ctaText: 'We are in active development. If you want to be among the first to see it — write.',
         back: '← APM Digital Lab',
     },
 } as const;
