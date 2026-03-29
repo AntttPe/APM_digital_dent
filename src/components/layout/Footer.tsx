@@ -44,7 +44,13 @@ export default function Footer() {
                         </h3>
                         <div className="space-y-2 text-xs text-zinc-500 dark:text-zinc-600">
                             <Link
-                                href="/badania"
+                                href="/faq"
+                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                {t('footer.legal.faq')}
+                            </Link>
+                            <Link
+                                href="/rd"
                                 className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
                             >
                                 {t('footer.legal.research')}

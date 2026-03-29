@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 import FadeIn from '@/components/ui/FadeIn';
 
@@ -107,6 +108,18 @@ export default function Contact() {
                             {t('contact.formats')}
                         </span>
                     </div>
+                </FadeIn>
+
+                {/* FAQ hint */}
+                <FadeIn y={8} delay={0.4}>
+                    <Link href="/faq" className="inline-flex items-center gap-2 mt-10 group">
+                        <span className="text-xs text-zinc-400 dark:text-zinc-600 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors">
+                            {t('faq.contactHint') as string}
+                        </span>
+                        <span className="text-xs text-zinc-500 dark:text-zinc-500 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors underline underline-offset-2">
+                            {t('faq.contactLink') as string} →
+                        </span>
+                    </Link>
                 </FadeIn>
             </div>
         </section>

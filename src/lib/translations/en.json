@@ -322,7 +322,8 @@
     },
     "legal": {
       "title": "Information",
-      "research": "Research & Development",
+      "faq": "FAQ",
+      "research": "R&D",
       "info": "Legal Information",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
@@ -761,5 +762,83 @@
       "title": "Legal contact",
       "body": "For legal matters and complaints, please contact us at:"
     }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before placing your first order.",
+    "cta": {
+      "label": "Didn't find an answer?",
+      "button": "Contact us",
+      "note": "We respond within 24h"
+    },
+    "contactHint": "Questions before your first order?",
+    "contactLink": "Check FAQ",
+    "categories": [
+      {
+        "title": "Ordering and file submission",
+        "items": [
+          {
+            "q": "How do I send a dental scan to the lab?",
+            "a": "All orders and files are accepted by email only: kontakt@apmdental.pl. Send your STL, OBJ or PLY file as an email attachment. Include the splint type and any clinical preferences in your message."
+          },
+          {
+            "q": "What scan formats do you accept? Which intraoral scanners do you work with?",
+            "a": "We accept STL, OBJ and PLY files. We work with all intraoral scanners on the market — 3Shape Trios, Medit, iTero, Dentsply Sirona Primescan, Carestream and others. If you are unsure about the format, just ask."
+          },
+          {
+            "q": "Can I order a single splint?",
+            "a": "Yes, we accept single-unit orders."
+          }
+        ]
+      },
+      {
+        "title": "Lead time and delivery",
+        "items": [
+          {
+            "q": "How long does it take to receive a splint?",
+            "a": "Once an order is confirmed, we produce the splint within 24 hours and dispatch it the same or next business day. Delivery by InPost or courier takes 1–3 business days. Total from scan submission to delivery: 2–4 business days."
+          },
+          {
+            "q": "What if the splint does not fit at seating?",
+            "a": "We remake it at no additional cost. A fit guarantee applies to every order — if the splint requires adjustment or does not seat correctly, contact us at kontakt@apmdental.pl."
+          }
+        ]
+      },
+      {
+        "title": "Materials",
+        "items": [
+          {
+            "q": "What materials are 3D printed splints made from?",
+            "a": "We use certified biocompatible resins from Formlabs, Keyprint and Detax. All materials are approved for long-term intraoral contact. Material documentation available on request."
+          },
+          {
+            "q": "What is the difference between a 3D printed splint and a thermoformed one?",
+            "a": "A 3D printed splint is CAD-designed from scan data — retention zone geometry, thickness and insertion path are defined, not accidental. Clinical studies (RCT, 2024) confirm 3.5× higher flexural strength compared to thermoformed materials. Thermoformed splints depend on sheet temperature and press force — different every time."
+          }
+        ]
+      },
+      {
+        "title": "Products and use cases",
+        "items": [
+          {
+            "q": "Can I order a duplicate splint without a new patient scan?",
+            "a": "Yes. We keep a digital archive of every project. A duplicate can be produced without rescanning the patient — just provide the previous order number or patient name."
+          }
+        ]
+      },
+      {
+        "title": "Partnership and payments",
+        "items": [
+          {
+            "q": "How does the first collaboration work?",
+            "a": "Send a scan to kontakt@apmdental.pl with the splint type. We will design and produce the first splint free of charge — no commitment required. Evaluate fit and finish quality before deciding on regular collaboration."
+          },
+          {
+            "q": "Do you issue VAT invoices? What are the payment terms?",
+            "a": "Yes, we issue VAT invoices. Payment is due 14 days from delivery. Invoices are issued by the company operating the lab under its full legal name and tax number."
+          }
+        ]
+      }
+    ]
   }
 }
