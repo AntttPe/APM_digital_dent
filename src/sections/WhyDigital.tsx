@@ -42,7 +42,6 @@ export default function WhyDigital() {
     const traditionalSteps   = t('whyDigital.processComparison.traditional.steps') as ProcessStep[];
     const digitalSteps       = t('whyDigital.processComparison.digital.steps') as ProcessStep[];
     const outcomes           = t('whyDigital.outcomes') as OutcomeMetric[];
-    const cases              = t('whyChooseUs.cases') as Array<{ tag: string; title: string; description: string; result: string }>;
 
     return (
         <section className="relative py-32 px-6 overflow-hidden border-t border-zinc-200 dark:border-zinc-900 bg-sky-50 dark:bg-black">
@@ -202,41 +201,6 @@ export default function WhyDigital() {
                 <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-2xl mx-auto">
                     {Array.isArray(outcomes) && outcomes.map((outcome, i) => (
                         <OutcomeCard key={i} outcome={outcome} index={i} />
-                    ))}
-                </div>
-
-                {/* ── Clinical examples ────────────────────────────────────── */}
-                <FadeIn y={0} className="mb-8 mt-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-600 text-center mb-10">
-                        {t('whyChooseUs.casesLabel')}
-                    </p>
-                </FadeIn>
-
-                <div className="grid md:grid-cols-3 gap-4 mb-20">
-                    {Array.isArray(cases) && cases.map((c, i) => (
-                        <FadeIn key={i} delay={i * 0.1} y={12}>
-                            <div className="flex flex-col h-full p-8 rounded-2xl border border-sky-100 dark:border-zinc-800/60 bg-white dark:bg-zinc-950/40 hover:border-sky-300 dark:hover:border-zinc-700 transition-colors duration-500">
-                                <div className="mb-6">
-                                    <span className="text-xs px-3 py-1 rounded-full border border-sky-200 dark:border-zinc-800 text-zinc-500">
-                                        {c.tag}
-                                    </span>
-                                </div>
-                                <h4 className="text-base font-light text-zinc-900 dark:text-white mb-3 leading-snug">
-                                    {c.title}
-                                </h4>
-                                <p className="text-sm text-zinc-500 leading-relaxed flex-1 mb-6">
-                                    {c.description}
-                                </p>
-                                <div className="pt-5 border-t border-sky-100 dark:border-zinc-900">
-                                    <div className="flex items-start gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: ACCENT }} />
-                                        <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                                            {c.result}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </FadeIn>
                     ))}
                 </div>
 
