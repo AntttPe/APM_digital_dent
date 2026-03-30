@@ -61,12 +61,6 @@ export default function Footer() {
                             >
                                 {t('footer.legal.info')}
                             </Link>
-                            <Link
-                                href="/pacjent"
-                                className="block hover:text-zinc-900 dark:hover:text-white transition-colors"
-                            >
-                                {t('patient.footerLink')}
-                            </Link>
                         </div>
                     </div>
                 </div>

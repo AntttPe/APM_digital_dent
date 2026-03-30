@@ -44,19 +44,19 @@
   "firstCollab": {
     "label": "Zanim wyślesz pierwsze zlecenie",
     "title": "Sprawdź nas bez ryzyka.",
-    "subtitle": "Dwie drogi do pierwszej współpracy — bez zobowiązań, bez faktur.",
+    "subtitle": "Dwie drogi do pierwszej współpracy.",
     "options": [
       {
         "num": "01",
         "title": "Wyślij nam skan",
-        "desc": "Prześlij skan zębów pacjenta. Zaprojektujemy, wyprodukujemy i wyślemy gotową szynę — bezpłatnie. Oceń jakość na własnym modelu, zanim zdecydujesz o współpracy.",
+        "desc": "Prześlij skan zębów pacjenta. Bezpłatnie zaprojektujemy, wyprodukujemy i wyślemy gotową szynę. Oceń jakość na własnym modelu, zanim zdecydujesz o współpracy.",
         "tag": "Twój skan → gotowy produkt"
       },
       {
         "num": "02",
         "title": "Zamów próbkę",
-        "desc": "Wyślemy Ci gotową nakładkę wraz z wydrukowanym modelem zębowym — bezpłatnie. Poczuj materiał, sprawdź precyzję dopasowania, pokaż pacjentom.",
-        "tag": "Produkt + model w Twoje ręce"
+        "desc": "Bezpłatnie wyślemy Ci gotową nakładkę wraz z wydrukowanym modelem zębów. Poczuj materiał, sprawdź precyzję dopasowania, pokaż pacjentom.",
+        "tag": "Produkt + model"
       }
     ],
     "cta": "Napisz do nas",
@@ -502,10 +502,10 @@
       "digital": {
         "label": "Druk 3D CAD/CAM",
         "steps": [
-          { "text": "Skan wewnątrzustny (STL/PLY)", "ok": "Pełna geometria bez fizycznego odcisku" },
-          { "text": "Projekt CAD - pełna kontrola kształtu i grubości", "ok": "Strefowa geometria, tor wprowadzania, okluzja" },
-          { "text": "Druk z certyfikowanego biomateriału", "ok": "Żywice dopuszczone do kontaktu z jamą ustną" },
-          { "text": "Gotowe do osadzenia + archiwum cyfrowe", "ok": "Identyczny duplikat na zawołanie - bez nowej wyceny" }
+          { "text": "Skan wewnątrzustny (STL/PLY)", "ok": "Bez fizycznego wycisku" },
+          { "text": "Projekt CAD", "ok": "Pełna kontrola kształtu i grubości" },
+          { "text": "Druk z certyfikowanego materiału", "ok": "Żywice dopuszczone do zastosowań w jamie ustnej" },
+          { "text": "Gotowe do oddania + archiwum cyfrowe", "ok": "Identyczny duplikat bez dodatkowych kroków" }
         ]
       }
     },
@@ -515,14 +515,14 @@
         "suffix": "×",
         "prefix": "do",
         "label": "Dłuższa żywotność",
-        "sub": "U pacjentów z bruksizmem vs szyna termoformowana - mniej wymian, mniej reklamacji"
+        "sub": "U pacjentów z bruksizmem vs szyna wykonana klasyczną techniką"
       },
       {
         "value": 100,
         "suffix": "%",
         "prefix": "",
         "label": "Produkcji cyfrowej",
-        "sub": "Każda szyna powstaje z tego samego pliku CAD — zero zmienności między egzemplarzami, niezależnie od daty zamówienia"
+        "sub": "Każda szyna powstaje z tego samego pliku CAD — zero zmienności między egzemplarzami"
       }
     ],
     "table": {
