@@ -719,5 +719,147 @@
         ]
       }
     ]
+  },
+
+  "rd": {
+    "tag": "APM Digital Lab — R&D",
+    "title": "Research & Development",
+    "subtitle": "Two parallel projects. One obsession with precision.",
+    "back": "← APM Digital Lab",
+    "cards": [
+      {
+        "number": "01",
+        "label": "Material research",
+        "title": "Printer and clinical resin validation",
+        "desc": "Systematic testing of over a dozen printing platforms and dozens of medical resins conducted before the first clinical case arrived. A material selection methodology that underlies every product that leaves our laboratory.",
+        "cta": "Methodology →",
+        "href": "/rd/materialy",
+        "accent": "from-emerald-500/10 to-teal-500/10",
+        "dot": "bg-emerald-500"
+      },
+      {
+        "number": "02",
+        "label": "DentalCAD Engine",
+        "title": "Automated CAD pipeline: from scan to finished geometry",
+        "desc": "A C++ system replacing manual design in commercial CAD/CAM tools. Three stages: scan loading and automatic tooth segmentation, splint geometry generation with defined parameters, STL export for 3D printing. A working end-to-end pipeline — from clinical file to finished splint geometry without manual intervention.",
+        "cta": "Technical overview →",
+        "href": "/dental-cad",
+        "accent": "from-blue-500/10 to-cyan-500/10",
+        "dot": "bg-blue-500"
+      }
+    ]
+  },
+
+  "rdMaterialy": {
+    "tag": "APM Digital Lab — Material research",
+    "thesis1": "We didn't choose a material from a catalog.",
+    "thesis2": "We tested every one.",
+    "intro": "Before we produced the first clinical product, we spent many months testing printers and resins from different manufacturers. Systematically, empirically — not based on technical data sheets. Data sheets describe what a material achieves under the manufacturer's laboratory conditions. We were interested in what it achieves under our conditions, with our clinical geometries.",
+    "introAccent": "That's the difference between a clinical product and a product that \"meets requirements\".",
+    "testsLabel": "What we tested",
+    "testsP": "Every printer-resin combination went through the same protocol — from the basics to things manufacturers rarely mention in their documentation.",
+    "testsItems": [
+      "Print quality — surface finish, layer resolution, faithful geometry reproduction at varying wall thicknesses",
+      "Clinical fit — precision of seating on the model, gingival margin clearance, retention",
+      "Durability and mechanical strength — including exposure to extreme conditions: temperature, moisture, occlusal loading",
+      "Different post-processing methods — curing time and intensity, washing, surface finishing",
+      "Smell and taste — because the splint spends many hours in the patient's mouth and this is not a secondary consideration"
+    ],
+    "findingsLabel": "Findings and outcome",
+    "findingsP1": "Months of testing led us to develop our own individual production method — specific print parameters, a precise post-processing protocol, and a quality control procedure tailored to the specific machine-material combination. The result is measurable: the dimensional accuracy and wearing comfort of digitally printed splints have no point of reference in thermoforming.",
+    "findingsP2": "Thermoforming stretches material over a model — geometry is an approximation, wall thickness is uneven, and the material after forming has different properties than before. A splint designed and generated digitally, then printed layer by layer, is a different product — not a better version of the same process.",
+    "findingsNote": "The platform and materials we use were selected based on 180-day test results — not based on marketing materials.",
+    "softwareLabel": "Production software",
+    "softwareP": "Existing lab management systems were written with general prosthetic workshops in mind. We built our own — tracking every order from scan receipt to finished product, with a full log of print parameters, resin batch number, and quality control results. If a deviation appears, we can correlate it with a specific material batch, production day, or machine parameter.",
+    "softwareNote": "Client panel with order status tracking is in planning.",
+    "livingLabel": "This process is never finished",
+    "livingP": "We built the methodology — but we don't consider it complete. Every splint that leaves the laboratory is a data point. Every piece of feedback from a dentist or patient — about fit, comfort, durability, or a detail we hadn't considered — goes directly into the next iteration of the process. Not into a backlog. Not into a future roadmap. Into the next production cycle.",
+    "livingAccent": "We measure quality not by the standard we set at the start, but by how much better we are than last month.",
+    "back": "← R&D",
+    "backHref": "/rd"
+  },
+
+  "dentalCad": {
+    "tag": "APM Digital Lab — R&D",
+    "thesis1": "Manual dental splint design.",
+    "thesis2": "Replaced by an algorithm.",
+    "intro": "Every existing CAD/CAM workflow in dentistry requires manual technician intervention on every case: model corrections, contour adjustments, geometry verification. Time from scan to finished design is measured in hours. Quality and repeatability depend on the person at the keyboard.",
+    "introAccent": "We're building something different.",
+    "engineLabel": "A pipeline, not a tool",
+    "engineP1": "We are building an automated CAD pipeline written in C++. Its purpose is to receive a digital dental scan and produce finished splint geometry — without manual intervention at any stage. The system replaces commercial CAD/CAM tools for this one, precisely defined class of tasks.",
+    "engineP2": "The pipeline consists of three coherent stages. First, the scan is loaded as a triangle mesh and automatically segmented — an algorithm identifies each tooth boundary using surface curvature analysis and assigns FDI numbering. Then, for each tooth, the splint geometry is generated: a bilateral mesh offset creates a closed shell with defined thickness and clinical clearance. The gingival margin is trimmed and smoothed with an interpolated transition at interproximal spaces. The result is exported as an STL file for the slicer.",
+    "practiceLabel": "What this means in practice",
+    "practiceP": "The technician sends a scan. The system returns finished geometry. Thickness, clinical clearance, gingival line — all defined as parameters, not as the result of manual shaping. The same scan and the same parameters always produce a mathematically identical result.",
+    "practiceItems": [
+      "Automatic tooth segmentation with FDI numbering and manual correction tools in the graphical interface",
+      "Splint thickness and clinical clearance as defined parameters — not manual approximations",
+      "Smooth gingival margin with interpolated transitions at interproximal spaces",
+      "Output: topologically consistent STL file ready directly for the slicer and printing"
+    ],
+    "practiceNote": "Current state: working end-to-end system on clinical scans. Development, refinement, and optimisation work ongoing.",
+    "whyLabel": "Why this matters",
+    "whyP1": "A manual CAD/CAM workflow means quality depends on the technician: their experience, fatigue, day of the week. Each case takes tens of minutes to several hours. Each correction means additional time. Results are repeatable only to the degree that a human is repeatable.",
+    "whyP2": "Our pipeline is deterministic. The same inputs always produce the same output — not approximate, not \"good enough\", but mathematically identical. The scalability of this model is not an acceleration of the existing process. It is the elimination of its variability.",
+    "whyQuote1": "Not a replacement for the technician.",
+    "whyQuote2": "The technician stays in control. The algorithm eliminates the repetitive work.",
+    "roadmapLabel": "Roadmap",
+    "roadmapIntro": "The engine is a platform. Clinical modules are applications built on its foundation — each subsequent one reuses the same geometric operations.",
+    "roadmap": [
+      {
+        "phase": "01",
+        "title": "Geometry engine",
+        "status": "active",
+        "statusLabel": "Active phase",
+        "desc": "SDF pipeline, algebraically clean volumetric operations, deterministic output of a topologically correct STL shell. Foundation for all modules below."
+      },
+      {
+        "phase": "02",
+        "title": "Module: Dental splints",
+        "status": "building",
+        "statusLabel": "In development",
+        "desc": "First clinical application of the engine. Retention, occlusal, and whitening splints generated automatically from intraoral scan data. Clinical clearance as a field parameter, per-tooth gingival margin, print-ready output."
+      },
+      {
+        "phase": "03",
+        "title": "Module: Crowns and bridges",
+        "status": "planned",
+        "statusLabel": "Planned",
+        "desc": "Not another template library. We plan to integrate a generative anatomical model trained on thousands of natural tooth morphologies — the engine doesn't generate a crown that \"fits\", but one that looks like it was always there. Cusp, fissure, and ridge morphology computed as a continuous field matched to the patient's dental phenotype. Occlusal contacts optimized automatically in SDF space."
+      },
+      {
+        "phase": "04",
+        "title": "Module: Restorations and minimally invasive techniques",
+        "status": "planned",
+        "statusLabel": "Planned",
+        "desc": "Class I–V composite restorations with precise proximal contact geometry control. Native support for flow injection technique — automatic generation of sectional matrices and injection channels for direct minimally invasive restorations."
+      },
+      {
+        "phase": "05",
+        "title": "Module: Orthodontics",
+        "status": "research",
+        "statusLabel": "Research",
+        "desc": "Tooth movement simulated as continuous field transformation — no separate meshes per treatment stage. Every target position is an isosurface in volumetric space. Automatic tooth positioning sequence planning accounting for root geometry, alveolar bone thickness, and occlusal relationships — the entire treatment plan as a coherent trajectory within a single anatomical model."
+      }
+    ],
+    "forLabel": "Who it's for",
+    "forItems": [
+      "Dental labs for whom clinical quality is the absolute constraint — not a cheaper workflow, but geometric outcomes that conventional pipelines cannot produce.",
+      "Clinics that want to reduce time from scan to finished clinical product from days to hours — without compromise at any stage of the geometric chain.",
+      "Those who see that the foundations of digital dentistry are being rewritten — and want to be part of that conversation before it becomes obvious."
+    ],
+    "ctaText": "We are in active development. If you want to be among the first to see it — write.",
+    "back": "← APM Digital Lab"
+  },
+
+  "galeria": {
+    "tag": "APM Digital Lab — Gallery",
+    "title": "Cases.",
+    "subtitle": "Real splints. Real teeth.",
+    "coming": "Photos coming soon.",
+    "comingNote": "This is where real photographs of retention, occlusal and whitening splints will live — on patients' teeth, on plaster models, and close-up detail shots so you can evaluate the finish quality before sending your first case.",
+    "cta": "Get in touch",
+    "ctaNote": "Want to see examples sooner? Send us a message — we'll share photos directly.",
+    "back": "← Products"
   }
+}
 }

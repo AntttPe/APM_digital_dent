@@ -105,22 +105,22 @@
   },
   "technology": {
     "title": "Technologia",
-    "description": "Wykorzystujemy zaawansowane technologie druku 3D i projektowania cyfrowego do tworzenia precyzyjnych rozwiązań dentystycznych z danych skanów.",
+    "description": "Łączymy cyfrowe projektowanie z bezpośrednim drukiem 3D, by tworzyć idealnie spasowane prace na podstawie skanów wewnątrzustnych.",
     "points": {
       "digital": {
-        "title": "Pełen cyfrowy workflow",
-        "desc": "Eliminacja błędów analogowych"
+        "title": "W 100% cyfrowy workflow",
+        "desc": "Praca bez modeli fizycznych eliminuje problem skurczu materiałów i niedokładności."
       },
       "precision": {
-        "title": "Kontrolowana precyzja",
-        "desc": "Dokładność na poziomie mikronów"
+        "title": "Mikrometryczna dokładność",
+        "desc": "Perfekcyjne przyleganie i powtarzalność na poziomie mikronów."
       },
       "material": {
-        "title": "Materiały medyczne",
-        "desc": "Certyfikowane tworzywa biokompatybilne"
+        "title": "Certyfikowane żywice",
+        "desc": "Biokompatybilne materiały medyczne przeznaczone do środowiska jamy ustnej."
       }
     },
-    "researchLink": "Metodologia doboru materiałów — Badania R&D"
+    "researchLink": "Jak testujemy materiały? — Nasze badania R&D"
   },
   "contact": {
     "tag": "Kontakt",
@@ -458,7 +458,7 @@
   "whyDigital": {
     "label": "Przewaga technologiczna",
     "title": "Sprawdzone. Precyzyjne. Powtarzalne.",
-    "subtitle": "Projektowanie cyfrowe eliminuje zmienność procesu termoformowania. Każda nakładka powstaje bezpośrednio z danych skanu 3D, z pełną kontrolą jej parametrów.\nDla Państwa pacjentów oznacza to przewidywalne dopasowanie i powtarzalną jakość zgodną z projektem CAD.",
+    "subtitle": "Bezpośredni druk eliminuje błędy wynikające ze skurczu folii podczas termoformowania. Drukując ze skanów 3D, mamy pełną kontrolę nad parametrami każdej nakładki. To gwarantuje Państwa pacjentom bezbłędne przyleganie, a sam wyrób jest dokładnym, fizycznym odzwierciedleniem cyfrowego projektu.",
     "bars": [
       {
         "label": "Dokładność dopasowania (RMS)",
@@ -470,7 +470,7 @@
         "lowerIsBetter": true
       },
       {
-        "label": "Jednolitość grubości ścianki",
+        "label": "Jednolitość grubości ścianki nakładki",
         "digitalLabel": "Druk 3D",
         "traditionalLabel": "Metoda tradycyjna",
         "digital": 100,
@@ -596,21 +596,21 @@
     "cases": [
       {
         "tag": "Ciężki bruksizm",
-        "title": "Szyna relaksacyjna u pacjenta z nocnym bruksizmem",
-        "description": "Pacjent użytkował przez lata szyny termoformowane – regularnie pękały lub odkształcały się w strefach okluzyjnych. Zamówiono szynę relaksacyjną drukowaną 3D z precyzyjnie zaprojektowaną grubością 2 mm w okluzji.",
-        "result": "Zero pęknięć po 12 miesiącach użytkowania. Żadnej wizyty reklamacyjnej - pacjent wreszcie używa szyny regularnie."
+        "title": "Szyna relaksacyjna dla pacjenta z silnym bruksizmem nocnym",
+        "description": "Pacjent od lat niszczył klasyczne szyny termoformowane – materiał szybko pękał lub przecierał się w punktach kontaktowych. Zaprojektowaliśmy i wydrukowaliśmy szynę 3D, precyzyjnie pogrubiając okluzję do 2 mm dokładnie tam, gdzie siły żucia były największe.",
+        "result": "Brak pęknięć i przetarć po 12 miesiącach użytkowania. Zero reklamacji, a pacjent wreszcie regularnie zakłada szynę na noc."
       },
       {
-        "tag": "Retencja po leczeniu ortodontycznym",
-        "title": "Szyna retencyjna po zakończeniu leczenia aparatem stałym",
-        "description": "Po zdjęciu aparatu stałego pacjentka otrzymała termoformowaną szynę retencyjną. Szyna szybko traciła napięcie i przestawała utrzymywać pozycję zębów. Przeszliśmy na szynę retencyjną drukowaną 3D z kontrolowaną geometrią.",
-        "result": "Brak jakiejkolwiek korekty przez cztery wizyty kontrolne w ciągu 9 miesięcy. Szyna identyczna geometrycznie jak przy wydaniu."
+        "tag": "Retencja ortodontyczna",
+        "title": "Stabilna retencja po zdjęciu aparatu stałego",
+        "description": "Standardowa szyna z folii, którą pacjentka dostała po zdjęciu aparatu, szybko się rozluźniła i przestała odpowiednio stabilizować zęby. Wykonaliśmy szynę drukowaną 3D, która charakteryzuje się znacznie wyższą stabilnością wymiarową.",
+        "result": "Po 9 miesiącach i czterech wizytach kontrolnych szyna nadal idealnie dolega. Materiał nie uległ odkształceniu, a retencja jest tak samo mocna jak w dniu oddania."
       },
       {
-        "tag": "Dyskomfort przy noszeniu",
-        "title": "Pacjent zgłaszający dyskomfort z szyną termoformowaną",
-        "description": "Pacjent wielokrotnie rezygnował z noszenia szyny nocnej z powodu ucisku i niedokładnego dopasowania. Zamówiono szynę relaksacyjną drukowaną 3D projektowaną indywidualnie pod jego skan.",
-        "result": "Pacjent nosi szynę regularnie od 10 miesięcy - po raz pierwszy w historii leczenia. Brak uwag dotyczących dyskomfortu od pierwszego założenia."
+        "tag": "Brak compliance (dyskomfort)",
+        "title": "Problem z adaptacją i uciskiem tradycyjnej szyny",
+        "description": "Pacjent wielokrotnie porzucał noszenie szyn na noc z powodu bolesnego ucisku i niedokładnego dopasowania. Zmieniliśmy podejście i wykonaliśmy szynę z druku 3D, która perfekcyjnie odwzorowuje skan wewnątrzustny bez błędów skurczu materiału.",
+        "result": "Szyna pasowała idealnie już przy przymiarce na fotelu, bez konieczności korekt. Pacjent nosi ją sumiennie od 10 miesięcy i nie zgłasza żadnego dyskomfortu."
       }
     ],
     "cta": {
@@ -719,5 +719,146 @@
         ]
       }
     ]
+  },
+
+  "rd": {
+    "tag": "APM Digital Lab — R&D",
+    "title": "Badania i rozwój",
+    "subtitle": "Dwa równoległe projekty. Wspólna obsesja na punkcie precyzji.",
+    "back": "← APM Digital Lab",
+    "cards": [
+      {
+        "number": "01",
+        "label": "Badania materiałowe",
+        "title": "Weryfikacja drukarek i żywic klinicznych",
+        "desc": "Systematyczne testy kilkunastu platform druku i dziesiątek żywic medycznych przeprowadzone zanim trafił do nas pierwszy zlecenie kliniczne. Metodologia doboru materiałów, która leży u podstaw każdego produktu, który opuszcza nasze laboratorium.",
+        "cta": "Metodologia →",
+        "href": "/rd/materialy",
+        "accent": "from-emerald-500/10 to-teal-500/10",
+        "dot": "bg-emerald-500"
+      },
+      {
+        "number": "02",
+        "label": "DentalCAD Engine",
+        "title": "Automatyczny pipeline CAD: od skanu do gotowej geometrii",
+        "desc": "System napisany w C++ zastępujący ręczne projektowanie w komercyjnych narzędziach CAD/CAM. Trzy etapy: wczytanie skanu i automatyczna segmentacja zębów, generowanie geometrii szyny z zadanymi parametrami, eksport STL do druku 3D. Działający end-to-end — od pliku klinicznego do gotowej nakładki bez ingerencji ręcznej.",
+        "cta": "Opis techniczny →",
+        "href": "/dental-cad",
+        "accent": "from-blue-500/10 to-cyan-500/10",
+        "dot": "bg-blue-500"
+      }
+    ]
+  },
+
+  "rdMaterialy": {
+    "tag": "APM Digital Lab — R&D i badania materiałowe",
+    "thesis1": "Nie wybieramy materiałów w ciemno z katalogu.",
+    "thesis2": "Każdy z nich najpierw rygorystycznie testujemy.",
+    "intro": "Zanim pierwsza szyna trafiła do pacjenta, przez wiele miesięcy testowaliśmy drukarki i żywice od wiodących producentów. Odrzuciliśmy marketing i karty techniczne – te sprawdzają się w sterylnych warunkach laboratoryjnych. Nas interesowało, jak dany materiał faktycznie zachowa się w jamie ustnej, przy obciążeniach zgryzowych i trudnych warunkach klinicznych.",
+    "introAccent": "To jest ta różnica między wyrobem medycznym klasy premium, a produktem, który tylko \"spełnia normy na papierze\".",
+    "testsLabel": "Co dokładnie weryfikowaliśmy?",
+    "testsP": "Każde połączenie drukarki i żywicy musiało przejść ten sam bezwzględny protokół testowy. Od weryfikacji podstawowych parametrów, po kwestie, o których producenci rzadko wspominają.",
+    "testsItems": [
+      "Jakość powierzchni i precyzja — gładkość wydruku, widoczność warstw oraz wierne odwzorowanie detali skanu przy różnej grubości ścianek.",
+      "Dopasowanie kliniczne (fit) — precyzja osadzenia na modelu, szczelność przy krawędzi dziąsłowej oraz siła retencji.",
+      "Stabilność mechaniczna i biochemiczna — odporność na ścieranie w punktach kontaktowych oraz zachowanie w środowisku wilgotnym (ślina) i przy zmianach temperatury.",
+      "Optymalizacja post-processingu — dobór idealnego czasu mycia, polimeryzacji w komorze UV oraz technik ostatecznego polerowania.",
+      "Biokompatybilność organoleptyczna — szyna spędza w ustach pacjenta kilka godzin dziennie, dlatego brak chemicznego zapachu i smaku to dla nas absolutny priorytet."
+    ],
+    "findingsLabel": "Wnioski i efekty z gabinetu",
+    "findingsP1": "Miesiące testów pozwoliły nam wypracować autorski protokół produkcyjny. Precyzyjnie dobraliśmy parametry druku i naświetlania pod konkretne żywice. Efekt jest mierzalny: dokładność wymiarowa i komfort pacjenta deklasują tradycyjne nakładki tłoczone na gorąco.",
+    "findingsP2": "Proces termoformowania zawsze wiąże się ze skurczem i niekontrolowanym rozciąganiem folii na modelu – grubość ścianki jest losowa, a dopasowanie przybliżone. Druk 3D pozwala nam kontrolować grubość szyny w każdym mikronie. To nie jest po prostu \"lepsza nakładka\". To zupełnie inna liga precyzji.",
+    "findingsNote": "Nasza flota maszyn i paleta używanych żywic to efekt ogromnej ilość dni testów obciążeniowych, a nie zaufania do broszur reklamowych.",
+    "softwareLabel": "Pełna kontrola dzięki autorskiemu oprogramowaniu",
+    "softwareP": "Większość programów dla laboratoriów protetycznych jest zbyt ogólna. Dlatego stworzyliśmy własny system zarządzania produkcją. Śledzimy w nim każde zlecenie – od wgrania pliku ze skanem, przez parametry wydruku, aż po numer partii użytej żywicy. Dzięki temu mamy pełną identyfikowalność medyczną. Jeśli cokolwiek poszłoby nie tak, od razu wiemy, z jakiej butelki materiału i na jakiej maszynie powstała dana praca.",
+    "softwareNote": "W przygotowaniu: Panel B2B dla lekarzy z podglądem statusu prac w czasie rzeczywistym.",
+    "livingLabel": "Ciągła ewolucja procesu",
+    "livingP": "Nasz protokół produkcyjny to żywy organizm. Każda wydrukowana szyna i każdy feedback z gabinetu – dotyczący dopasowania brzeżnego, retencji czy komfortu pacjenta – to dla nas cenne dane kliniczne. Wniosków nie odkładamy na później. Od razu wdrażamy je do kolejnych cykli produkcyjnych, by stale udoskonalać nasze prace.",
+    "livingAccent": "Dla nas jakość to nie statyczny certyfikat na ścianie, ale ciągłe podnoszenie poprzeczki.",
+    "back": "← Wróć do sekcji R&D",
+    "backHref": "/rd"
+  },
+
+  "dentalCad": {
+    "tag": "APM Digital Lab — R&D",
+    "thesis1": "Ręczne projektowanie szyn stomatologicznych.",
+    "thesis2": "Zastąpione algorytmem.",
+    "intro": "Każdy istniejący workflow CAD/CAM w stomatologii wymaga ręcznej ingerencji technika przy każdym przypadku: korekty modelu, dopasowania konturów, weryfikacji geometrii. Czas od skanu do gotowego projektu to godziny pracy. Jakość i powtarzalność zależą od osoby siedzącej przy klawiaturze.",
+    "introAccent": "Budujemy coś innego.",
+    "engineLabel": "Pipeline, nie narzędzie",
+    "engineP1": "Budujemy zautomatyzowany pipeline CAD napisany w C++. Jego zadaniem jest przyjęcie cyfrowego skanu zębowego i wygenerowanie gotowej geometrii szyny — bez ręcznej ingerencji na żadnym etapie. System zastępuje komercyjne narzędzia CAD/CAM w tej jednej, precyzyjnie zdefiniowanej klasie zadań.",
+    "engineP2": "Pipeline składa się z trzech spójnych etapów. Najpierw skan wczytywany jest jako siatka trójkątów i automatycznie segmentowany — algorytm wyznacza granice każdego zęba na podstawie analizy krzywizny powierzchni i nadaje mu numer FDI. Następnie dla każdego zęba generowana jest geometria nakładki: dwustronny offset tworzy zamknięty shell o zadanej grubości i luzie klinicznym. Krawędź dziąsłowa jest przycinana i wygładzana z interpolowanym przejściem w przestrzeniach międzyzębowych. Wynik eksportowany jest jako plik STL do slicera.",
+    "practiceLabel": "Co to oznacza w praktyce",
+    "practiceP": "Technik wysyła skan. System zwraca gotową geometrię. Grubość, luz kliniczny, linia dziąsłowa — wszystko jako parametry, nie jako efekt ręcznego kształtowania. Ten sam skan i te same parametry zawsze dają matematycznie identyczny wynik.",
+    "practiceItems": [
+      "Automatyczna segmentacja zębów z numeracją FDI i możliwością ręcznej korekty w interfejsie graficznym",
+      "Grubość nakładki i luz kliniczny jako zdefiniowane parametry — nie ręczne przybliżenia",
+      "Gładka krawędź dziąsłowa z interpolowanym przejściem w przestrzeniach międzyzębowych",
+      "Output: topologicznie spójny plik STL gotowy bezpośrednio do slicera i druku"
+    ],
+    "practiceNote": "Stan aktualny: działający system end-to-end na skanach klinicznych. Trwają prace rozwojowe, udoskonalające i optymalizacyjne.",
+    "whyLabel": "Dlaczego to ma znaczenie",
+    "whyP1": "Ręczny workflow CAD/CAM oznacza, że jakość projektu zależy od technika: jego doświadczenia, zmęczenia, dnia tygodnia. Każdy przypadek to kilkadziesiąt minut do kilku godzin pracy. Każda korekta to nowy czas. Wyniki są powtarzalne tylko o tyle, o ile powtarzalny jest człowiek.",
+    "whyP2": "Nasz pipeline jest deterministyczny. Te same dane wejściowe zawsze generują ten sam output — nie przybliżony, nie \"wystarczająco dobry\", lecz matematycznie identyczny. Skalowalność tego modelu to nie przyspieszenie istniejącego procesu. To eliminacja jego zmienności.",
+    "whyQuote1": "Nie zamiast technika.",
+    "whyQuote2": "Technik kontroluje. Algorytm eliminuje powtarzalną robotę.",
+    "roadmapLabel": "Roadmap",
+    "roadmapIntro": "Silnik to platforma. Moduły kliniczne to aplikacje zbudowane na jego fundamencie — każdy kolejny korzysta z tych samych geometrycznych operacji.",
+    "roadmap": [
+      {
+        "phase": "01",
+        "title": "Silnik geometryczny",
+        "status": "active",
+        "statusLabel": "Aktywna faza",
+        "desc": "SDF pipeline, algebraicznie czyste operacje wolumetryczne, deterministyczny output topologicznie poprawnej powłoki STL. Fundament wszystkich modułów poniżej."
+      },
+      {
+        "phase": "02",
+        "title": "Moduł: Nakładki stomatologiczne",
+        "status": "building",
+        "statusLabel": "W budowie",
+        "desc": "Pierwsza kliniczna aplikacja silnika. Nakładki retencyjne, relaksacyjne i wybielające generowane automatycznie z danych skanu wewnątrzustnego. Kliniczny luz jako parametr pola, indywidualna linia dziąsłowa per-ząb, pełna gotowość do druku."
+      },
+      {
+        "phase": "03",
+        "title": "Moduł: Korony i mosty",
+        "status": "planned",
+        "statusLabel": "Planowane",
+        "desc": "Nie kolejna biblioteka szablonów. Planujemy zintegrować generatywny model anatomiczny wytrenowany na tysiącach naturalnych morfologii zębowych — silnik nie generuje korony, która \"pasuje\", lecz taką, która wygląda jakby była tam od zawsze. Morfologia guzków, bruzd i grzbietów obliczana jako ciągłe pole dopasowane do fenotypu zębowego pacjenta. Kontakty okluzyjne optymalizowane automatycznie w przestrzeni SDF."
+      },
+      {
+        "phase": "04",
+        "title": "Moduł: Wypełnienia i techniki małoinwazyjne",
+        "status": "planned",
+        "statusLabel": "Planowane",
+        "desc": "Wypełnienia kompozytowe klas I–V z precyzyjną kontrolą geometrii kontaktu proksymalnego. Natywne wsparcie techniki flow injection — automatyczna generacja matryc sekcyjnych i kanałów iniekcyjnych pod odbudowę minimalnie inwazyjną."
+      },
+      {
+        "phase": "05",
+        "title": "Moduł: Ortodoncja",
+        "status": "research",
+        "statusLabel": "Badania",
+        "desc": "Symulacja przemieszczenia zębów jako ciągłej transformacji pola — bez oddzielnych siatek na każdy etap leczenia. Każda pozycja docelowa to izopowierzchnia w przestrzeni wolumetrycznej. Automatyczne planowanie sekwencji ustawienia zębów z uwzględnieniem geometrii korzeni, grubości kości wyrostka i relacji okluzyjnych — cały plan leczenia jako spójna trajektoria w jednym modelu anatomicznym."
+      }
+    ],
+    "forLabel": "Dla kogo",
+    "forItems": [
+      "Dla laboratoriów protetycznych, dla których jakość kliniczna jest bezwzględnym priorytetem — nie tańszy workflow, lecz wyniki geometryczne niemożliwe do osiągnięcia konwencjonalnymi metodami.",
+      "Dla klinik z ambicją skrócenia czasu od skanu do gotowego produktu klinicznego z dni do godzin — bez kompromisów na żadnym etapie łańcucha geometrycznego.",
+      "Dla podmiotów, które dostrzegają, że fundamenty cyfrowej stomatologii są przepisywane od nowa — i chcą uczestniczyć w tej rozmowie zanim stanie się to oczywiste."
+    ],
+    "ctaText": "Jesteśmy w fazie aktywnego rozwoju. Jeśli chcesz być wśród pierwszych, którzy to zobaczą — napisz.",
+    "back": "← APM Digital Lab"
+  },
+
+  "galeria": {
+    "tag": "APM Digital Lab — Galeria",
+    "title": "Realizacje.",
+    "subtitle": "Prawdziwe nakładki. Prawdziwe zęby.",
+    "coming": "Zdjęcia w przygotowaniu.",
+    "comingNote": "Tutaj znajdą się prawdziwe fotografie nakładek retencyjnych, relaksacyjnych i wybielających — na zębach pacjentów, na modelach gipsowych i z bliska, żebyś mógł ocenić jakość wykończenia zanim wyślesz pierwsze zlecenie.",
+    "cta": "Napisz do nas",
+    "ctaNote": "Chcesz zobaczyć przykłady szybciej? Wyślij wiadomość — prześlemy zdjęcia bezpośrednio.",
+    "back": "← Produkty"
   }
 }
