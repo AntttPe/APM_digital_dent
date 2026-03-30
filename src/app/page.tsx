@@ -4,7 +4,6 @@ import Products from '@/sections/Products';
 import Technology from '@/sections/Technology';
 import Contact from '@/sections/Contact';
 import WhyDigital from '@/sections/WhyDigital';
-import WhyChooseUs from '@/sections/WhyChooseUs';
 import FirstCollaboration from '@/sections/FirstCollaboration';
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
             <DigitalWorkflow />
             <Products />
             <WhyDigital />
-            <WhyChooseUs />
             <FirstCollaboration />
             <Technology />
             <Contact />

@@ -24,10 +24,10 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
     metadataBase: new URL('https://apmdental.pl'),
     title: {
-        default: 'Szyny stomatologiczne 3D — APM Dental Lab',
+        default: 'Szyny stomatologiczne drukowane 3D — APM Dental Lab',
         template: '%s | APM Dental Lab',
     },
-    description: 'Szyny retencyjne, relaksacyjne i do wybielania drukowane 3D. Od pliku STL do gotowej szyny w 24h. Cyfrowe laboratorium dla gabinetów i klinik stomatologicznych.',
+    description: 'Szyny retencyjne, relaksacyjne i do wybielania nakładkowego drukowane 3D. Od pliku STL do gotowej szyny w 48h. Cyfrowe laboratorium dla gabinetów i klinik stomatologicznych.',
     icons: {
         icon: '/images/logos/favicon.svg',
     },
