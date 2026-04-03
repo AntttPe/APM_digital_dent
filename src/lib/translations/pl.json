@@ -346,47 +346,43 @@
     },
     "retainers": {
       "title": "Szyny retencyjne",
-      "tagline": "Dopasowanie z dokładnością ±0,1 mm. Retencja, która działa po roku, nie tylko po osadzeniu.",
+      "tagline": "Dopasowanie z dokładnością ±0,1 mm.",
       "description": [
-        "Szyny termoformowane mają jedną wadę: grubość w strefach retencji zależy od temperatury folii i siły nacisku — za każdym razem inaczej. Nasze szyny projektujemy w CAD, więc geometria jest deterministyczna. Siły retencji, tor wprowadzania, grubość ścianki — każdy parametr jest zaplanowany, nie przypadkowy.",
-        "Druk 3D z żywicy medycznej Class IIa daje wytrzymałość na zginanie 3,5× wyższą niż materiały termoformowalne (Mattiello et al., 2024, RCT). Mniej pęknięć po 6 miesiącach, mniej wizyt korygujących, mniej reklamacji od pacjentów."
+        "Nasze szyny powstają w oparciu o projekt cyfrowy CAD, co pozwala precyzyjnie określić ich geometrię jeszcze przed produkcją. Parametry takie jak siły retencji, tor wprowadzania oraz grubość ścianek są definiowane na etapie projektowania i zachowywane w gotowym wyrobie. Dzięki temu uzyskujemy powtarzalność i większą kontrolę nad właściwościami wykonanych szyn.",
+        "Druk 3D z żywicy medycznej Class IIa daje wytrzymałość na zginanie 3,5× wyższą niż materiały termoformowalne (Mattiello et al., 2024, RCT)."
       ],
       "features": [
-        "Zaprojektowane strefy retencji — nie przypadkowe odkształcenie folii",
-        "Jednakowy tor wprowadzania przy każdym zamówieniu kolejnej szyny",
-        "Wytrzymałość na zginanie 3,5× wyższa niż termoformowalne (RCT 2024)",
-        "Grubość 0,75–1,5 mm zdefiniowana w projekcie, nie wymuszona przez arkusz",
-        "Materiał Class IIa dopuszczony do długotrwałego kontaktu wewnątrzustnego",
-        "Cyfrowe archiwum projektu — identyczna replika na życzenie"
+        "Odporność na zginanie wyższa w porównaniu do szyn termoformowanych (wg danych RCT 2024)",
+        "Grubość 0,75–1,5 mm zdefiniowana w projekcie",
+        "Materiał Class IIa dopuszczony do długotrwałego zastosowania wewnątrzustnego",
+        "Archiwizacja projektu w formie cyfrowej, umożliwiająca wykonanie identycznej repliki w dowolnym momencie"
       ],
       "specs": [
-        { "label": "Materiał", "value": "Żywica Class IIa (Formlabs BioMed)" },
+        { "label": "Materiał", "value": "Żywica Class IIa (Formlabs Dental LT Comfort)" },
         { "label": "Grubość", "value": "0,75 – 1,5 mm" },
         { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
       ],
-      "price": "od 180 zł"
+      "price": "od 100 zł"
     },
     "guards": {
       "title": "Szyny relaksacyjne",
-      "tagline": "Zmienna grubość zaprojektowana pod rozkład sił — nie wyciągnięta z arkusza.",
+      "tagline": "Zwiększony komfort dla pacjenta dzięki całkowitej kontroli nad projektem cyfrowym.",
       "description": [
-        "Pacjent z bruksizmem potrafi przetrzeć szynę termoformowalną w 3–4 miesiące, bo cała grubość koncentruje się równomiernie wszędzie tam, gdzie nie jest potrzebna. W naszym projekcie CAD strefa okluzyjna ma zawsze 2 mm, obszary nieobciążone — 1 mm. Grubość wynika z analizy sił, nie z grubości arkusza.",
-        "Żywica o wysokiej wytrzymałości mechanicznej wytrzymuje wieloletnie obciążenia zgryzowe bez odkształcenia plastycznego. Przy kolejnym zamówieniu tej samej szyny — identyczna geometria, bez konieczności nowych odcisków."
+        "Nasze szyny relaksacyjne powstają w oparciu o projekt cyfrowy CAD, co daje całkowitą kontrolę nad ich geometrią. Dzięki temu od początku eliminujemy losowy ucisk, z którym często wiążą się inne metody produkcji.",
+        "Druk 3D z biokompatybilnej żywicy Class IIa daje również idealne dopasowanie do zębów pacjęta, a co za tym idzie znacząco zwiększony komfort użytkowania."
       ],
       "features": [
-        "Strefa okluzyjna 2 mm / obszary boczne 1 mm — zdefiniowane w CAD",
-        "Absorpcja sił zgryzowych bez odkształcenia plastycznego materiału",
-        "Wytrzymałość mechaniczna przewyższa folie termoformowalne",
-        "Pełne pokrycie powierzchni okluzyjnych zaprojektowane na danych ze skanu",
-        "Mniej korekt okluzji po osadzeniu niż przy tradycyjnych metodach",
-        "Archiwum cyfrowe — identyczna replika bez nowego skanu"
+        "2 mm w strefach okluzyjnych / 1 mm w strefach bocznych — zdefiniowane w CAD",
+        "Komfort dla pacjęta",
+        "Wytrzymałość mechaniczna przewyższa znacząco folie termoformowalne",
+        "Archiwizacja projektu w formie cyfrowej, umożliwiająca wykonanie identycznej repliki w dowolnym momencie"
       ],
       "specs": [
-        { "label": "Materiał", "value": "Żywica wysokiej wytrzymałości" },
-        { "label": "Grubość", "value": "1 mm / 2 mm (strefy CAD)" },
+        { "label": "Materiał", "value": "Biokompatybilna żywica wysokiej wytrzymałości" },
+        { "label": "Grubość", "value": "2 mm okluzja / 1 mm strefy boczne" },
         { "label": "Czas realizacji", "value": "3 – 5 dni roboczych" }
       ],
-      "price": "od 220 zł"
+      "price": "od 100 zł"
     },
     "aligners": {
       "title": "Szyny do wybielania nakładowego",
